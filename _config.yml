@@ -31,6 +31,25 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - .gitignore
+  - .DS_Store
+  - Thumbs.db
+  - *.log
+  - .vscode/
+  - .idea/
+  - .tmp/
+  - .cache/
+  - .sass-cache/
+  - .env*
+  - *.bak
+  - *.backup
+  - *.old
+  - test/
+  - tests/
+  - spec/
+  - __tests__/
+  - docs/
+  - documentation/
 
 # Include in processing
 include:

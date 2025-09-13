@@ -1,2 +1,31 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+# منع الوصول لملفات التطوير
+Disallow: /README.md
+Disallow: /Gemfile
+Disallow: /Gemfile.lock
+Disallow: /_config.yml
+Disallow: /.gitignore
+Disallow: /node_modules/
+Disallow: /.vscode/
+Disallow: /.idea/
+Disallow: /.tmp/
+Disallow: /.cache/
+Disallow: /.sass-cache/
+Disallow: /.env*
+Disallow: /*.log
+Disallow: /*.bak
+Disallow: /*.backup
+Disallow: /*.old
+
+# السماح بملفات الموقع الأساسية
+Allow: /index.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /style.css
+Allow: /script.js
+Allow: /CNAME
+
+# خريطة الموقع
+Sitemap: https://diyomx.com/sitemap.xml
