@@ -4,7 +4,7 @@ description: موقع ديومكس الرسمي - فريق متخصص في تط�
 author: فريق ديومكس
 email: info@diyomx.com
 baseurl: ""
-url: "https://diyomx.github.io"
+url: "https://diyomx.com"
 
 # Site settings
 lang: ar
@@ -82,7 +82,7 @@ seo:
   type: Organization
   name: ديومكس
   description: فريق متخصص في تطوير التطبيقات الذكية والحلول الرقمية المبتكرة
-  url: https://diyomx.github.io
+  url: https://diyomx.com
   logo: /assets/images/logo.png
   sameAs:
     - https://twitter.com/diyomx
