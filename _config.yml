@@ -1,0 +1,91 @@
+# GitHub Pages Configuration for DIYOMX
+title: ديومكس - تطبيقات ذكية وإنجازات رقمية
+description: موقع ديومكس الرسمي - فريق متخصص في تطوير التطبيقات الذكية والحلول الرقمية المبتكرة
+author: فريق ديومكس
+email: info@diyomx.com
+baseurl: ""
+url: "https://diyomx.github.io"
+
+# Site settings
+lang: ar
+direction: rtl
+timezone: Asia/Riyadh
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Include in processing
+include:
+  - _pages
+
+# Collections
+collections:
+  apps:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "apps"
+    values:
+      layout: "app"
+
+# Social media links
+social:
+  twitter: diyomx
+  facebook: diyomx
+  instagram: diyomx
+  linkedin: diyomx
+  youtube: diyomx
+
+# Navigation
+navigation:
+  - title: الرئيسية
+    url: /
+  - title: من نحن
+    url: /about.html
+  - title: اتصل بنا
+    url: /contact.html
+
+# SEO
+seo:
+  type: Organization
+  name: ديومكس
+  description: فريق متخصص في تطوير التطبيقات الذكية والحلول الرقمية المبتكرة
+  url: https://diyomx.github.io
+  logo: /assets/images/logo.png
+  sameAs:
+    - https://twitter.com/diyomx
+    - https://facebook.com/diyomx
+    - https://instagram.com/diyomx
+    - https://linkedin.com/company/diyomx
