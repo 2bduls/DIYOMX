@@ -1038,6 +1038,149 @@ body {
     100% { transform: rotate(360deg); }
 }
 
+/* Privacy Policy Styles */
+.privacy-content {
+    background: white;
+    border-radius: 15px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.privacy-intro {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    border-left: 4px solid #4a7c59;
+}
+
+.privacy-intro p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.privacy-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.privacy-section:hover {
+    border-color: #4a7c59;
+    box-shadow: 0 5px 20px rgba(74, 124, 89, 0.1);
+}
+
+.privacy-section h2 {
+    color: #2c5530;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.privacy-section h2 i {
+    color: #4a7c59;
+    font-size: 1.5rem;
+}
+
+.privacy-subsection {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    border-left: 4px solid #4a7c59;
+}
+
+.privacy-subsection h3 {
+    color: #2c5530;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.privacy-subsection ul {
+    list-style: none;
+    padding: 0;
+}
+
+.privacy-subsection li {
+    padding: 0.5rem 0;
+    color: #555;
+    line-height: 1.6;
+    position: relative;
+    padding-right: 1.5rem;
+}
+
+.privacy-subsection li:before {
+    content: "•";
+    color: #4a7c59;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+}
+
+.privacy-subsection p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.contact-details {
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    border-color: #4a7c59;
+    transform: translateX(-5px);
+}
+
+.contact-item i {
+    color: #4a7c59;
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+.contact-item span {
+    color: #555;
+    font-weight: 500;
+}
+
+.privacy-footer {
+    background: linear-gradient(135deg, #2c5530 0%, #3a6b3f 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.privacy-footer p {
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.privacy-footer strong {
+    color: #4a7c59;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-container {
