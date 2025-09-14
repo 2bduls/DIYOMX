@@ -16,6 +16,13 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 
+# GitHub Pages specific settings
+github: [metadata]
+safe: true
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
 # Plugins
 plugins:
   - jekyll-sitemap
@@ -52,32 +59,22 @@ exclude:
   - documentation/
 
 # Include in processing
-include:
-  - _pages
+# include:
+#   - _pages
 
 # Collections
-collections:
-  apps:
-    output: true
-    permalink: /:collection/:name/
+# collections:
+#   apps:
+#     output: true
+#     permalink: /:collection/:name/
 
 # Defaults
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-      type: "apps"
-    values:
-      layout: "app"
+# defaults:
+#   - scope:
+#       path: ""
+#       type: "pages"
+#     values:
+#       layout: "default"
 
 # Social media links
 social:
