@@ -1888,6 +1888,24 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    min-height: 70vh;
+}
+
+.privacy-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-intro p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
 }
 
 .privacy-badge {
@@ -1900,6 +1918,7 @@ body {
     gap: 0.5rem;
     margin-top: 1rem;
     box-shadow: 0 4px 8px rgba(44, 85, 48, 0.3);
+    font-weight: 600;
 }
 
 .privacy-badge i {
@@ -1913,30 +1932,40 @@ body {
 
 .privacy-options-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     margin: 3rem 0;
+    align-items: stretch;
 }
 
 .privacy-option-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     border: 1px solid #e0e0e0;
     border-radius: 15px;
     padding: 2rem;
     transition: all 0.3s ease;
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 400px;
 }
 
 .privacy-option-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
     border-color: #4a7c59;
 }
 
 .privacy-option-card.featured {
     border: 2px solid #4a7c59;
-    background: linear-gradient(135deg, rgba(74, 124, 89, 0.05) 0%, rgba(90, 140, 105, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(74, 124, 89, 0.08) 0%, rgba(90, 140, 105, 0.08) 100%);
+    transform: scale(1.02);
+}
+
+.privacy-option-card.featured:hover {
+    transform: translateY(-8px) scale(1.02);
 }
 
 .privacy-card-header {
@@ -2001,29 +2030,49 @@ body {
     list-style: none;
     padding: 0;
     margin: 1.5rem 0;
+    flex: 1;
 }
 
 .privacy-features li {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 0;
+    padding: 0.7rem 0;
     color: #555;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.privacy-features li:last-child {
+    border-bottom: none;
 }
 
 .privacy-features i {
     color: #4a7c59;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    width: 16px;
+    text-align: center;
 }
 
 .privacy-card-footer {
-    margin-top: 2rem;
+    margin-top: auto;
     text-align: center;
+    padding-top: 1rem;
 }
 
 .privacy-card-footer .btn {
     width: 100%;
     justify-content: center;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.privacy-card-footer .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 124, 89, 0.3);
 }
 
 /* Privacy Summary */
@@ -2172,6 +2221,84 @@ body {
 .dark-mode .privacy-badge {
     background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
     color: white;
+}
+
+/* Privacy Options Responsive Design */
+@media (max-width: 768px) {
+    .privacy-options-content {
+        padding: 1rem;
+    }
+    
+    .privacy-intro {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .privacy-intro p {
+        font-size: 1.1rem;
+    }
+    
+    .privacy-options-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .privacy-option-card {
+        min-height: 350px;
+        padding: 1.5rem;
+    }
+    
+    .privacy-card-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .privacy-card-header p {
+        font-size: 0.9rem;
+    }
+    
+    .privacy-features li {
+        padding: 0.6rem 0;
+        font-size: 0.9rem;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-buttons .btn {
+        min-width: 250px;
+        margin: 0.5rem 0;
+    }
+    
+    .summary-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .privacy-option-card {
+        min-height: 320px;
+        padding: 1rem;
+    }
+    
+    .privacy-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .privacy-card-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .featured-badge,
+    .security-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
 }
 
 /* Dark Mode Responsive */
