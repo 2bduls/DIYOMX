@@ -1227,6 +1227,278 @@ body {
     font-size: 1.1rem;
 }
 
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.dark-mode-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.dark-mode-toggle i {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle:hover i {
+    transform: rotate(180deg);
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .site-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-bottom: 1px solid #333;
+}
+
+.dark-mode .site-title {
+    color: #ffffff;
+}
+
+.dark-mode .site-description {
+    color: #cccccc;
+}
+
+.dark-mode .main-navigation a {
+    color: #e0e0e0;
+}
+
+.dark-mode .main-navigation a:hover,
+.dark-mode .main-navigation a.active {
+    color: #4a7c59;
+}
+
+.dark-mode .dark-mode-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.dark-mode .dark-mode-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Hero Section Dark Mode */
+.dark-mode .hero-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #e0e0e0;
+}
+
+.dark-mode .hero-title {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .hero-subtitle {
+    color: #cccccc;
+}
+
+/* Cards and Sections Dark Mode */
+.dark-mode .app-card,
+.dark-mode .feature-item,
+.dark-mode .achievement-item,
+.dark-mode .service-item,
+.dark-mode .team-member,
+.dark-mode .timeline-item,
+.dark-mode .youtube-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    backdrop-filter: blur(10px);
+}
+
+.dark-mode .app-card:hover,
+.dark-mode .feature-item:hover,
+.dark-mode .service-item:hover,
+.dark-mode .team-member:hover,
+.dark-mode .youtube-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #4a7c59;
+    transform: translateY(-5px);
+}
+
+/* Buttons Dark Mode */
+.dark-mode .btn-primary {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
+    color: white;
+    border: 1px solid #4a7c59;
+}
+
+.dark-mode .btn-primary:hover {
+    background: linear-gradient(135deg, #5a8c69 0%, #6a9c79 100%);
+    border-color: #5a8c69;
+}
+
+.dark-mode .btn-secondary {
+    background: transparent;
+    color: #4a7c59;
+    border: 2px solid #4a7c59;
+}
+
+.dark-mode .btn-secondary:hover {
+    background: #4a7c59;
+    color: white;
+}
+
+/* Footer Dark Mode */
+.dark-mode .site-footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-top: 1px solid #333;
+}
+
+.dark-mode .footer-info h3,
+.dark-mode .footer-privacy-links h4 {
+    color: #ffffff;
+}
+
+.dark-mode .footer-info p {
+    color: #cccccc;
+}
+
+.dark-mode .footer-links a,
+.dark-mode .footer-privacy-links a {
+    color: #e0e0e0;
+}
+
+.dark-mode .footer-links a:hover,
+.dark-mode .footer-privacy-links a:hover {
+    color: #4a7c59;
+}
+
+/* Privacy Policy Dark Mode */
+.dark-mode .privacy-content {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+}
+
+.dark-mode .privacy-section {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #333;
+}
+
+.dark-mode .privacy-section:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #4a7c59;
+}
+
+.dark-mode .privacy-section h2 {
+    color: #ffffff;
+}
+
+.dark-mode .privacy-section h3 {
+    color: #e0e0e0;
+}
+
+.dark-mode .privacy-subsection p,
+.dark-mode .privacy-subsection li {
+    color: #cccccc;
+}
+
+.dark-mode .privacy-footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border: 1px solid #333;
+}
+
+.dark-mode .app-badge {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
+    color: white;
+}
+
+/* Contact Form Dark Mode */
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea,
+.dark-mode .contact-form select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    color: #e0e0e0;
+}
+
+.dark-mode .contact-form input:focus,
+.dark-mode .contact-form textarea:focus,
+.dark-mode .contact-form select:focus {
+    border-color: #4a7c59;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .contact-form input::placeholder,
+.dark-mode .contact-form textarea::placeholder {
+    color: #888;
+}
+
+/* Notifications Dark Mode */
+.dark-mode .notification {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #333;
+    backdrop-filter: blur(10px);
+}
+
+.dark-mode .notification-success {
+    border-color: #4a7c59;
+}
+
+/* Scroll to Top Button Dark Mode */
+.dark-mode .scroll-to-top {
+    background: #4a7c59;
+    color: white;
+    border: 1px solid #333;
+}
+
+/* Status Badges Dark Mode */
+.dark-mode .app-status {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    border: 1px solid #333;
+}
+
+.dark-mode .status-current {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
+    color: white;
+}
+
+.dark-mode .status-development {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+    color: white;
+}
+
+.dark-mode .status-future {
+    background: linear-gradient(135deg, #6c757d 0%, #7c858c 100%);
+    color: white;
+}
+
+/* Dark Mode Responsive */
+@media (max-width: 768px) {
+    .dark-mode-toggle {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .dark-mode .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-container {

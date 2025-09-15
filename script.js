@@ -287,5 +287,86 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Dark Mode Functionality
+    initializeDarkMode();
+
     console.log('ديومكس - الموقع جاهز للاستخدام!');
 });
+
+// Dark Mode Functions
+function initializeDarkMode() {
+    // Check for saved dark mode preference or default to light mode
+    const darkMode = localStorage.getItem('darkMode') === 'true';
+    
+    // Apply dark mode if it was previously enabled
+    if (darkMode) {
+        document.body.classList.add('dark-mode');
+    }
+    
+    // Create dark mode toggle button
+    createDarkModeToggle();
+}
+
+function createDarkModeToggle() {
+    // Check if toggle already exists
+    if (document.querySelector('.dark-mode-toggle')) {
+        return;
+    }
+    
+    const toggle = document.createElement('button');
+    toggle.className = 'dark-mode-toggle';
+    toggle.innerHTML = '<i class="fas fa-moon"></i>';
+    toggle.title = 'تبديل الوضع الليلي';
+    
+    // Add toggle to header
+    const headerContainer = document.querySelector('.header-container');
+    if (headerContainer) {
+        headerContainer.appendChild(toggle);
+    }
+    
+    // Add click event listener
+    toggle.addEventListener('click', toggleDarkMode);
+    
+    // Update icon based on current mode
+    updateDarkModeIcon();
+}
+
+function toggleDarkMode() {
+    const body = document.body;
+    const isDarkMode = body.classList.contains('dark-mode');
+    
+    if (isDarkMode) {
+        // Switch to light mode
+        body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'false');
+    } else {
+        // Switch to dark mode
+        body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'true');
+    }
+    
+    // Update icon
+    updateDarkModeIcon();
+    
+    // Add transition effect
+    body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+    setTimeout(() => {
+        body.style.transition = '';
+    }, 300);
+}
+
+function updateDarkModeIcon() {
+    const toggle = document.querySelector('.dark-mode-toggle');
+    if (!toggle) return;
+    
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    const icon = toggle.querySelector('i');
+    
+    if (isDarkMode) {
+        icon.className = 'fas fa-sun';
+        toggle.title = 'التبديل إلى الوضع النهاري';
+    } else {
+        icon.className = 'fas fa-moon';
+        toggle.title = 'تبديل الوضع الليلي';
+    }
+}
