@@ -1883,6 +1883,297 @@ body {
     color: #cccccc;
 }
 
+/* Privacy Options Page Styles */
+.privacy-options-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.privacy-badge {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(44, 85, 48, 0.3);
+}
+
+.privacy-badge i {
+    font-size: 1.2rem;
+}
+
+.privacy-badge span {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.privacy-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.privacy-option-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-color: #4a7c59;
+}
+
+.privacy-option-card.featured {
+    border: 2px solid #4a7c59;
+    background: linear-gradient(135deg, rgba(74, 124, 89, 0.05) 0%, rgba(90, 140, 105, 0.05) 100%);
+}
+
+.privacy-card-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.privacy-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.privacy-option-card.featured .privacy-icon {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+}
+
+.privacy-card-header h3 {
+    color: #2c5530;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.privacy-card-header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.featured-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.security-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.privacy-features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.privacy-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    color: #555;
+}
+
+.privacy-features i {
+    color: #4a7c59;
+    font-size: 0.9rem;
+}
+
+.privacy-card-footer {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.privacy-card-footer .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Privacy Summary */
+.privacy-summary {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.privacy-summary h2 {
+    color: #2c5530;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.summary-item {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.summary-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.summary-item h4 {
+    color: #2c5530;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.summary-item p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Privacy Contact */
+.privacy-contact {
+    background: linear-gradient(135deg, rgba(74, 124, 89, 0.1) 0%, rgba(90, 140, 105, 0.1) 100%);
+    border: 1px solid #4a7c59;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.privacy-contact h2 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.privacy-contact p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-buttons .btn {
+    min-width: 200px;
+}
+
+/* Dark Mode Styles for Privacy Options */
+.dark-mode .privacy-option-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+}
+
+.dark-mode .privacy-option-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #4a7c59;
+}
+
+.dark-mode .privacy-option-card.featured {
+    background: linear-gradient(135deg, rgba(74, 124, 89, 0.1) 0%, rgba(90, 140, 105, 0.1) 100%);
+    border-color: #4a7c59;
+}
+
+.dark-mode .privacy-card-header h3 {
+    color: #ffffff;
+}
+
+.dark-mode .privacy-card-header p {
+    color: #cccccc;
+}
+
+.dark-mode .privacy-features li {
+    color: #e0e0e0;
+}
+
+.dark-mode .privacy-summary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+}
+
+.dark-mode .privacy-summary h2 {
+    color: #ffffff;
+}
+
+.dark-mode .summary-item h4 {
+    color: #ffffff;
+}
+
+.dark-mode .summary-item p {
+    color: #cccccc;
+}
+
+.dark-mode .privacy-contact {
+    background: linear-gradient(135deg, rgba(74, 124, 89, 0.2) 0%, rgba(90, 140, 105, 0.2) 100%);
+    border-color: #4a7c59;
+}
+
+.dark-mode .privacy-contact h2 {
+    color: #ffffff;
+}
+
+.dark-mode .privacy-contact p {
+    color: #cccccc;
+}
+
+.dark-mode .privacy-badge {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
+    color: white;
+}
+
 /* Dark Mode Responsive */
 @media (max-width: 768px) {
     .dark-mode-toggle {
