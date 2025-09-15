@@ -1484,6 +1484,405 @@ body {
     color: white;
 }
 
+/* YouTube Section Dark Mode */
+.dark-mode .youtube-section {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    margin: 3rem 0;
+}
+
+.dark-mode .youtube-section .section-title {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .youtube-intro p {
+    color: #cccccc;
+}
+
+.dark-mode .youtube-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    backdrop-filter: blur(10px);
+}
+
+.dark-mode .youtube-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #4a7c59;
+    transform: translateY(-5px);
+}
+
+.dark-mode .youtube-card h3 {
+    color: #ffffff;
+}
+
+.dark-mode .youtube-card p {
+    color: #cccccc;
+}
+
+.dark-mode .youtube-icon {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
+    color: white;
+}
+
+/* Achievements Section Dark Mode */
+.dark-mode .achievements-section {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    margin: 3rem 0;
+}
+
+.dark-mode .achievements-section .section-title {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .achievement-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    backdrop-filter: blur(10px);
+}
+
+.dark-mode .achievement-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #4a7c59;
+    transform: translateY(-5px);
+}
+
+.dark-mode .achievement-number {
+    color: #4a7c59;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .achievement-label {
+    color: #e0e0e0;
+}
+
+/* Features Section Dark Mode */
+.dark-mode .features-section {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    margin: 3rem 0;
+}
+
+.dark-mode .features-section .section-title {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .feature-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    backdrop-filter: blur(10px);
+}
+
+.dark-mode .feature-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #4a7c59;
+    transform: translateY(-5px);
+}
+
+.dark-mode .feature-item h3 {
+    color: #ffffff;
+}
+
+.dark-mode .feature-item p {
+    color: #cccccc;
+}
+
+.dark-mode .feature-icon {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
+    color: white;
+}
+
+/* Apps Section Dark Mode */
+.dark-mode .apps-section {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    margin: 3rem 0;
+}
+
+.dark-mode .apps-section .section-title {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .app-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    backdrop-filter: blur(10px);
+}
+
+.dark-mode .app-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #4a7c59;
+    transform: translateY(-5px);
+}
+
+.dark-mode .app-title {
+    color: #ffffff;
+}
+
+.dark-mode .app-description {
+    color: #cccccc;
+}
+
+.dark-mode .app-features li {
+    color: #e0e0e0;
+}
+
+.dark-mode .app-icon {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c59 100%);
+    color: white;
+}
+
+/* Section Titles Dark Mode */
+.dark-mode .section-title {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Page Header Dark Mode */
+.dark-mode .page-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #e0e0e0;
+}
+
+.dark-mode .page-title {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .page-subtitle {
+    color: #cccccc;
+}
+
+/* Contact Details Dark Mode */
+.dark-mode .contact-details {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.dark-mode .contact-item {
+    color: #e0e0e0;
+    border-bottom: 1px solid #333;
+}
+
+.dark-mode .contact-item:last-child {
+    border-bottom: none;
+}
+
+.dark-mode .contact-item i {
+    color: #4a7c59;
+}
+
+/* Additional Dark Mode Styles for Complete Coverage */
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
+    color: #ffffff !important;
+}
+
+.dark-mode p, .dark-mode span, .dark-mode div {
+    color: #e0e0e0;
+}
+
+.dark-mode .site-main {
+    background: transparent;
+}
+
+.dark-mode .hero-buttons .btn {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
+    color: white;
+    border: 1px solid #4a7c59;
+}
+
+.dark-mode .hero-buttons .btn:hover {
+    background: linear-gradient(135deg, #5a8c69 0%, #6a9c79 100%);
+    transform: translateY(-2px);
+}
+
+.dark-mode .hero-buttons .btn-secondary {
+    background: transparent;
+    color: #4a7c59;
+    border: 2px solid #4a7c59;
+}
+
+.dark-mode .hero-buttons .btn-secondary:hover {
+    background: #4a7c59;
+    color: white;
+}
+
+/* Ensure all text elements are visible in dark mode */
+.dark-mode * {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Fix any remaining light text on light backgrounds */
+.dark-mode .app-features {
+    color: #e0e0e0;
+}
+
+.dark-mode .app-features li {
+    color: #cccccc;
+}
+
+.dark-mode .youtube-intro {
+    color: #cccccc;
+}
+
+.dark-mode .achievement-item {
+    text-align: center;
+}
+
+.dark-mode .feature-item {
+    text-align: center;
+}
+
+/* About Page Dark Mode Styles */
+.dark-mode .about-content {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+}
+
+.dark-mode .services-section,
+.dark-mode .values-section,
+.dark-mode .team-section,
+.dark-mode .timeline-section {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    margin: 3rem 0;
+}
+
+.dark-mode .services-section h2,
+.dark-mode .values-section h2,
+.dark-mode .team-section h2,
+.dark-mode .timeline-section h2 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .services-grid,
+.dark-mode .values-grid,
+.dark-mode .team-grid,
+.dark-mode .timeline-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.dark-mode .service-item,
+.dark-mode .value-item,
+.dark-mode .team-member,
+.dark-mode .timeline-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.dark-mode .service-item:hover,
+.dark-mode .value-item:hover,
+.dark-mode .team-member:hover,
+.dark-mode .timeline-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #4a7c59;
+    transform: translateY(-5px);
+}
+
+.dark-mode .service-item h4,
+.dark-mode .value-item h4,
+.dark-mode .team-member h4,
+.dark-mode .timeline-item h4 {
+    color: #ffffff;
+}
+
+.dark-mode .service-item p,
+.dark-mode .value-item p,
+.dark-mode .team-member p,
+.dark-mode .timeline-item p {
+    color: #cccccc;
+}
+
+.dark-mode .service-icon,
+.dark-mode .value-icon,
+.dark-mode .team-member .member-avatar,
+.dark-mode .timeline-icon {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
+    color: white;
+}
+
+.dark-mode .timeline-item .timeline-date {
+    color: #4a7c59;
+    font-weight: bold;
+}
+
+/* Contact Page Dark Mode Styles */
+.dark-mode .contact-content {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+}
+
+.dark-mode .contact-info {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.dark-mode .contact-info h3 {
+    color: #ffffff;
+}
+
+.dark-mode .contact-info p {
+    color: #cccccc;
+}
+
+.dark-mode .contact-form {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.dark-mode .contact-form h3 {
+    color: #ffffff;
+}
+
+.dark-mode .contact-form label {
+    color: #e0e0e0;
+}
+
+/* Privacy Pages Dark Mode Styles */
+.dark-mode .privacy-intro {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.dark-mode .privacy-intro p {
+    color: #cccccc;
+}
+
 /* Dark Mode Responsive */
 @media (max-width: 768px) {
     .dark-mode-toggle {
