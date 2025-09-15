@@ -914,6 +914,31 @@ body {
     color: #4a7c59;
 }
 
+.footer-privacy-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-privacy-links h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.footer-privacy-links a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-privacy-links a:hover {
+    color: #4a7c59;
+}
+
 .footer-social {
     display: flex;
     justify-content: center;
@@ -1179,6 +1204,27 @@ body {
 
 .privacy-footer strong {
     color: #4a7c59;
+}
+
+.app-badge {
+    background: linear-gradient(135deg, #2c5530 0%, #3a6b3f 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(44, 85, 48, 0.3);
+}
+
+.app-badge i {
+    font-size: 1.2rem;
+}
+
+.app-badge span {
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 /* Responsive Design */
