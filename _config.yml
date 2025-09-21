@@ -2,7 +2,7 @@
 title: ديومكس - تطبيقات ذكية وإنجازات رقمية
 description: موقع ديومكس الرسمي - فريق متخصص في تطوير التطبيقات الذكية والحلول الرقمية المبتكرة
 author: فريق ديومكس
-email: info@diyomx.com
+email: diyomx@gmail.com
 baseurl: ""
 url: "https://diyomx.com"
 
@@ -79,9 +79,7 @@ exclude:
 # Social media links
 social:
   twitter: diyomx
-  facebook: diyomx
   instagram: diyomx
-  linkedin: diyomx
   youtube: diyomx
 
 # Navigation
@@ -102,6 +100,4 @@ seo:
   logo: /assets/images/logo.png
   sameAs:
     - https://twitter.com/diyomx
-    - https://facebook.com/diyomx
     - https://instagram.com/diyomx
-    - https://linkedin.com/company/diyomx
