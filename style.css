@@ -1260,7 +1260,13 @@ body {
 }
 
 /* Dark Mode Styles */
-.dark-mode {
+.dark-mode,
+html.dark-mode {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    color: #e0e0e0 !important;
+}
+
+html.dark-mode body {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
     color: #e0e0e0 !important;
 }
@@ -2582,6 +2588,287 @@ body {
 .legal-rights h3 {
     color: #2c5530;
     margin-bottom: 1rem;
+}
+
+/* Delete Account Page Dark Mode */
+.dark-mode .delete-account-content {
+    background: transparent;
+}
+
+.dark-mode .warning-box {
+    background: linear-gradient(135deg, #d32f2f 0%, #c62828 100%);
+    color: white;
+    box-shadow: 0 8px 25px rgba(211, 47, 47, 0.4);
+}
+
+.dark-mode .delete-account-form {
+    background: #2d2d2d;
+    color: #e0e0e0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .form-group label {
+    color: #e0e0e0;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group select,
+.dark-mode .form-group textarea {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group select:focus,
+.dark-mode .form-group textarea:focus {
+    border-color: #4a7c59;
+    box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.2);
+}
+
+.dark-mode .form-group input::placeholder,
+.dark-mode .form-group textarea::placeholder {
+    color: #888;
+}
+
+.dark-mode .checkbox-group label {
+    color: #e0e0e0;
+}
+
+.dark-mode .btn-danger {
+    background: linear-gradient(135deg, #d32f2f 0%, #c62828 100%);
+    color: white;
+}
+
+.dark-mode .btn-danger:hover {
+    background: linear-gradient(135deg, #c62828 0%, #b71c1c 100%);
+    box-shadow: 0 8px 25px rgba(211, 47, 47, 0.4);
+}
+
+.dark-mode .btn-secondary {
+    background: linear-gradient(135deg, #555 0%, #444 100%);
+    color: white;
+}
+
+.dark-mode .btn-secondary:hover {
+    background: linear-gradient(135deg, #444 0%, #333 100%);
+    box-shadow: 0 8px 25px rgba(108, 117, 125, 0.4);
+}
+
+.dark-mode .process-steps {
+    background: #2d2d2d;
+    color: #e0e0e0;
+}
+
+.dark-mode .alternative-options {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2d1b4e 100%);
+    color: #e0e0e0;
+}
+
+.dark-mode .alternative-options li:before {
+    color: #4a7c59;
+}
+
+.dark-mode .legal-rights {
+    background: linear-gradient(135deg, #1e3a1e 0%, #2d4a2d 100%);
+    border-color: #4a7c59;
+    color: #e0e0e0;
+}
+
+.dark-mode .legal-rights h3 {
+    color: #81c784;
+}
+
+.dark-mode .contact-details {
+    background: #2d2d2d;
+    color: #e0e0e0;
+}
+
+.dark-mode .contact-item {
+    color: #e0e0e0;
+}
+
+.dark-mode .contact-item i {
+    color: #4a7c59;
+}
+
+/* Additional Dark Mode Styles for Links and Other Elements */
+.dark-mode a {
+    color: #81c784;
+}
+
+.dark-mode a:hover {
+    color: #a5d6a7;
+}
+
+.dark-mode a:visited {
+    color: #66bb6a;
+}
+
+.dark-mode ul,
+.dark-mode ol {
+    color: #e0e0e0;
+}
+
+.dark-mode li {
+    color: #e0e0e0;
+}
+
+.dark-mode strong {
+    color: #ffffff;
+}
+
+.dark-mode code {
+    background: #1e1e1e;
+    color: #81c784;
+    border: 1px solid #444;
+}
+
+.dark-mode pre {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+.dark-mode blockquote {
+    background: #2d2d2d;
+    border-right: 4px solid #4a7c59;
+    color: #e0e0e0;
+}
+
+.dark-mode table {
+    background: #2d2d2d;
+    color: #e0e0e0;
+}
+
+.dark-mode table th {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-mode table td {
+    border-color: #444;
+}
+
+.dark-mode table tr:nth-child(even) {
+    background: #1e1e1e;
+}
+
+.dark-mode hr {
+    border-color: #444;
+}
+
+.dark-mode mark {
+    background: #4a7c59;
+    color: #ffffff;
+}
+
+.dark-mode .social-link {
+    color: #e0e0e0;
+}
+
+.dark-mode .social-link:hover {
+    color: #4a7c59;
+}
+
+.dark-mode .social-link-large {
+    background: #2d2d2d;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+.dark-mode .social-link-large:hover {
+    background: #1e1e1e;
+    color: #4a7c59;
+    border-color: #4a7c59;
+}
+
+/* Dark Mode for Form Elements */
+.dark-mode input[type="text"],
+.dark-mode input[type="email"],
+.dark-mode input[type="password"],
+.dark-mode input[type="number"],
+.dark-mode input[type="tel"],
+.dark-mode input[type="url"],
+.dark-mode input[type="search"],
+.dark-mode input[type="date"],
+.dark-mode input[type="time"],
+.dark-mode input[type="datetime-local"],
+.dark-mode textarea,
+.dark-mode select {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+.dark-mode input[type="text"]:focus,
+.dark-mode input[type="email"]:focus,
+.dark-mode input[type="password"]:focus,
+.dark-mode input[type="number"]:focus,
+.dark-mode input[type="tel"]:focus,
+.dark-mode input[type="url"]:focus,
+.dark-mode input[type="search"]:focus,
+.dark-mode input[type="date"]:focus,
+.dark-mode input[type="time"]:focus,
+.dark-mode input[type="datetime-local"]:focus,
+.dark-mode textarea:focus,
+.dark-mode select:focus {
+    border-color: #4a7c59;
+    box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.2);
+}
+
+.dark-mode input[type="checkbox"],
+.dark-mode input[type="radio"] {
+    accent-color: #4a7c59;
+}
+
+.dark-mode input[type="checkbox"]:checked,
+.dark-mode input[type="radio"]:checked {
+    background: #4a7c59;
+    border-color: #4a7c59;
+}
+
+/* Dark Mode for Buttons */
+.dark-mode button:not(.dark-mode-toggle):not(.btn-danger):not(.btn-secondary) {
+    background: #2d2d2d;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+.dark-mode button:not(.dark-mode-toggle):not(.btn-danger):not(.btn-secondary):hover {
+    background: #1e1e1e;
+    color: #4a7c59;
+    border-color: #4a7c59;
+}
+
+/* Dark Mode for Scrollbar (Webkit browsers) */
+.dark-mode ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 6px;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Dark Mode for Selection */
+.dark-mode ::selection {
+    background: #4a7c59;
+    color: #ffffff;
+}
+
+.dark-mode ::-moz-selection {
+    background: #4a7c59;
+    color: #ffffff;
 }
 
 /* Delete Account Page Responsive */

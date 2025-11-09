@@ -301,6 +301,10 @@ function initializeDarkMode() {
     // Apply dark mode if it was previously enabled
     if (darkMode) {
         document.body.classList.add('dark-mode');
+        document.documentElement.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+        document.documentElement.classList.remove('dark-mode');
     }
     
     // Create dark mode toggle button
@@ -333,15 +337,18 @@ function createDarkModeToggle() {
 
 function toggleDarkMode() {
     const body = document.body;
+    const html = document.documentElement;
     const isDarkMode = body.classList.contains('dark-mode');
     
     if (isDarkMode) {
         // Switch to light mode
         body.classList.remove('dark-mode');
+        html.classList.remove('dark-mode');
         localStorage.setItem('darkMode', 'false');
     } else {
         // Switch to dark mode
         body.classList.add('dark-mode');
+        html.classList.add('dark-mode');
         localStorage.setItem('darkMode', 'true');
     }
     
@@ -350,8 +357,10 @@ function toggleDarkMode() {
     
     // Add transition effect
     body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+    html.style.transition = 'background-color 0.3s ease, color 0.3s ease';
     setTimeout(() => {
         body.style.transition = '';
+        html.style.transition = '';
     }, 300);
 }
 

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق التسبيح | ديومكس</title>
+    <meta name="description" content="تطبيق التسبيح الذكي - تطبيق شامل للتسبيح والذكر مع ميزات متقدمة للعد والتتبع. تطبيق مجاني وآمن تماماً">
+    <meta name="keywords" content="تطبيق التسبيح, التسبيح, الأذكار, الذكر, عداد التسبيح, تطبيق إسلامي, ديومكس, تطبيقات ذكية">
+    <meta name="author" content="ديومكس">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="تطبيق التسبيح | ديومكس">
+    <meta property="og:description" content="تطبيق التسبيح الذكي - تطبيق شامل للتسبيح والذكر مع ميزات متقدمة للعد والتتبع">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tasbiah.diyomx.com">
+    <meta property="og:locale" content="ar_SA">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="تطبيق التسبيح | ديومكس">
+    <meta name="twitter:description" content="تطبيق التسبيح الذكي - تطبيق شامل للتسبيح والذكر مع ميزات متقدمة للعد والتتبع">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://diyomx.com/style.css">
+    
+    <style>
+        /* Tasbiah App Specific Styles */
+        .tasbiah-hero {
+            background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tasbiah-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .tasbiah-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .tasbiah-app-icon {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tasbiah-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tasbiah-hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .download-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: white;
+            color: #2c5530;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .download-btn i {
+            font-size: 1.5rem;
+        }
+        
+        .features-section-tasbiah {
+            padding: 4rem 2rem;
+            background: #f8f9fa;
+        }
+        
+        .features-grid-tasbiah {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card-tasbiah {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .feature-card-tasbiah:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon-tasbiah {
+            font-size: 3rem;
+            color: #4a7c59;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card-tasbiah h3 {
+            color: #2c5530;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .feature-card-tasbiah p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .privacy-highlight {
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 3px solid #4a7c59;
+            border-bottom: 3px solid #4a7c59;
+        }
+        
+        .privacy-highlight h2 {
+            color: #2c5530;
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-highlight p {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .privacy-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: #4a7c59;
+            color: white;
+            border-radius: 25px;
+            font-weight: 600;
+            margin: 0.5rem;
+        }
+        
+        .screenshots-section {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto 0;
+        }
+        
+        .screenshot-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .screenshot-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .screenshot-card h4 {
+            color: #2c5530;
+            margin-top: 1rem;
+        }
+        
+        /* Dark Mode Styles for Tasbiah Page */
+        .dark-mode .tasbiah-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        }
+        
+        .dark-mode .features-section-tasbiah {
+            background: #1e1e1e;
+        }
+        
+        .dark-mode .feature-card-tasbiah {
+            background: #2d2d2d;
+            color: #e0e0e0;
+        }
+        
+        .dark-mode .feature-card-tasbiah h3 {
+            color: #81c784;
+        }
+        
+        .dark-mode .feature-card-tasbiah p {
+            color: #cccccc;
+        }
+        
+        .dark-mode .privacy-highlight {
+            background: linear-gradient(135deg, #1e3a1e 0%, #2d4a2d 100%);
+            border-color: #4a7c59;
+        }
+        
+        .dark-mode .privacy-highlight h2 {
+            color: #81c784;
+        }
+        
+        .dark-mode .privacy-highlight p {
+            color: #e0e0e0;
+        }
+        
+        .dark-mode .screenshots-section {
+            background: #1e1e1e;
+        }
+        
+        .dark-mode .screenshot-card {
+            background: #2d2d2d;
+        }
+        
+        .dark-mode .screenshot-card h4 {
+            color: #81c784;
+        }
+        
+        .dark-mode .screenshot-placeholder {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        }
+        
+        .dark-mode .privacy-highlight a {
+            color: #81c784 !important;
+        }
+        
+        .dark-mode .privacy-highlight a:hover {
+            color: #a5d6a7 !important;
+        }
+        
+        .dark-mode .privacy-badge {
+            background: #4a7c59;
+            color: white;
+        }
+        
+        .dark-mode .download-btn {
+            background: #2d2d2d;
+            color: #e0e0e0;
+        }
+        
+        .dark-mode .download-btn:hover {
+            background: #1e1e1e;
+            color: #4a7c59;
+        }
+        
+        @media (max-width: 768px) {
+            .tasbiah-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tasbiah-hero p {
+                font-size: 1.2rem;
+            }
+            
+            .tasbiah-app-icon {
+                font-size: 4rem;
+            }
+            
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .download-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="site-branding">
+                <a href="https://diyomx.com" class="site-title">ديومكس</a>
+                <p class="site-description">تطبيق التسبيح</p>
+            </div>
+            <nav class="main-navigation">
+                <a href="https://diyomx.com">الرئيسية</a>
+                <a href="https://diyomx.com/about.html">من نحن</a>
+                <a href="https://diyomx.com/contact.html">اتصل بنا</a>
+                <a href="https://diyomx.com/privacy-tasbiah.html">سياسة الخصوصية</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="tasbiah-hero">
+        <div class="tasbiah-hero-content">
+            <div class="tasbiah-app-icon">
+                <i class="fas fa-mosque"></i>
+            </div>
+            <h1>تطبيق التسبيح</h1>
+            <p>تطبيق ذكي للتسبيح والذكر مع ميزات متقدمة للعد والتتبع</p>
+            <div class="download-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.diyomx.tasbiah" class="download-btn" target="_blank">
+                    <i class="fab fa-google-play"></i>
+                    <span>تحميل من Google Play</span>
+                </a>
+                <a href="https://apps.apple.com/app/tasbiah" class="download-btn" target="_blank">
+                    <i class="fab fa-apple"></i>
+                    <span>تحميل من App Store</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section-tasbiah">
+        <div class="container">
+            <h2 class="section-title">ميزات التطبيق</h2>
+            <div class="features-grid-tasbiah">
+                <div class="feature-card-tasbiah">
+                    <div class="feature-icon-tasbiah">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>عداد ذكي</h3>
+                    <p>عداد ذكي ودقيق للتسبيح مع إمكانية إعادة التعيين والاحتفاظ بالسجلات</p>
+                </div>
+                
+                <div class="feature-card-tasbiah">
+                    <div class="feature-icon-tasbiah">
+                        <i class="fas fa-book-quran"></i>
+                    </div>
+                    <h3>أذكار متنوعة</h3>
+                    <p>مجموعة شاملة من الأذكار والتسبيحات مع نصوصها الكاملة</p>
+                </div>
+                
+                <div class="feature-card-tasbiah">
+                    <div class="feature-icon-tasbiah">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>خصوصية كاملة</h3>
+                    <p>جميع بياناتك محفوظة محلياً على جهازك فقط - لا تسجيل دخول ولا بيانات شخصية</p>
+                </div>
+                
+                <div class="feature-card-tasbiah">
+                    <div class="feature-icon-tasbiah">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3>وضع ليلي</h3>
+                    <p>وضع ليلي مريح للعينين مع تصميم جميل ومتناسق</p>
+                </div>
+                
+                <div class="feature-card-tasbiah">
+                    <div class="feature-icon-tasbiah">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>تذكيرات</h3>
+                    <p>تذكيرات يومية للتسبيح والذكر في أوقات محددة</p>
+                </div>
+                
+                <div class="feature-card-tasbiah">
+                    <div class="feature-icon-tasbiah">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>إحصائيات</h3>
+                    <p>تتبع إحصائيات التسبيح اليومية والأسبوعية والشهرية</p>
+                </div>
+                
+                <div class="feature-card-tasbiah">
+                    <div class="feature-icon-tasbiah">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>تصميم جميل</h3>
+                    <p>تصميم عصري وجذاب مع ألوان هادئة ومريحة للعين</p>
+                </div>
+                
+                <div class="feature-card-tasbiah">
+                    <div class="feature-icon-tasbiah">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>مجاني تماماً</h3>
+                    <p>تطبيق مجاني بالكامل بدون اشتراكات أو رسوم مخفية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Highlight Section -->
+    <section class="privacy-highlight">
+        <div class="container">
+            <h2>خصوصيتك مهمة جداً</h2>
+            <p>نحن نؤمن بأهمية خصوصية بياناتك الروحية والشخصية. لذلك:</p>
+            <div>
+                <span class="privacy-badge">
+                    <i class="fas fa-lock"></i> لا تسجيل دخول
+                </span>
+                <span class="privacy-badge">
+                    <i class="fas fa-user-shield"></i> لا بيانات شخصية
+                </span>
+                <span class="privacy-badge">
+                    <i class="fas fa-database"></i> بيانات محلية فقط
+                </span>
+                <span class="privacy-badge">
+                    <i class="fas fa-server"></i> لا خوادم خارجية
+                </span>
+            </div>
+            <p style="margin-top: 2rem;">
+                <a href="https://diyomx.com/privacy-tasbiah.html" style="color: #2c5530; font-weight: 600; text-decoration: underline;">
+                    اقرأ سياسة الخصوصية الكاملة
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots-section">
+        <div class="container">
+            <h2 class="section-title">لقطات من التطبيق</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <div class="screenshot-placeholder">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>الشاشة الرئيسية</h4>
+                </div>
+                
+                <div class="screenshot-card">
+                    <div class="screenshot-placeholder">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h4>عداد التسبيح</h4>
+                </div>
+                
+                <div class="screenshot-card">
+                    <div class="screenshot-placeholder">
+                        <i class="fas fa-book-quran"></i>
+                    </div>
+                    <h4>الأذكار</h4>
+                </div>
+                
+                <div class="screenshot-card">
+                    <div class="screenshot-placeholder">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>الإحصائيات</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>تطبيق التسبيح</h3>
+                <p>تطبيق ذكي للتسبيح والذكر</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://diyomx.com">الرئيسية</a>
+                <a href="https://diyomx.com/about.html">من نحن</a>
+                <a href="https://diyomx.com/contact.html">اتصل بنا</a>
+                <a href="https://diyomx.com/privacy-tasbiah.html">سياسة الخصوصية</a>
+            </div>
+            <div class="footer-privacy-links">
+                <h4>روابط مهمة</h4>
+                <a href="https://diyomx.com/privacy-tasbiah.html">سياسة الخصوصية</a>
+                <a href="https://diyomx.com/delete-account.html">حذف الحساب</a>
+                <a href="https://diyomx.com/contact.html">ممارسة الحقوق</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://twitter.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/company/DIYOMX" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://youtube.com/@DIYOMX" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ديومكس. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://diyomx.com/script.js"></script>
+</body>
+</html>
+
