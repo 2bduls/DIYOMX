@@ -3337,8 +3337,22 @@ html.dark-mode body {
 .dark-mode [style*="color: #555"],
 .dark-mode [style*="color:#555"],
 .dark-mode [style*="color: #333"],
-.dark-mode [style*="color:#333"] {
+.dark-mode [style*="color:#333"],
+.dark-mode [style*="color: #666"],
+.dark-mode [style*="color:#666"],
+.dark-mode [style*="color: #000"],
+.dark-mode [style*="color:#000"],
+.dark-mode [style*="color: black"],
+.dark-mode [style*="color:black"] {
     color: #e0e0e0 !important;
+}
+
+/* Fix for links with inline color styles */
+.dark-mode a[style*="color: #2c5530"],
+.dark-mode a[style*="color:#2c5530"],
+.dark-mode a[style*="color: #333"],
+.dark-mode a[style*="color:#333"] {
+    color: #81c784 !important;
 }
 
 /* Universal fix for headings with inline styles */
@@ -3364,6 +3378,42 @@ html.dark-mode body {
 /* Fix for any div with inline styles */
 .dark-mode div[style*="background"]:not([style*="transparent"]) {
     background: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* Fix for privacy-card-content */
+.dark-mode .privacy-card-content {
+    background: transparent;
+    color: #e0e0e0;
+}
+
+.dark-mode .privacy-card-content ul {
+    color: #e0e0e0;
+}
+
+.dark-mode .privacy-card-content li {
+    color: #cccccc;
+}
+
+/* Fix for any remaining elements */
+.dark-mode .privacy-option-card .privacy-card-content h3,
+.dark-mode .privacy-option-card .privacy-card-content h4 {
+    color: #ffffff !important;
+}
+
+.dark-mode .privacy-option-card .privacy-card-content p {
+    color: #cccccc !important;
+}
+
+/* Additional comprehensive fixes */
+.dark-mode .privacy-card-content .privacy-features i {
+    color: #4a7c59 !important;
+}
+
+/* Fix for featured badge and security badge */
+.dark-mode .featured-badge,
+.dark-mode .security-badge {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%) !important;
+    color: white !important;
 }
 
 /* Delete Account Page Responsive */

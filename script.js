@@ -334,6 +334,95 @@ function initializeDarkMode() {
             }
         }
     }
+    
+    // Watch for dynamically added elements
+    if (darkMode) {
+        observeForNewElements();
+    }
+}
+
+// Global observer instance
+let darkModeObserver = null;
+
+// Observe DOM for new elements and apply dark mode styles
+function observeForNewElements() {
+    // Disconnect existing observer if any
+    if (darkModeObserver) {
+        darkModeObserver.disconnect();
+    }
+    
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    if (!isDarkMode) return;
+    
+    darkModeObserver = new MutationObserver(function(mutations) {
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        if (isDarkMode) {
+            // Check if any new elements with inline styles were added
+            mutations.forEach(function(mutation) {
+                mutation.addedNodes.forEach(function(node) {
+                    if (node.nodeType === 1) { // Element node
+                        // Check if the node itself has inline styles
+                        if (node.hasAttribute && node.hasAttribute('style')) {
+                            const style = node.getAttribute('style');
+                            if (style && (style.includes('color') || style.includes('background'))) {
+                                applyDarkModeToElement(node);
+                            }
+                        }
+                        // Check children
+                        const elementsWithStyles = node.querySelectorAll ? node.querySelectorAll('[style*="color"], [style*="background"]') : [];
+                        elementsWithStyles.forEach(applyDarkModeToElement);
+                    }
+                });
+            });
+        } else {
+            // Disconnect if dark mode is turned off
+            if (darkModeObserver) {
+                darkModeObserver.disconnect();
+                darkModeObserver = null;
+            }
+        }
+    });
+    
+    darkModeObserver.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+}
+
+// Apply dark mode to a single element
+function applyDarkModeToElement(el) {
+    if (!el || !el.hasAttribute) return;
+    
+    const style = el.getAttribute('style');
+    if (!style) return;
+    
+    const tagName = el.tagName.toLowerCase();
+    
+    // Save original style if not already saved
+    if (!originalStyles.has(el)) {
+        originalStyles.set(el, style);
+    }
+    
+    // Fix background colors
+    if (style.includes('background') && (style.includes('#f8f9fa') || style.includes('white') || style.includes('#fff'))) {
+        el.style.setProperty('background', 'rgba(255, 255, 255, 0.02)', 'important');
+    }
+    
+    // Fix text colors
+    if (style.includes('color')) {
+        const darkColors = ['#2c5530', '#333', '#555', '#666', '#000', 'black'];
+        const isDarkColor = darkColors.some(color => style.includes(color));
+        
+        if (isDarkColor) {
+            if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(tagName)) {
+                el.style.setProperty('color', '#ffffff', 'important');
+            } else if (tagName === 'a') {
+                el.style.setProperty('color', '#81c784', 'important');
+            } else {
+                el.style.setProperty('color', '#cccccc', 'important');
+            }
+        }
+    }
 }
 
 function createDarkModeToggle() {
@@ -377,6 +466,8 @@ function toggleDarkMode() {
         html.classList.add('dark-mode');
         localStorage.setItem('darkMode', 'true');
         applyDarkModeToInlineStyles();
+        // Start observing for new elements
+        observeForNewElements();
     }
     
     // Force reflow to ensure styles are applied
@@ -410,7 +501,7 @@ function applyDarkModeToInlineStyles() {
         if (style && !originalStyles.has(el)) {
             originalStyles.set(el, style);
         }
-        if (style && (style.includes('#f8f9fa') || style.includes('white'))) {
+        if (style && (style.includes('#f8f9fa') || style.includes('white') || style.includes('#fff'))) {
             el.style.setProperty('background', 'rgba(255, 255, 255, 0.02)', 'important');
         }
     });
@@ -421,7 +512,7 @@ function applyDarkModeToInlineStyles() {
         if (style && !originalStyles.has(el)) {
             originalStyles.set(el, style);
         }
-        if (style && (style.includes('#2c5530') || style.includes('#333') || style.includes('#555'))) {
+        if (style && (style.includes('#2c5530') || style.includes('#333') || style.includes('#555') || style.includes('#000'))) {
             el.style.setProperty('color', '#ffffff', 'important');
         }
     });
@@ -432,8 +523,19 @@ function applyDarkModeToInlineStyles() {
         if (style && !originalStyles.has(el)) {
             originalStyles.set(el, style);
         }
-        if (style && (style.includes('#555') || style.includes('#333') || style.includes('#666'))) {
+        if (style && (style.includes('#555') || style.includes('#333') || style.includes('#666') || style.includes('#000'))) {
             el.style.setProperty('color', '#cccccc', 'important');
+        }
+    });
+    
+    // Fix links with color styles
+    document.querySelectorAll('a[style*="color"]').forEach(el => {
+        const style = el.getAttribute('style');
+        if (style && !originalStyles.has(el)) {
+            originalStyles.set(el, style);
+        }
+        if (style && (style.includes('#2c5530') || style.includes('#333') || style.includes('#555'))) {
+            el.style.setProperty('color', '#81c784', 'important');
         }
     });
     
@@ -443,16 +545,59 @@ function applyDarkModeToInlineStyles() {
         if (style && !originalStyles.has(el)) {
             originalStyles.set(el, style);
         }
-        if (style && (style.includes('#f8f9fa') || style.includes('white'))) {
+        if (style && (style.includes('#f8f9fa') || style.includes('white') || style.includes('#fff'))) {
             el.style.setProperty('background', 'rgba(255, 255, 255, 0.02)', 'important');
+        }
+    });
+    
+    // Fix spans with color styles
+    document.querySelectorAll('span[style*="color"]').forEach(el => {
+        const style = el.getAttribute('style');
+        if (style && !originalStyles.has(el)) {
+            originalStyles.set(el, style);
+        }
+        if (style && (style.includes('#2c5530') || style.includes('#333') || style.includes('#555'))) {
+            el.style.setProperty('color', '#e0e0e0', 'important');
+        }
+    });
+    
+    // Fix any element with dark text colors
+    document.querySelectorAll('[style*="color: #"], [style*="color:#"]').forEach(el => {
+        const style = el.getAttribute('style');
+        if (!style) return;
+        
+        // Check if it's a dark color that needs to be lightened
+        const darkColors = ['#2c5530', '#333', '#555', '#666', '#000', 'black'];
+        const isDarkColor = darkColors.some(color => style.includes(color));
+        
+        if (isDarkColor && !originalStyles.has(el)) {
+            originalStyles.set(el, style);
+            
+            // Determine appropriate light color based on element type
+            const tagName = el.tagName.toLowerCase();
+            if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(tagName)) {
+                el.style.setProperty('color', '#ffffff', 'important');
+            } else if (tagName === 'a') {
+                el.style.setProperty('color', '#81c784', 'important');
+            } else {
+                el.style.setProperty('color', '#cccccc', 'important');
+            }
         }
     });
 }
 
 function restoreInlineStyles() {
+    // Disconnect observer
+    if (darkModeObserver) {
+        darkModeObserver.disconnect();
+        darkModeObserver = null;
+    }
+    
     // Restore original styles
     originalStyles.forEach((originalStyle, el) => {
-        el.setAttribute('style', originalStyle);
+        if (el && el.setAttribute) {
+            el.setAttribute('style', originalStyle);
+        }
     });
     originalStyles.clear();
 }
