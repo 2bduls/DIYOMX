@@ -2871,6 +2871,386 @@ html.dark-mode body {
     color: #ffffff;
 }
 
+/* Comprehensive Dark Mode Fixes - Cover All Missing Elements */
+.dark-mode .container {
+    background: transparent;
+}
+
+.dark-mode .content-section {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 4rem 2rem;
+    color: #e0e0e0;
+}
+
+.dark-mode .content-section h2,
+.dark-mode .content-section h3 {
+    color: #ffffff !important;
+}
+
+.dark-mode .content-section p {
+    color: #cccccc !important;
+}
+
+/* Tasbiah Page Specific Dark Mode */
+.dark-mode .tasbiah-hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    color: #e0e0e0;
+}
+
+.dark-mode .tasbiah-hero h1 {
+    color: #ffffff !important;
+}
+
+.dark-mode .tasbiah-hero p {
+    color: #cccccc !important;
+}
+
+.dark-mode .features-section-tasbiah {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid #333;
+}
+
+.dark-mode .feature-card-tasbiah {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid #333;
+    color: #e0e0e0;
+}
+
+.dark-mode .feature-card-tasbiah h3 {
+    color: #ffffff !important;
+}
+
+.dark-mode .feature-card-tasbiah p {
+    color: #cccccc !important;
+}
+
+.dark-mode .privacy-highlight {
+    background: linear-gradient(135deg, #1e3a1e 0%, #2d4a2d 100%) !important;
+    border-color: #4a7c59;
+}
+
+.dark-mode .privacy-highlight h2 {
+    color: #81c784 !important;
+}
+
+.dark-mode .privacy-highlight p {
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .privacy-badge {
+    background: #4a7c59 !important;
+    color: white !important;
+}
+
+.dark-mode .screenshots-section {
+    background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.dark-mode .screenshot-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid #333;
+}
+
+.dark-mode .screenshot-card h4 {
+    color: #ffffff !important;
+}
+
+.dark-mode .screenshot-placeholder {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    color: white;
+}
+
+.dark-mode .faq-section {
+    background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.dark-mode .faq-item {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid #333;
+    border-right: 4px solid #4a7c59;
+}
+
+.dark-mode .faq-question {
+    color: #81c784 !important;
+}
+
+.dark-mode .faq-answer {
+    color: #cccccc !important;
+}
+
+.dark-mode .download-btn {
+    background: #2d2d2d !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #444;
+}
+
+.dark-mode .download-btn:hover {
+    background: #1e1e1e !important;
+    color: #4a7c59 !important;
+    border-color: #4a7c59;
+}
+
+/* Fix for all sections that might have white backgrounds */
+.dark-mode section {
+    background: transparent !important;
+}
+
+.dark-mode .about-intro {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid #333;
+    color: #e0e0e0;
+}
+
+.dark-mode .about-intro h2 {
+    color: #ffffff !important;
+}
+
+.dark-mode .about-intro p {
+    color: #cccccc !important;
+}
+
+.dark-mode .mission-item {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid #333;
+    border-left: 4px solid #4a7c59;
+}
+
+.dark-mode .mission-item h3 {
+    color: #ffffff !important;
+}
+
+.dark-mode .mission-item p {
+    color: #cccccc !important;
+}
+
+.dark-mode .timeline-content h4 {
+    color: #ffffff !important;
+}
+
+.dark-mode .timeline-content p {
+    color: #cccccc !important;
+}
+
+.dark-mode .timeline-year {
+    background: #4a7c59 !important;
+    color: white;
+}
+
+.dark-mode .member-role {
+    color: #81c784 !important;
+}
+
+.dark-mode .member-bio {
+    color: #cccccc !important;
+}
+
+/* Fix for contact form section */
+.dark-mode .contact-form-section,
+.dark-mode .contact-info-section {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.dark-mode .contact-form-section h2,
+.dark-mode .contact-info-section h2 {
+    color: #ffffff !important;
+}
+
+.dark-mode .contact-info-item {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid #333;
+}
+
+.dark-mode .contact-details h4 {
+    color: #ffffff !important;
+}
+
+.dark-mode .contact-details p {
+    color: #cccccc !important;
+}
+
+/* Fix for FAQ section */
+.dark-mode .faq-section h2 {
+    color: #ffffff !important;
+}
+
+.dark-mode .faq-item h4 {
+    color: #81c784 !important;
+}
+
+.dark-mode .faq-item p {
+    color: #cccccc !important;
+}
+
+/* Fix for social section */
+.dark-mode .social-section h2 {
+    color: #ffffff !important;
+}
+
+/* Fix for any remaining white backgrounds */
+.dark-mode .privacy-subsection {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid #333;
+    border-left: 4px solid #4a7c59;
+}
+
+.dark-mode .privacy-subsection h3 {
+    color: #ffffff !important;
+}
+
+.dark-mode .privacy-subsection a {
+    color: #81c784 !important;
+}
+
+.dark-mode .privacy-subsection a:hover {
+    color: #a5d6a7 !important;
+}
+
+/* Fix for timeline */
+.dark-mode .timeline:before {
+    background: #4a7c59;
+}
+
+.dark-mode .timeline-item:before {
+    background: #4a7c59;
+}
+
+/* Fix for value items */
+.dark-mode .value-item h4 {
+    color: #ffffff !important;
+}
+
+.dark-mode .value-item p {
+    color: #cccccc !important;
+}
+
+.dark-mode .value-item i {
+    color: #4a7c59 !important;
+}
+
+/* Ensure all text in dark mode is visible */
+.dark-mode *:not(.dark-mode-toggle):not(.btn-primary):not(.btn-secondary):not(.btn-danger) {
+    color: inherit;
+}
+
+/* Fix for any inline styles or specific elements */
+.dark-mode [style*="background"]:not([style*="transparent"]) {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark-mode [style*="color"]:not([style*="white"]):not([style*="#fff"]) {
+    color: #e0e0e0 !important;
+}
+
+/* Fix for summary items */
+.dark-mode .summary-item h4 {
+    color: #ffffff !important;
+}
+
+.dark-mode .summary-item p {
+    color: #cccccc !important;
+}
+
+/* Fix for process steps */
+.dark-mode .process-steps ol,
+.dark-mode .process-steps ul {
+    color: #e0e0e0;
+}
+
+.dark-mode .process-steps li {
+    color: #cccccc;
+}
+
+/* Fix for alternative options */
+.dark-mode .alternative-options ul {
+    color: #e0e0e0;
+}
+
+.dark-mode .alternative-options li {
+    color: #cccccc;
+}
+
+/* Fix for legal rights */
+.dark-mode .legal-rights ul {
+    color: #e0e0e0;
+}
+
+.dark-mode .legal-rights li {
+    color: #cccccc;
+}
+
+/* Ensure all headings are visible */
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode h4, 
+.dark-mode h5, 
+.dark-mode h6 {
+    color: #ffffff !important;
+}
+
+/* Ensure all paragraphs and text are visible */
+.dark-mode p,
+.dark-mode span:not(.social-link):not(.btn):not(.dark-mode-toggle),
+.dark-mode div:not(.dark-mode-toggle):not(.btn) {
+    color: #e0e0e0;
+}
+
+/* Global dark mode override for any element with white background */
+.dark-mode * {
+    box-sizing: border-box;
+}
+
+/* Force dark backgrounds for common white background classes */
+.dark-mode [class*="bg-white"],
+.dark-mode [class*="background-white"],
+.dark-mode [style*="background: white"],
+.dark-mode [style*="background: #fff"],
+.dark-mode [style*="background: #ffffff"] {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Force dark text for common light text colors */
+.dark-mode [style*="color: #333"],
+.dark-mode [style*="color: #000"],
+.dark-mode [style*="color: black"] {
+    color: #e0e0e0 !important;
+}
+
+/* Fix for any element with inline background colors */
+.dark-mode [style*="background-color: white"],
+.dark-mode [style*="background-color: #fff"],
+.dark-mode [style*="background-color: #ffffff"] {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Fix for any list items */
+.dark-mode li {
+    color: #cccccc;
+}
+
+/* Fix for any remaining white or light backgrounds */
+.dark-mode [class*="white"],
+.dark-mode [class*="light"],
+.dark-mode [class*="bg-"]:not([class*="dark"]) {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Fix for scroll to top button */
+.dark-mode .scroll-to-top {
+    background: #4a7c59 !important;
+    color: white !important;
+    border: 1px solid #333;
+}
+
+.dark-mode .scroll-to-top:hover {
+    background: #5a8c69 !important;
+}
+
 /* Delete Account Page Responsive */
 @media (max-width: 768px) {
     .delete-account-content {

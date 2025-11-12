@@ -307,8 +307,25 @@ function initializeDarkMode() {
         document.documentElement.classList.remove('dark-mode');
     }
     
+    // Force reflow to ensure styles are applied immediately
+    void document.body.offsetHeight;
+    
     // Create dark mode toggle button
     createDarkModeToggle();
+    
+    // Listen for system preference changes (optional)
+    if (window.matchMedia) {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        // Only auto-apply if user hasn't manually set a preference
+        if (!localStorage.getItem('darkMode')) {
+            if (mediaQuery.matches) {
+                document.body.classList.add('dark-mode');
+                document.documentElement.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'true');
+                updateDarkModeIcon();
+            }
+        }
+    }
 }
 
 function createDarkModeToggle() {
@@ -352,6 +369,9 @@ function toggleDarkMode() {
         localStorage.setItem('darkMode', 'true');
     }
     
+    // Force reflow to ensure styles are applied
+    void body.offsetHeight;
+    
     // Update icon
     updateDarkModeIcon();
     
@@ -362,6 +382,12 @@ function toggleDarkMode() {
         body.style.transition = '';
         html.style.transition = '';
     }, 300);
+    
+    // Trigger a custom event for any components that need to react
+    const event = new CustomEvent('darkModeToggle', {
+        detail: { isDarkMode: !isDarkMode }
+    });
+    document.dispatchEvent(event);
 }
 
 function updateDarkModeIcon() {
