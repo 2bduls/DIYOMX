@@ -3251,6 +3251,121 @@ html.dark-mode body {
     background: #5a8c69 !important;
 }
 
+/* Fix for inline styles - Override all inline styles in dark mode */
+.dark-mode section[style*="background"] {
+    background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.dark-mode section[style*="background: #f8f9fa"],
+.dark-mode section[style*="background:#f8f9fa"] {
+    background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.dark-mode h2[style*="color: #2c5530"],
+.dark-mode h2[style*="color:#2c5530"] {
+    color: #ffffff !important;
+}
+
+.dark-mode p[style*="color: #555"],
+.dark-mode p[style*="color:#555"] {
+    color: #cccccc !important;
+}
+
+.dark-mode div[style*="max-width"] {
+    background: transparent !important;
+}
+
+/* Fix for content section with inline styles */
+.dark-mode section[style*="padding: 4rem 2rem"] {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid #333;
+    border-radius: 15px;
+}
+
+.dark-mode section[style*="padding: 4rem 2rem"] h2 {
+    color: #ffffff !important;
+}
+
+.dark-mode section[style*="padding: 4rem 2rem"] p {
+    color: #cccccc !important;
+}
+
+/* Fix for mission and vision items */
+.dark-mode .mission-item h3 {
+    color: #ffffff !important;
+}
+
+.dark-mode .mission-item p {
+    color: #cccccc !important;
+}
+
+/* Fix for services section */
+.dark-mode .services-section h2 {
+    color: #ffffff !important;
+}
+
+.dark-mode .service-item h4 {
+    color: #ffffff !important;
+}
+
+.dark-mode .service-item p {
+    color: #cccccc !important;
+}
+
+/* Fix for values section */
+.dark-mode .values-section h2 {
+    color: #ffffff !important;
+}
+
+/* Fix for team section */
+.dark-mode .team-section h2 {
+    color: #ffffff !important;
+}
+
+.dark-mode .team-member h4 {
+    color: #ffffff !important;
+}
+
+/* Fix for timeline section */
+.dark-mode .timeline-section h2 {
+    color: #ffffff !important;
+}
+
+/* Universal fix for any element with inline color styles */
+.dark-mode [style*="color: #2c5530"],
+.dark-mode [style*="color:#2c5530"],
+.dark-mode [style*="color: #555"],
+.dark-mode [style*="color:#555"],
+.dark-mode [style*="color: #333"],
+.dark-mode [style*="color:#333"] {
+    color: #e0e0e0 !important;
+}
+
+/* Universal fix for headings with inline styles */
+.dark-mode h1[style*="color"],
+.dark-mode h2[style*="color"],
+.dark-mode h3[style*="color"],
+.dark-mode h4[style*="color"],
+.dark-mode h5[style*="color"],
+.dark-mode h6[style*="color"] {
+    color: #ffffff !important;
+}
+
+/* Universal fix for paragraphs with inline styles */
+.dark-mode p[style*="color"] {
+    color: #cccccc !important;
+}
+
+/* Universal fix for sections with background inline styles */
+.dark-mode section[style*="background"] {
+    background: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* Fix for any div with inline styles */
+.dark-mode div[style*="background"]:not([style*="transparent"]) {
+    background: rgba(255, 255, 255, 0.02) !important;
+}
+
 /* Delete Account Page Responsive */
 @media (max-width: 768px) {
     .delete-account-content {

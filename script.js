@@ -302,9 +302,14 @@ function initializeDarkMode() {
     if (darkMode) {
         document.body.classList.add('dark-mode');
         document.documentElement.classList.add('dark-mode');
+        // Apply dark mode to inline styles after a short delay to ensure DOM is ready
+        setTimeout(() => {
+            applyDarkModeToInlineStyles();
+        }, 100);
     } else {
         document.body.classList.remove('dark-mode');
         document.documentElement.classList.remove('dark-mode');
+        restoreInlineStyles();
     }
     
     // Force reflow to ensure styles are applied immediately
@@ -322,6 +327,9 @@ function initializeDarkMode() {
                 document.body.classList.add('dark-mode');
                 document.documentElement.classList.add('dark-mode');
                 localStorage.setItem('darkMode', 'true');
+                setTimeout(() => {
+                    applyDarkModeToInlineStyles();
+                }, 100);
                 updateDarkModeIcon();
             }
         }
@@ -362,11 +370,13 @@ function toggleDarkMode() {
         body.classList.remove('dark-mode');
         html.classList.remove('dark-mode');
         localStorage.setItem('darkMode', 'false');
+        restoreInlineStyles();
     } else {
         // Switch to dark mode
         body.classList.add('dark-mode');
         html.classList.add('dark-mode');
         localStorage.setItem('darkMode', 'true');
+        applyDarkModeToInlineStyles();
     }
     
     // Force reflow to ensure styles are applied
@@ -388,6 +398,63 @@ function toggleDarkMode() {
         detail: { isDarkMode: !isDarkMode }
     });
     document.dispatchEvent(event);
+}
+
+// Store original inline styles
+const originalStyles = new Map();
+
+function applyDarkModeToInlineStyles() {
+    // Fix sections with background colors
+    document.querySelectorAll('section[style*="background"]').forEach(el => {
+        const style = el.getAttribute('style');
+        if (style && !originalStyles.has(el)) {
+            originalStyles.set(el, style);
+        }
+        if (style && (style.includes('#f8f9fa') || style.includes('white'))) {
+            el.style.setProperty('background', 'rgba(255, 255, 255, 0.02)', 'important');
+        }
+    });
+    
+    // Fix headings with color styles
+    document.querySelectorAll('h1[style*="color"], h2[style*="color"], h3[style*="color"], h4[style*="color"], h5[style*="color"], h6[style*="color"]').forEach(el => {
+        const style = el.getAttribute('style');
+        if (style && !originalStyles.has(el)) {
+            originalStyles.set(el, style);
+        }
+        if (style && (style.includes('#2c5530') || style.includes('#333') || style.includes('#555'))) {
+            el.style.setProperty('color', '#ffffff', 'important');
+        }
+    });
+    
+    // Fix paragraphs with color styles
+    document.querySelectorAll('p[style*="color"]').forEach(el => {
+        const style = el.getAttribute('style');
+        if (style && !originalStyles.has(el)) {
+            originalStyles.set(el, style);
+        }
+        if (style && (style.includes('#555') || style.includes('#333') || style.includes('#666'))) {
+            el.style.setProperty('color', '#cccccc', 'important');
+        }
+    });
+    
+    // Fix divs with background colors
+    document.querySelectorAll('div[style*="background"]').forEach(el => {
+        const style = el.getAttribute('style');
+        if (style && !originalStyles.has(el)) {
+            originalStyles.set(el, style);
+        }
+        if (style && (style.includes('#f8f9fa') || style.includes('white'))) {
+            el.style.setProperty('background', 'rgba(255, 255, 255, 0.02)', 'important');
+        }
+    });
+}
+
+function restoreInlineStyles() {
+    // Restore original styles
+    originalStyles.forEach((originalStyle, el) => {
+        el.setAttribute('style', originalStyle);
+    });
+    originalStyles.clear();
 }
 
 function updateDarkModeIcon() {
