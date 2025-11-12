@@ -1,0 +1,16 @@
+/* TEAM */
+Developer: ديومكس
+Contact: diyomx [at] gmail.com
+Twitter: @DIYOMX
+Location: Saudi Arabia
+
+/* THANKS */
+Font Awesome: https://fontawesome.com
+Google Fonts: https://fonts.google.com
+
+/* SITE */
+Last update: 2025/01/27
+Standards: HTML5, CSS3, JavaScript
+Components: Font Awesome, Google Fonts
+Software: Visual Studio Code, Git
+
