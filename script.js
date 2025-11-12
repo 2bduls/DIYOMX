@@ -584,6 +584,25 @@ function applyDarkModeToInlineStyles() {
             }
         }
     });
+    
+    // Force re-apply dark mode classes to ensure all styles are applied
+    setTimeout(() => {
+        const body = document.body;
+        const html = document.documentElement;
+        if (body.classList.contains('dark-mode')) {
+            // Force a reflow to ensure all CSS is applied
+            void body.offsetHeight;
+            void html.offsetHeight;
+            
+            // Re-apply dark mode to ensure all elements are styled
+            body.classList.remove('dark-mode');
+            html.classList.remove('dark-mode');
+            setTimeout(() => {
+                body.classList.add('dark-mode');
+                html.classList.add('dark-mode');
+            }, 10);
+        }
+    }, 50);
 }
 
 function restoreInlineStyles() {

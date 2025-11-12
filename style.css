@@ -3416,6 +3416,526 @@ html.dark-mode body {
     color: white !important;
 }
 
+/* ============================================
+   COMPREHENSIVE DARK MODE FIXES FOR ALL PAGES
+   ============================================ */
+
+/* Contact Page - Complete Dark Mode Fixes */
+.dark-mode .contact-content {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid #333;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .contact-grid {
+    background: transparent;
+}
+
+.dark-mode .contact-form-section {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.dark-mode .contact-form-section h2 {
+    color: #ffffff !important;
+}
+
+.dark-mode .contact-info-section {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.dark-mode .contact-info-section h2 {
+    color: #ffffff !important;
+}
+
+.dark-mode .contact-form {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid #333;
+}
+
+.dark-mode .contact-info-item {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid #333;
+}
+
+.dark-mode .contact-info-item .contact-details h4 {
+    color: #ffffff !important;
+}
+
+.dark-mode .contact-info-item .contact-details p {
+    color: #cccccc !important;
+}
+
+/* FAQ Section in Contact Page */
+.dark-mode .faq-section {
+    background: transparent;
+}
+
+.dark-mode .faq-section h2 {
+    color: #ffffff !important;
+}
+
+.dark-mode .faq-grid {
+    background: transparent;
+}
+
+.dark-mode .faq-item {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid #333;
+}
+
+.dark-mode .faq-item h4 {
+    color: #81c784 !important;
+}
+
+.dark-mode .faq-item p {
+    color: #cccccc !important;
+}
+
+/* Social Section in Contact Page */
+.dark-mode .social-section {
+    background: transparent;
+}
+
+.dark-mode .social-section h2 {
+    color: #ffffff !important;
+}
+
+.dark-mode .social-links {
+    background: transparent;
+}
+
+/* Privacy Options Page - Complete Dark Mode Fixes */
+.dark-mode .privacy-options-content {
+    background: transparent;
+}
+
+.dark-mode .privacy-intro {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid #333 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .privacy-intro p {
+    color: #cccccc !important;
+}
+
+.dark-mode .privacy-options-grid {
+    background: transparent;
+}
+
+.dark-mode .privacy-option-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid #333 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .privacy-option-card:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: #4a7c59 !important;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .privacy-option-card.featured {
+    background: linear-gradient(135deg, rgba(74, 124, 89, 0.1) 0%, rgba(90, 140, 105, 0.1) 100%) !important;
+    border-color: #4a7c59 !important;
+}
+
+.dark-mode .privacy-card-header h3 {
+    color: #ffffff !important;
+}
+
+.dark-mode .privacy-card-header p {
+    color: #cccccc !important;
+}
+
+.dark-mode .privacy-card-content {
+    background: transparent !important;
+    color: #e0e0e0;
+}
+
+.dark-mode .privacy-features {
+    background: transparent;
+    color: #e0e0e0;
+}
+
+.dark-mode .privacy-features li {
+    color: #cccccc !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .privacy-features li:last-child {
+    border-bottom: none;
+}
+
+.dark-mode .privacy-features i {
+    color: #4a7c59 !important;
+}
+
+.dark-mode .privacy-card-footer {
+    background: transparent;
+}
+
+/* Privacy Summary Section */
+.dark-mode .privacy-summary {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid #333 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .privacy-summary h2 {
+    color: #ffffff !important;
+}
+
+.dark-mode .privacy-summary h2 i {
+    color: #4a7c59 !important;
+}
+
+.dark-mode .summary-grid {
+    background: transparent;
+}
+
+.dark-mode .summary-item {
+    background: transparent;
+}
+
+.dark-mode .summary-icon {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%) !important;
+    color: white;
+}
+
+/* Privacy Contact Section */
+.dark-mode .privacy-contact {
+    background: linear-gradient(135deg, rgba(74, 124, 89, 0.2) 0%, rgba(90, 140, 105, 0.2) 100%) !important;
+    border: 1px solid #4a7c59 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .privacy-contact h2 {
+    color: #ffffff !important;
+}
+
+.dark-mode .privacy-contact h2 i {
+    color: #4a7c59 !important;
+}
+
+.dark-mode .privacy-contact p {
+    color: #cccccc !important;
+}
+
+.dark-mode .contact-buttons {
+    background: transparent;
+}
+
+/* Privacy Policy Pages (tasbiah, electric, car, money, website) - Complete Fixes */
+.dark-mode .privacy-content {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid #333 !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .privacy-intro {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid #333 !important;
+    border-left: 4px solid #4a7c59 !important;
+}
+
+.dark-mode .privacy-intro p {
+    color: #cccccc !important;
+}
+
+.dark-mode .app-badge {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%) !important;
+    color: white !important;
+    box-shadow: 0 4px 8px rgba(74, 124, 89, 0.4);
+}
+
+.dark-mode .privacy-section {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid #333 !important;
+}
+
+.dark-mode .privacy-section:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: #4a7c59 !important;
+    box-shadow: 0 5px 20px rgba(74, 124, 89, 0.2);
+}
+
+.dark-mode .privacy-section h2 {
+    color: #ffffff !important;
+}
+
+.dark-mode .privacy-section h2 i {
+    color: #4a7c59 !important;
+}
+
+.dark-mode .privacy-subsection {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid #333 !important;
+    border-left: 4px solid #4a7c59 !important;
+}
+
+.dark-mode .privacy-subsection h3 {
+    color: #ffffff !important;
+}
+
+.dark-mode .privacy-subsection p {
+    color: #cccccc !important;
+}
+
+.dark-mode .privacy-subsection ul {
+    background: transparent;
+}
+
+.dark-mode .privacy-subsection li {
+    color: #cccccc !important;
+}
+
+.dark-mode .privacy-subsection li:before {
+    color: #4a7c59 !important;
+}
+
+.dark-mode .privacy-subsection a {
+    color: #81c784 !important;
+}
+
+.dark-mode .privacy-subsection a:hover {
+    color: #a5d6a7 !important;
+}
+
+.dark-mode .contact-details {
+    background: transparent;
+}
+
+.dark-mode .contact-item {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid #333 !important;
+}
+
+.dark-mode .contact-item:hover {
+    border-color: #4a7c59 !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark-mode .contact-item i {
+    color: #4a7c59 !important;
+}
+
+.dark-mode .contact-item span {
+    color: #cccccc !important;
+}
+
+.dark-mode .privacy-footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    border: 1px solid #333 !important;
+    color: #e0e0e0;
+}
+
+.dark-mode .privacy-footer p {
+    color: #cccccc !important;
+}
+
+.dark-mode .privacy-footer strong {
+    color: #4a7c59 !important;
+}
+
+/* Fix for all select elements */
+.dark-mode select {
+    background: #1e1e1e !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+
+.dark-mode select option {
+    background: #1e1e1e !important;
+    color: #e0e0e0 !important;
+}
+
+.dark-mode select:focus {
+    border-color: #4a7c59 !important;
+    box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.2) !important;
+}
+
+/* Fix for all textarea elements */
+.dark-mode textarea {
+    background: #1e1e1e !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+
+.dark-mode textarea:focus {
+    border-color: #4a7c59 !important;
+    box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.2) !important;
+}
+
+.dark-mode textarea::placeholder {
+    color: #888 !important;
+}
+
+/* Additional comprehensive fixes for any remaining elements */
+.dark-mode .container {
+    background: transparent !important;
+}
+
+.dark-mode main {
+    background: transparent !important;
+}
+
+.dark-mode section:not(.page-header) {
+    background: transparent !important;
+}
+
+/* ============================================
+   COMPREHENSIVE BASE ELEMENT FIXES
+   ============================================ */
+
+/* Fix all white backgrounds in dark mode */
+.dark-mode .app-card,
+.dark-mode .achievements-section,
+.dark-mode .youtube-section,
+.dark-mode .features-section,
+.dark-mode .about-content,
+.dark-mode .service-item,
+.dark-mode .value-item,
+.dark-mode .team-member,
+.dark-mode .contact-content,
+.dark-mode .faq-item {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid #333 !important;
+}
+
+/* Fix all text colors in dark mode */
+.dark-mode .app-title,
+.dark-mode .app-description,
+.dark-mode .app-features li,
+.dark-mode .section-title,
+.dark-mode .achievement-label,
+.dark-mode .youtube-card h3,
+.dark-mode .youtube-card p,
+.dark-mode .youtube-intro p,
+.dark-mode .feature-item h3,
+.dark-mode .feature-item p,
+.dark-mode .about-intro h2,
+.dark-mode .about-intro p,
+.dark-mode .mission-item h3,
+.dark-mode .mission-item p,
+.dark-mode .service-item h4,
+.dark-mode .service-item p,
+.dark-mode .value-item h4,
+.dark-mode .value-item p,
+.dark-mode .team-member h4,
+.dark-mode .member-bio,
+.dark-mode .timeline-content h4,
+.dark-mode .timeline-content p {
+    color: inherit !important;
+}
+
+/* Fix status badges */
+.dark-mode .status-current {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%) !important;
+    color: white !important;
+}
+
+.dark-mode .status-future {
+    background: linear-gradient(135deg, #6c757d 0%, #7c858c 100%) !important;
+    color: white !important;
+}
+
+.dark-mode .status-development {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%) !important;
+    color: white !important;
+}
+
+/* Fix all icons in dark mode */
+.dark-mode .feature-icon,
+.dark-mode .mission-icon,
+.dark-mode .service-icon,
+.dark-mode .value-item i,
+.dark-mode .member-avatar,
+.dark-mode .privacy-icon,
+.dark-mode .summary-icon {
+    background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%) !important;
+    color: white !important;
+}
+
+/* Fix all borders and shadows */
+.dark-mode .app-card,
+.dark-mode .achievements-section,
+.dark-mode .youtube-section,
+.dark-mode .features-section,
+.dark-mode .about-content,
+.dark-mode .service-item,
+.dark-mode .value-item,
+.dark-mode .team-member,
+.dark-mode .contact-content,
+.dark-mode .faq-item,
+.dark-mode .privacy-option-card,
+.dark-mode .privacy-content,
+.dark-mode .privacy-section,
+.dark-mode .privacy-subsection {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Fix hover states in dark mode */
+.dark-mode .app-card:hover,
+.dark-mode .youtube-card:hover,
+.dark-mode .feature-item:hover,
+.dark-mode .service-item:hover,
+.dark-mode .value-item:hover,
+.dark-mode .team-member:hover,
+.dark-mode .faq-item:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: #4a7c59 !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Universal text color fix - override any remaining dark text */
+/* Note: Using inherit to respect specific rules, but ensuring base colors */
+
+/* But ensure headings are white */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+    color: #ffffff !important;
+}
+
+/* Ensure paragraphs and spans are light - but respect specific rules */
+.dark-mode p:not(.btn):not(.dark-mode-toggle):not([style*="color"]),
+.dark-mode span:not(.btn):not(.dark-mode-toggle):not(.social-link):not([style*="color"]) {
+    color: #cccccc !important;
+}
+
+/* Ensure all list items are light */
+.dark-mode li:not([style*="color"]) {
+    color: #cccccc !important;
+}
+
+/* Fix for any remaining white backgrounds using attribute selectors */
+.dark-mode [class*="white"],
+.dark-mode [class*="bg-white"],
+.dark-mode [class*="light-bg"] {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Force all sections to have transparent or dark background */
+.dark-mode section {
+    background: transparent !important;
+}
+
+/* Fix for any divs with white backgrounds */
+.dark-mode div[class*="white"],
+.dark-mode div[class*="bg-"]:not([class*="dark"]) {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
 /* Delete Account Page Responsive */
 @media (max-width: 768px) {
     .delete-account-content {
