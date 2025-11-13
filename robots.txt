@@ -49,10 +49,19 @@ Allow: /index.html
 Allow: /about.html
 Allow: /contact.html
 Allow: /tasbiah.html
+Allow: /delete-account.html
 Allow: /style.css
 Allow: /script.js
 Allow: /achievements-data.json
 Allow: /CNAME
+
+# السماح بملفات سياسة الخصوصية
+Allow: /privacy-tasbiah.html
+Allow: /privacy-electric.html
+Allow: /privacy-car.html
+Allow: /privacy-money.html
+Allow: /privacy-website.html
+Allow: /privacy-options.html
 
 # خريطة الموقع
 Sitemap: https://diyomx.com/sitemap.xml
