@@ -35,6 +35,22 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    position: relative;
+}
+
+.header-container .site-branding {
+    flex: 1;
+}
+
+.header-container .main-navigation {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container .language-toggle,
+.header-container .dark-mode-toggle {
+    flex-shrink: 0;
 }
 
 .site-title {
@@ -2407,12 +2423,14 @@ body.ltr .main-navigation {
     flex-direction: row-reverse;
 }
 
-body.ltr .language-toggle {
+body.ltr .header-container .language-toggle {
+    order: 2;
     margin-left: 0;
     margin-right: 1rem;
 }
 
-body.ltr .dark-mode-toggle {
+body.ltr .header-container .dark-mode-toggle {
+    order: 1;
     margin-left: 0;
     margin-right: 1rem;
 }

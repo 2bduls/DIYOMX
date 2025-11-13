@@ -437,7 +437,8 @@ function createDarkModeToggle() {
     const toggle = document.createElement('button');
     toggle.className = 'dark-mode-toggle';
     toggle.innerHTML = '<i class="fas fa-moon"></i>';
-    toggle.title = 'تبديل الوضع الليلي';
+    const currentLang = localStorage.getItem('language') || 'ar';
+    toggle.title = currentLang === 'ar' ? 'تبديل الوضع الليلي' : 'Toggle Dark Mode';
     
     // Add toggle to header
     const headerContainer = document.querySelector('.header-container');
@@ -646,15 +647,31 @@ function initializeLanguageToggle() {
     // Check for saved language preference or default to Arabic
     const savedLang = localStorage.getItem('language') || 'ar';
     
-    // Apply language if it was previously set
+    // Apply language if it was previously set (but don't translate yet, wait for DOM)
     if (savedLang === 'en') {
-        switchToEnglish();
+        // Update HTML attributes immediately
+        document.documentElement.lang = 'en';
+        document.documentElement.dir = 'ltr';
+        document.body.classList.remove('rtl');
+        document.body.classList.add('ltr');
     } else {
-        switchToArabic();
+        // Ensure Arabic is set
+        document.documentElement.lang = 'ar';
+        document.documentElement.dir = 'rtl';
+        document.body.classList.remove('ltr');
+        document.body.classList.add('rtl');
     }
     
-    // Create language toggle button
-    createLanguageToggle();
+    // Create language toggle button (must be after dark mode toggle is created)
+    setTimeout(() => {
+        createLanguageToggle();
+        // Translate after a short delay to ensure DOM is ready
+        if (savedLang === 'en') {
+            translatePage('en');
+        } else {
+            translatePage('ar');
+        }
+    }, 100);
 }
 
 function createLanguageToggle() {
@@ -681,7 +698,8 @@ function createLanguageToggle() {
     
     if (headerContainer) {
         if (darkModeToggle) {
-            // Insert before dark mode toggle
+            // Insert before dark mode toggle (in RTL, this puts it to the left)
+            // In LTR, we'll adjust the order via CSS
             headerContainer.insertBefore(toggle, darkModeToggle);
         } else {
             // If dark mode toggle doesn't exist, append to header
