@@ -51,6 +51,7 @@ Allow: /contact.html
 Allow: /tasbiah.html
 Allow: /style.css
 Allow: /script.js
+Allow: /achievements-data.json
 Allow: /CNAME
 
 # خريطة الموقع

@@ -102,23 +102,44 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
+    // Load achievements data automatically
+    loadAchievementsData();
+
     // Counter animation for achievements
     function animateCounters() {
         const counters = document.querySelectorAll('.achievement-number');
         
         counters.forEach(counter => {
-            const target = parseInt(counter.textContent.replace(/[^\d]/g, ''));
-            const suffix = counter.textContent.replace(/[\d]/g, '');
+            const targetValue = counter.getAttribute('data-value');
+            if (!targetValue) return;
+            
+            const isPercentage = counter.textContent.includes('%');
+            const isDecimal = counter.textContent.includes('.');
+            const suffix = counter.textContent.replace(/[\d.]/g, '');
+            
+            let target = parseFloat(targetValue);
             let current = 0;
             const increment = target / 50;
             
             const updateCounter = () => {
                 if (current < target) {
                     current += increment;
-                    counter.textContent = Math.floor(current) + suffix;
+                    if (isDecimal) {
+                        counter.textContent = current.toFixed(1) + suffix;
+                    } else if (isPercentage) {
+                        counter.textContent = Math.floor(current) + '%';
+                    } else {
+                        counter.textContent = Math.floor(current) + suffix;
+                    }
                     requestAnimationFrame(updateCounter);
                 } else {
-                    counter.textContent = target + suffix;
+                    if (isDecimal) {
+                        counter.textContent = target.toFixed(1) + suffix;
+                    } else if (isPercentage) {
+                        counter.textContent = target + '%';
+                    } else {
+                        counter.textContent = target + suffix;
+                    }
                 }
             };
             
@@ -295,6 +316,96 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('ديومكس - الموقع جاهز للاستخدام!');
 });
+
+// Load achievements data automatically
+async function loadAchievementsData() {
+    try {
+        // Try to load from local JSON file first
+        const response = await fetch('achievements-data.json');
+        if (response.ok) {
+            const data = await response.json();
+            updateAchievementsFromData(data);
+        } else {
+            // If file doesn't exist, try to fetch from Google Play Store API
+            await fetchFromGooglePlay();
+        }
+    } catch (error) {
+        console.log('Loading from local data file...', error);
+        // Fallback: try Google Play Store scraping or use default values
+        await fetchFromGooglePlay();
+    }
+}
+
+// Update achievements from JSON data
+function updateAchievementsFromData(data) {
+    const mapping = {
+        'apps-published': () => data.apps.published,
+        'apps-development': () => data.apps.inDevelopment,
+        'users-active': () => data.users.active,
+        'downloads': () => data.users.downloads,
+        'rating-average': () => data.ratings.average,
+        'ratings-count': () => data.ratings.count,
+        'countries': () => data.global.countries,
+        'languages': () => data.global.languages,
+        'updates': () => data.updates.total,
+        'privacy': () => data.privacy.localData,
+        'features': () => data.features.perApp,
+        'satisfaction': () => data.satisfaction.rate
+    };
+
+    Object.keys(mapping).forEach(key => {
+        const item = document.querySelector(`[data-key="${key}"]`);
+        if (item) {
+            const numberElement = item.querySelector('.achievement-number');
+            if (numberElement) {
+                const value = mapping[key]();
+                const currentText = numberElement.textContent;
+                const suffix = currentText.replace(/[\d.]/g, '');
+                const isPercentage = currentText.includes('%');
+                const isDecimal = currentText.includes('.');
+                
+                numberElement.setAttribute('data-value', value);
+                
+                if (isPercentage) {
+                    numberElement.textContent = value + '%';
+                } else if (isDecimal) {
+                    numberElement.textContent = value.toFixed(1) + suffix;
+                } else {
+                    numberElement.textContent = value + suffix;
+                }
+            }
+        }
+    });
+}
+
+// Fetch data from Google Play Store (using scraping or API)
+async function fetchFromGooglePlay() {
+    try {
+        // Google Play Store App ID
+        const appId = 'com.diyom.tasbiah';
+        
+        // Try to fetch from Google Play Store page
+        // Note: This requires a CORS proxy or backend service
+        const playStoreUrl = `https://play.google.com/store/apps/details?id=${appId}`;
+        
+        // Alternative: Use a backend API endpoint if available
+        // const apiUrl = `https://your-backend.com/api/play-store-stats?appId=${appId}`;
+        // const response = await fetch(apiUrl);
+        
+        // For now, we'll use the local JSON file as fallback
+        // In production, you can set up a backend service to fetch from Google Play Store API
+        
+        console.log('Using local achievements data. To fetch from Google Play Store, set up a backend API.');
+    } catch (error) {
+        console.error('Error fetching from Google Play Store:', error);
+        // Keep default values from HTML
+    }
+}
+
+// Auto-refresh achievements data every hour
+setInterval(() => {
+    loadAchievementsData();
+}, 3600000); // 1 hour in milliseconds
 
 // Dark Mode Functions
 function initializeDarkMode() {

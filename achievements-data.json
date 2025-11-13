@@ -1,0 +1,32 @@
+{
+  "apps": {
+    "published": 1,
+    "inDevelopment": 3
+  },
+  "users": {
+    "active": 388,
+    "downloads": 676
+  },
+  "ratings": {
+    "average": 5.0,
+    "count": 50
+  },
+  "global": {
+    "countries": 15,
+    "languages": 2
+  },
+  "updates": {
+    "total": 10
+  },
+  "features": {
+    "perApp": 14
+  },
+  "satisfaction": {
+    "rate": 95
+  },
+  "privacy": {
+    "localData": 100
+  },
+  "lastUpdated": "2025-01-27"
+}
+
