@@ -2,14 +2,14 @@
 Developer: ديومكس
 Contact: diyomx [at] gmail.com
 Twitter: @DIYOMX
-Location: Saudi Arabia
+Location: Muscat, Oman
 
 /* THANKS */
 Font Awesome: https://fontawesome.com
 Google Fonts: https://fonts.google.com
 
 /* SITE */
-Last update: 2025/01/27
+Last update: 2025/08/26
 Standards: HTML5, CSS3, JavaScript
 Components: Font Awesome, Google Fonts
 Software: Visual Studio Code, Git
