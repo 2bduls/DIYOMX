@@ -755,9 +755,10 @@ function switchToArabic() {
 }
 
 function translatePage(lang) {
-    // Translation dictionary
+    // Comprehensive translation dictionary
     const translations = {
         ar: {
+            // Navigation
             'nav-home': 'الرئيسية',
             'nav-about': 'من نحن',
             'nav-contact': 'اتصل بنا',
@@ -766,9 +767,72 @@ function translatePage(lang) {
             'dark-mode-title': 'تبديل الوضع الليلي',
             'dark-mode-title-light': 'التبديل إلى الوضع النهاري',
             'lang-toggle-title': 'التبديل إلى الإنجليزية',
-            'lang-toggle-title-en': 'Switch to English'
+            
+            // Page titles
+            'page-title-privacy': 'سياسة الخصوصية',
+            'page-subtitle-tasbiah': 'المسبحة الذكية اذكار - تسبيح - ديومكس',
+            
+            // Privacy intro
+            'privacy-intro-1': 'نحن في ديومكس ندرك أهمية خصوصيتك وأمان بياناتك، خاصة عندما يتعلق الأمر بتطبيق روحي مثل المسبحة الذكية اذكار - تسبيح. تشرح هذه السياسة الشاملة كيفية جمع واستخدام وحماية المعلومات المتعلقة بالمسبحة الذكية اذكار - تسبيح وكيف نضمن حماية خصوصيتك والشخصية.',
+            'last-updated': 'تاريخ آخر تحديث:',
+            'app-name': 'المسبحة الذكية اذكار - تسبيح - ديومكس',
+            
+            // Sections
+            'section-info-collect': 'المعلومات التي نجمعها',
+            'section-how-use': 'كيفية استخدام المعلومات',
+            'section-data-protection': 'حماية البيانات',
+            'section-user-rights': 'حقوقك في البيانات',
+            'section-data-retention': 'الاحتفاظ بالبيانات',
+            'section-third-party': 'خدمات الطرف الثالث',
+            'section-spiritual-privacy': 'الخصوصية',
+            'section-compliance': 'الامتثال للقوانين والشرع',
+            'section-children': 'خصوصية الأطفال',
+            'section-updates': 'تحديثات السياسة',
+            'section-contact': 'التواصل معنا',
+            'section-related': 'سياسات ذات صلة',
+            
+            // Subsections
+            'sub-basic-info': '1. المعلومات الشخصية الأساسية',
+            'sub-spiritual-data': '2. البيانات العبادية (محفوظة محلياً فقط)',
+            'sub-usage-info': '3. معلومات الاستخدام والتطبيق (مجهولة الهوية)',
+            'sub-no-collect': '4. معلومات لا نجمعها أبداً',
+            'sub-spiritual-use': 'الاستخدامات العبادية (محلية فقط)',
+            'sub-technical-use': 'الاستخدامات التقنية (مجهولة الهوية)',
+            'sub-security-measures': 'إجراءات الأمان المحلية',
+            'sub-no-sharing': 'عدم مشاركة البيانات',
+            'sub-gdpr-rights': 'حقوقك الأساسية (GDPR)',
+            'sub-data-rights': 'حقوقك الخاصة بالبيانات',
+            'sub-exercise-rights': 'كيفية ممارسة حقوقك',
+            'sub-retention-period': 'فترة الاحتفاظ (محلياً فقط)',
+            'sub-services-used': 'خدمات نستخدمها',
+            'sub-google-services': 'Google Play Services و AdMob',
+            'sub-protect-privacy': 'حماية خصوصيتك',
+            'sub-islamic-compliance': 'الالتزام بالقوانين الإسلامية والمحلية',
+            'sub-international-compliance': 'الامتثال للقوانين الدولية',
+            'sub-data-commitments': 'التزاماتنا الخاصة بالبيانات',
+            
+            // Footer
+            'footer-note': 'ملاحظة مهمة: هذه السياسة مكتوبة باللغة العربية وهي النسخة الرسمية. أي ترجمة أخرى هي للمرجع فقط.',
+            'footer-app': 'التطبيق:',
+            'footer-company': 'الشركة:',
+            'footer-effective': 'تاريخ النفاذ:',
+            'footer-commitment': 'الالتزام:',
+            'company-name': 'ديومكس للتطبيقات الذكية',
+            'commitment-text': 'نحن ملتزمون بحماية خصوصيتك والشخصية بأعلى معايير الأمان والسرية.',
+            
+            // Contact
+            'email-label': 'البريد الإلكتروني:',
+            'website-label': 'الموقع:',
+            
+            // Related policies
+            'related-policies-text': 'يمكنك أيضاً مراجعة سياساتنا الأخرى:',
+            'policy-website': 'سياسة خصوصية الموقع العام',
+            'policy-electric': 'سياسة خصوصية DIY Electric Calculator',
+            'policy-car': 'سياسة خصوصية تطبيق صيانة السيارات',
+            'policy-money': 'سياسة خصوصية تطبيق إدارة المال الشخصي'
         },
         en: {
+            // Navigation
             'nav-home': 'Home',
             'nav-about': 'About Us',
             'nav-contact': 'Contact Us',
@@ -777,17 +841,85 @@ function translatePage(lang) {
             'dark-mode-title': 'Toggle Dark Mode',
             'dark-mode-title-light': 'Switch to Light Mode',
             'lang-toggle-title': 'Switch to Arabic',
-            'lang-toggle-title-en': 'Switch to Arabic'
+            
+            // Page titles
+            'page-title-privacy': 'Privacy Policy',
+            'page-subtitle-tasbiah': 'Smart Tasbih App - Dhikr - DIYOMX',
+            
+            // Privacy intro
+            'privacy-intro-1': 'At DIYOMX, we recognize the importance of your privacy and data security, especially when it comes to a spiritual application like the Smart Tasbih App - Dhikr. This comprehensive policy explains how we collect, use, and protect information related to the Smart Tasbih App - Dhikr and how we ensure the protection of your privacy and spirituality.',
+            'last-updated': 'Last Updated:',
+            'app-name': 'Smart Tasbih App - Dhikr - DIYOMX',
+            
+            // Sections
+            'section-info-collect': 'Information We Collect',
+            'section-how-use': 'How We Use Information',
+            'section-data-protection': 'Data Protection',
+            'section-user-rights': 'Your Data Rights',
+            'section-data-retention': 'Data Retention',
+            'section-third-party': 'Third Party Services',
+            'section-spiritual-privacy': 'Spiritual Privacy',
+            'section-compliance': 'Compliance with Laws and Regulations',
+            'section-children': 'Children\'s Privacy',
+            'section-updates': 'Policy Updates',
+            'section-contact': 'Contact Us',
+            'section-related': 'Related Policies',
+            
+            // Subsections
+            'sub-basic-info': '1. Basic Personal Information',
+            'sub-spiritual-data': '2. Spiritual Data (Stored Locally Only)',
+            'sub-usage-info': '3. Usage and Application Information (Anonymous)',
+            'sub-no-collect': '4. Information We Never Collect',
+            'sub-spiritual-use': 'Spiritual Uses (Local Only)',
+            'sub-technical-use': 'Technical Uses (Anonymous)',
+            'sub-security-measures': 'Local Security Measures',
+            'sub-no-sharing': 'No Data Sharing',
+            'sub-gdpr-rights': 'Your Basic Rights (GDPR)',
+            'sub-data-rights': 'Your Data-Specific Rights',
+            'sub-exercise-rights': 'How to Exercise Your Rights',
+            'sub-retention-period': 'Retention Period (Local Only)',
+            'sub-services-used': 'Services We Use',
+            'sub-google-services': 'Google Play Services and AdMob',
+            'sub-protect-privacy': 'Protecting Your Privacy',
+            'sub-islamic-compliance': 'Compliance with Islamic and Local Laws',
+            'sub-international-compliance': 'Compliance with International Laws',
+            'sub-data-commitments': 'Our Data-Specific Commitments',
+            
+            // Footer
+            'footer-note': 'Important Note: This policy is written in Arabic and is the official version. Any other translation is for reference only.',
+            'footer-app': 'Application:',
+            'footer-company': 'Company:',
+            'footer-effective': 'Effective Date:',
+            'footer-commitment': 'Commitment:',
+            'company-name': 'DIYOMX for Smart Applications',
+            'commitment-text': 'We are committed to protecting your privacy and spirituality with the highest standards of security and confidentiality.',
+            
+            // Contact
+            'email-label': 'Email:',
+            'website-label': 'Website:',
+            
+            // Related policies
+            'related-policies-text': 'You can also review our other policies:',
+            'policy-website': 'General Website Privacy Policy',
+            'policy-electric': 'DIY Electric Calculator Privacy Policy',
+            'policy-car': 'Car Maintenance App Privacy Policy',
+            'policy-money': 'Personal Money Management App Privacy Policy'
         }
     };
     
-    // Translate elements with data-i18n attribute
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-            element.textContent = translations[lang][key];
+    // Helper function to translate text content
+    function translateText(element, arText, enText) {
+        if (element) {
+            element.textContent = lang === 'en' ? enText : arText;
         }
-    });
+    }
+    
+    // Helper function to translate HTML content (preserving structure)
+    function translateHTML(element, arHTML, enHTML) {
+        if (element) {
+            element.innerHTML = lang === 'en' ? enHTML : arHTML;
+        }
+    }
     
     // Translate navigation links
     const navLinks = document.querySelectorAll('.main-navigation a');
@@ -808,7 +940,268 @@ function translatePage(lang) {
     // Translate site description
     const siteDesc = document.querySelector('.site-description');
     if (siteDesc) {
-        siteDesc.textContent = lang === 'en' ? 'Smart Apps & Digital Achievements' : 'تطبيقات ذكية وإنجازات رقمية';
+        siteDesc.textContent = translations[lang]['site-desc'];
+    }
+    
+    // Translate page title
+    const pageTitle = document.querySelector('.page-title');
+    if (pageTitle && pageTitle.textContent.includes('سياسة الخصوصية')) {
+        pageTitle.textContent = translations[lang]['page-title-privacy'];
+    }
+    
+    // Translate page subtitle
+    const pageSubtitle = document.querySelector('.page-subtitle');
+    if (pageSubtitle) {
+        pageSubtitle.textContent = translations[lang]['page-subtitle-tasbiah'];
+    }
+    
+    // Translate all h2 headings (section titles)
+    const sectionHeadings = document.querySelectorAll('.privacy-section > h2');
+    sectionHeadings.forEach(h2 => {
+        const text = h2.textContent.trim();
+        const icon = h2.querySelector('i');
+        const iconHTML = icon ? icon.outerHTML + ' ' : '';
+        
+        if (text.includes('المعلومات التي نجمعها')) {
+            h2.innerHTML = iconHTML + translations[lang]['section-info-collect'];
+        } else if (text.includes('كيفية استخدام المعلومات')) {
+            h2.innerHTML = iconHTML + translations[lang]['section-how-use'];
+        } else if (text.includes('حماية البيانات')) {
+            h2.innerHTML = iconHTML + translations[lang]['section-data-protection'];
+        } else if (text.includes('حقوقك في البيانات')) {
+            h2.innerHTML = iconHTML + translations[lang]['section-user-rights'];
+        } else if (text.includes('الاحتفاظ بالبيانات')) {
+            h2.innerHTML = iconHTML + translations[lang]['section-data-retention'];
+        } else if (text.includes('خدمات الطرف الثالث')) {
+            h2.innerHTML = iconHTML + translations[lang]['section-third-party'];
+        } else if (text.includes('الخصوصية')) {
+            h2.innerHTML = iconHTML + translations[lang]['section-spiritual-privacy'];
+        } else if (text.includes('الامتثال')) {
+            h2.innerHTML = iconHTML + translations[lang]['section-compliance'];
+        } else if (text.includes('خصوصية الأطفال')) {
+            h2.innerHTML = iconHTML + translations[lang]['section-children'];
+        } else if (text.includes('تحديثات السياسة')) {
+            h2.innerHTML = iconHTML + translations[lang]['section-updates'];
+        } else if (text.includes('التواصل معنا')) {
+            h2.innerHTML = iconHTML + translations[lang]['section-contact'];
+        } else if (text.includes('سياسات ذات صلة')) {
+            h2.innerHTML = iconHTML + translations[lang]['section-related'];
+        }
+    });
+    
+    // Translate all h3 headings (subsection titles)
+    const subsectionHeadings = document.querySelectorAll('.privacy-subsection > h3');
+    subsectionHeadings.forEach(h3 => {
+        const text = h3.textContent.trim();
+        
+        if (text.includes('المعلومات الشخصية الأساسية')) {
+            h3.textContent = translations[lang]['sub-basic-info'];
+        } else if (text.includes('البيانات العبادية')) {
+            h3.textContent = translations[lang]['sub-spiritual-data'];
+        } else if (text.includes('معلومات الاستخدام والتطبيق')) {
+            h3.textContent = translations[lang]['sub-usage-info'];
+        } else if (text.includes('معلومات لا نجمعها')) {
+            h3.textContent = translations[lang]['sub-no-collect'];
+        } else if (text.includes('الاستخدامات العبادية')) {
+            h3.textContent = translations[lang]['sub-spiritual-use'];
+        } else if (text.includes('الاستخدامات التقنية')) {
+            h3.textContent = translations[lang]['sub-technical-use'];
+        } else if (text.includes('إجراءات الأمان المحلية')) {
+            h3.textContent = translations[lang]['sub-security-measures'];
+        } else if (text.includes('عدم مشاركة البيانات')) {
+            h3.textContent = translations[lang]['sub-no-sharing'];
+        } else if (text.includes('حقوقك الأساسية')) {
+            h3.textContent = translations[lang]['sub-gdpr-rights'];
+        } else if (text.includes('حقوقك الخاصة بالبيانات')) {
+            h3.textContent = translations[lang]['sub-data-rights'];
+        } else if (text.includes('كيفية ممارسة حقوقك')) {
+            h3.textContent = translations[lang]['sub-exercise-rights'];
+        } else if (text.includes('فترة الاحتفاظ')) {
+            h3.textContent = translations[lang]['sub-retention-period'];
+        } else if (text.includes('خدمات نستخدمها')) {
+            h3.textContent = translations[lang]['sub-services-used'];
+        } else if (text.includes('Google Play Services')) {
+            h3.textContent = translations[lang]['sub-google-services'];
+        } else if (text.includes('حماية خصوصيتك')) {
+            h3.textContent = translations[lang]['sub-protect-privacy'];
+        } else if (text.includes('الالتزام بالقوانين الإسلامية')) {
+            h3.textContent = translations[lang]['sub-islamic-compliance'];
+        } else if (text.includes('الامتثال للقوانين الدولية')) {
+            h3.textContent = translations[lang]['sub-international-compliance'];
+        } else if (text.includes('التزاماتنا الخاصة')) {
+            h3.textContent = translations[lang]['sub-data-commitments'];
+        }
+    });
+    
+    // Translate privacy intro paragraph
+    const introParagraphs = document.querySelectorAll('.privacy-intro > p');
+    if (introParagraphs.length > 0) {
+        const firstPara = introParagraphs[0];
+        if (firstPara.textContent.includes('نحن في ديومكس')) {
+            firstPara.textContent = translations[lang]['privacy-intro-1'];
+        }
+        
+        // Translate "Last Updated" paragraph
+        if (introParagraphs.length > 1) {
+            const secondPara = introParagraphs[1];
+            if (secondPara.textContent.includes('تاريخ آخر تحديث')) {
+                secondPara.innerHTML = '<strong>' + translations[lang]['last-updated'] + '</strong> 15 September 2025';
+            }
+        }
+    }
+    
+    // Translate app badge
+    const appBadge = document.querySelector('.app-badge span');
+    if (appBadge) {
+        appBadge.textContent = translations[lang]['app-name'];
+    }
+    
+    // Translate footer
+    const footerParagraphs = document.querySelectorAll('.privacy-footer > p');
+    footerParagraphs.forEach(p => {
+        const text = p.textContent.trim();
+        if (text.includes('ملاحظة مهمة')) {
+            p.innerHTML = '<strong>' + translations[lang]['footer-note'].split(':')[0] + ':</strong> ' + translations[lang]['footer-note'].split(':')[1];
+        } else if (text.includes('التطبيق:')) {
+            p.innerHTML = '<strong>' + translations[lang]['footer-app'] + '</strong> ' + translations[lang]['app-name'];
+        } else if (text.includes('الشركة:')) {
+            p.innerHTML = '<strong>' + translations[lang]['footer-company'] + '</strong> ' + translations[lang]['company-name'];
+        } else if (text.includes('تاريخ النفاذ:')) {
+            p.innerHTML = '<strong>' + translations[lang]['footer-effective'] + '</strong> 15 September 2025';
+        } else if (text.includes('الالتزام:')) {
+            p.innerHTML = '<strong>' + translations[lang]['footer-commitment'] + '</strong> ' + translations[lang]['commitment-text'];
+        }
+    });
+    
+    // Translate contact items
+    const contactItems = document.querySelectorAll('.contact-item span');
+    contactItems.forEach(span => {
+        if (span.textContent.includes('البريد الإلكتروني:')) {
+            span.textContent = translations[lang]['email-label'] + ' diyomx@gmail.com';
+        } else if (span.textContent.includes('الموقع:')) {
+            span.textContent = translations[lang]['website-label'] + ' www.diyomx.com';
+        }
+    });
+    
+    // Translate related policies section - find by section content
+    const allSections = document.querySelectorAll('.privacy-section');
+    allSections.forEach(section => {
+        const h2 = section.querySelector('h2');
+        if (h2 && h2.textContent.includes('سياسات ذات صلة')) {
+            const para = section.querySelector('.privacy-subsection > p');
+            if (para && para.textContent.includes('يمكنك أيضاً')) {
+                para.textContent = translations[lang]['related-policies-text'];
+            }
+            
+            // Translate related policy links
+            const links = section.querySelectorAll('.privacy-subsection a');
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href) {
+                    if (href.includes('privacy-website')) {
+                        link.textContent = translations[lang]['policy-website'];
+                    } else if (href.includes('privacy-electric')) {
+                        link.textContent = translations[lang]['policy-electric'];
+                    } else if (href.includes('privacy-car')) {
+                        link.textContent = translations[lang]['policy-car'];
+                    } else if (href.includes('privacy-money')) {
+                        link.textContent = translations[lang]['policy-money'];
+                    }
+                }
+            });
+        }
+    });
+    
+    // Store original Arabic text in data attributes for restoration
+    if (lang === 'en') {
+        // First pass: store original Arabic text
+        document.querySelectorAll('.privacy-content p, .privacy-content li').forEach(element => {
+            if (!element.hasAttribute('data-ar-original')) {
+                element.setAttribute('data-ar-original', element.innerHTML);
+            }
+        });
+        
+        // Translate paragraphs and list items based on their content patterns
+        document.querySelectorAll('.privacy-content p, .privacy-content li').forEach(element => {
+            const originalText = element.getAttribute('data-ar-original') || element.innerHTML;
+            let translatedText = originalText;
+            
+            // Comprehensive translation patterns for common phrases
+            const translationPatterns = [
+                // Basic info section
+                { ar: /المسبحة الذكية اذكار - تسبيح لا يتطلب تسجيل دخول ولا نجمع أي معلومات شخصية من المستخدمين/g, en: 'The Smart Tasbih App - Dhikr does not require login and we do not collect any personal information from users.' },
+                { ar: /لا نطلب الاسم:/g, en: 'We do not request name:' },
+                { ar: /التطبيق يعمل بدون الحاجة لاسم المستخدم/g, en: 'The app works without requiring a username' },
+                { ar: /لا نطلب البريد الإلكتروني:/g, en: 'We do not request email:' },
+                { ar: /لا نجمع عناوين البريد الإلكتروني/g, en: 'We do not collect email addresses' },
+                { ar: /لا نطلب تاريخ الميلاد:/g, en: 'We do not request date of birth:' },
+                { ar: /لا نحتاج لمعلومات العمر/g, en: 'We do not need age information' },
+                { ar: /لا نطلب الموقع:/g, en: 'We do not request location:' },
+                { ar: /التطبيق يعمل بدون معرفة موقعك الجغرافي/g, en: 'The app works without knowing your geographical location' },
+                
+                // Spiritual data section
+                { ar: /جميع البيانات التالية محفوظة محلياً على جهازك فقط ولا ترسل إلى أي خوادم:/g, en: 'All the following data is stored locally on your device only and is not sent to any servers:' },
+                { ar: /إحصائيات التسبيح:/g, en: 'Tasbih statistics:' },
+                { ar: /عدد المرات والتواريخ والأوقات ومواعيد التسبيح \(محفوظة محلياً\)/g, en: 'Number of times, dates, times, and tasbih schedules (stored locally)' },
+                { ar: /الأذكار المفضلة:/g, en: 'Favorite dhikr:' },
+                { ar: /الأذكار التي تختارها كأذكار مفضلة \(محفوظة محلياً\)/g, en: 'Dhikr that you choose as favorites (stored locally)' },
+                { ar: /جدول التسبيح:/g, en: 'Tasbih schedule:' },
+                { ar: /الأهداف اليومية والشهرية للتسبيح \(محفوظة محلياً\)/g, en: 'Daily and monthly tasbih goals (stored locally)' },
+                { ar: /التذكيرات:/g, en: 'Reminders:' },
+                { ar: /إعدادات التذكيرات والتوقيتات المفضلة \(محفوظة محلياً\)/g, en: 'Reminder settings and preferred times (stored locally)' },
+                { ar: /الإنجازات:/g, en: 'Achievements:' },
+                { ar: /الشهادات والإنجازات المحققة \(محفوظة محلياً\)/g, en: 'Certificates and achievements achieved (stored locally)' },
+                { ar: /ملاحظات شخصية:/g, en: 'Personal notes:' },
+                { ar: /أي ملاحظات أو تأملات تريد حفظها \(محفوظة محلياً\)/g, en: 'Any notes or reflections you want to save (stored locally)' },
+                
+                // Usage info section
+                { ar: /قد نجمع المعلومات التالية لأغراض تحسين التطبيق فقط:/g, en: 'We may collect the following information for app improvement purposes only:' },
+                { ar: /إحصائيات الاستخدام:/g, en: 'Usage statistics:' },
+                { ar: /الميزات الأكثر استخداماً والأوقات المفضلة \(مجهولة الهوية\)/g, en: 'Most used features and preferred times (anonymous)' },
+                { ar: /التفضيلات:/g, en: 'Preferences:' },
+                { ar: /الإعدادات الشخصية والمظهر المفضل \(محفوظة محلياً\)/g, en: 'Personal settings and preferred appearance (stored locally)' },
+                { ar: /معلومات الجهاز:/g, en: 'Device information:' },
+                { ar: /نوع الجهاز ونظام التشغيل لتحسين الأداء \(مجهولة الهوية\)/g, en: 'Device type and operating system to improve performance (anonymous)' },
+                { ar: /سجلات الأخطاء:/g, en: 'Error logs:' },
+                { ar: /معلومات تقنية لحل المشاكل وتحسين التطبيق \(مجهولة الهوية\)/g, en: 'Technical information to solve problems and improve the app (anonymous)' },
+                { ar: /معلومات الشبكة:/g, en: 'Network information:' },
+                { ar: /حالة الاتصال بالإنترنت \(مجهولة الهوية\)/g, en: 'Internet connection status (anonymous)' },
+                
+                // No collect section
+                { ar: /لا نجمع معلومات الموقع الجغرافي الدقيق/g, en: 'We do not collect precise geographical location information' },
+                { ar: /لا نجمع معلومات الاتصالات أو جهات الاتصال/g, en: 'We do not collect contact or address book information' },
+                { ar: /لا نجمع معلومات مالية أو مصرفية/g, en: 'We do not collect financial or banking information' },
+                { ar: /لا نجمع صور أو ملفات شخصية/g, en: 'We do not collect photos or personal files' },
+                { ar: /لا نجمع معلومات حساسة أخرى غير متعلقة بالعبادة/g, en: 'We do not collect other sensitive information unrelated to worship' },
+                { ar: /لا نراقب نشاطك خارج التطبيق/g, en: 'We do not monitor your activity outside the app' },
+                
+                // Common phrases
+                { ar: /جميع البيانات محفوظة محلياً على جهازك وتستخدم فقط داخلياً:/g, en: 'All data is stored locally on your device and used only internally:' },
+                { ar: /المعلومات التقنية المجمعة تستخدم فقط لتحسين التطبيق:/g, en: 'The collected technical information is used only to improve the app:' },
+                { ar: /جميع البيانات محفوظة محلياً على جهازك فقط:/g, en: 'All data is stored locally on your device only:' },
+                { ar: /نحن لا نشارك أو نبيع أو نرسل بياناتك مع أي طرف ثالث أبداً:/g, en: 'We do not share, sell, or send your data with any third party ever:' },
+            ];
+            
+            // Apply translation patterns
+            translationPatterns.forEach(pattern => {
+                translatedText = translatedText.replace(pattern.ar, pattern.en);
+            });
+            
+            // Only update if translation was applied
+            if (translatedText !== originalText) {
+                element.innerHTML = translatedText;
+                element.setAttribute('data-translated', 'true');
+            }
+        });
+    } else {
+        // Restore original Arabic text
+        document.querySelectorAll('.privacy-content p[data-ar-original], .privacy-content li[data-ar-original]').forEach(element => {
+            const original = element.getAttribute('data-ar-original');
+            if (original) {
+                element.innerHTML = original;
+                element.removeAttribute('data-translated');
+            }
+        });
     }
 }
 
