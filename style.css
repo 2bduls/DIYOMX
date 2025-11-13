@@ -1227,6 +1227,45 @@ body {
     font-size: 1.1rem;
 }
 
+/* Language Toggle Button */
+.language-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+    backdrop-filter: blur(10px);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.language-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.language-toggle i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.language-toggle:hover i {
+    transform: rotate(360deg);
+}
+
+.language-toggle span {
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
 /* Dark Mode Toggle Button */
 .dark-mode-toggle {
     background: rgba(255, 255, 255, 0.1);
@@ -1291,6 +1330,17 @@ html.dark-mode body {
 .dark-mode .main-navigation a:hover,
 .dark-mode .main-navigation a.active {
     color: #4a7c59;
+}
+
+.dark-mode .language-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.dark-mode .language-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .dark-mode .dark-mode-toggle {
@@ -2309,9 +2359,18 @@ html.dark-mode body {
 
 /* Dark Mode Responsive */
 @media (max-width: 768px) {
+    .language-toggle {
+        margin-left: 0.5rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .language-toggle span {
+        font-size: 0.75rem;
+    }
+    
     .dark-mode-toggle {
-        margin-left: 0;
-        margin-top: 0.5rem;
+        margin-left: 0.5rem;
         width: 40px;
         height: 40px;
     }
@@ -2320,6 +2379,42 @@ html.dark-mode body {
         flex-direction: column;
         gap: 1rem;
     }
+    
+    .header-container {
+        flex-wrap: wrap;
+    }
+    
+    .language-toggle,
+    .dark-mode-toggle {
+        margin-top: 0.5rem;
+    }
+}
+
+/* RTL/LTR Support */
+body.rtl {
+    direction: rtl;
+}
+
+body.ltr {
+    direction: ltr;
+}
+
+body.ltr .header-container {
+    flex-direction: row-reverse;
+}
+
+body.ltr .main-navigation {
+    flex-direction: row-reverse;
+}
+
+body.ltr .language-toggle {
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+body.ltr .dark-mode-toggle {
+    margin-left: 0;
+    margin-right: 1rem;
 }
 
 /* Responsive Design */

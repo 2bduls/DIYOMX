@@ -290,6 +290,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dark Mode Functionality
     initializeDarkMode();
 
+    // Language Toggle Functionality
+    initializeLanguageToggle();
+
     console.log('ديومكس - الموقع جاهز للاستخدام!');
 });
 
@@ -627,12 +630,181 @@ function updateDarkModeIcon() {
     
     const isDarkMode = document.body.classList.contains('dark-mode');
     const icon = toggle.querySelector('i');
+    const currentLang = localStorage.getItem('language') || 'ar';
     
     if (isDarkMode) {
         icon.className = 'fas fa-sun';
-        toggle.title = 'التبديل إلى الوضع النهاري';
+        toggle.title = currentLang === 'ar' ? 'التبديل إلى الوضع النهاري' : 'Switch to Light Mode';
     } else {
         icon.className = 'fas fa-moon';
-        toggle.title = 'تبديل الوضع الليلي';
+        toggle.title = currentLang === 'ar' ? 'تبديل الوضع الليلي' : 'Toggle Dark Mode';
+    }
+}
+
+// Language Toggle Functions
+function initializeLanguageToggle() {
+    // Check for saved language preference or default to Arabic
+    const savedLang = localStorage.getItem('language') || 'ar';
+    
+    // Apply language if it was previously set
+    if (savedLang === 'en') {
+        switchToEnglish();
+    } else {
+        switchToArabic();
+    }
+    
+    // Create language toggle button
+    createLanguageToggle();
+}
+
+function createLanguageToggle() {
+    // Check if toggle already exists
+    if (document.querySelector('.language-toggle')) {
+        return;
+    }
+    
+    const toggle = document.createElement('button');
+    toggle.className = 'language-toggle';
+    const currentLang = localStorage.getItem('language') || 'ar';
+    
+    if (currentLang === 'ar') {
+        toggle.innerHTML = '<i class="fas fa-globe"></i><span>EN</span>';
+        toggle.title = 'Switch to English';
+    } else {
+        toggle.innerHTML = '<i class="fas fa-globe"></i><span>AR</span>';
+        toggle.title = 'التبديل إلى العربية';
+    }
+    
+    // Add toggle to header next to dark mode toggle
+    const headerContainer = document.querySelector('.header-container');
+    const darkModeToggle = document.querySelector('.dark-mode-toggle');
+    
+    if (headerContainer) {
+        if (darkModeToggle) {
+            // Insert before dark mode toggle
+            headerContainer.insertBefore(toggle, darkModeToggle);
+        } else {
+            // If dark mode toggle doesn't exist, append to header
+            headerContainer.appendChild(toggle);
+        }
+    }
+    
+    // Add click event listener
+    toggle.addEventListener('click', toggleLanguage);
+}
+
+function toggleLanguage() {
+    const currentLang = localStorage.getItem('language') || 'ar';
+    
+    if (currentLang === 'ar') {
+        switchToEnglish();
+    } else {
+        switchToArabic();
+    }
+    
+    // Update language toggle button
+    updateLanguageToggleIcon();
+    // Update dark mode toggle title
+    updateDarkModeIcon();
+}
+
+function switchToEnglish() {
+    // Set language preference
+    localStorage.setItem('language', 'en');
+    
+    // Update HTML attributes
+    document.documentElement.lang = 'en';
+    document.documentElement.dir = 'ltr';
+    document.body.classList.remove('rtl');
+    document.body.classList.add('ltr');
+    
+    // Translate all elements with data-i18n attribute
+    translatePage('en');
+}
+
+function switchToArabic() {
+    // Set language preference
+    localStorage.setItem('language', 'ar');
+    
+    // Update HTML attributes
+    document.documentElement.lang = 'ar';
+    document.documentElement.dir = 'rtl';
+    document.body.classList.remove('ltr');
+    document.body.classList.add('rtl');
+    
+    // Translate all elements with data-i18n attribute
+    translatePage('ar');
+}
+
+function translatePage(lang) {
+    // Translation dictionary
+    const translations = {
+        ar: {
+            'nav-home': 'الرئيسية',
+            'nav-about': 'من نحن',
+            'nav-contact': 'اتصل بنا',
+            'nav-privacy': 'سياسة الخصوصية',
+            'site-desc': 'تطبيقات ذكية وإنجازات رقمية',
+            'dark-mode-title': 'تبديل الوضع الليلي',
+            'dark-mode-title-light': 'التبديل إلى الوضع النهاري',
+            'lang-toggle-title': 'التبديل إلى الإنجليزية',
+            'lang-toggle-title-en': 'Switch to English'
+        },
+        en: {
+            'nav-home': 'Home',
+            'nav-about': 'About Us',
+            'nav-contact': 'Contact Us',
+            'nav-privacy': 'Privacy Policy',
+            'site-desc': 'Smart Apps & Digital Achievements',
+            'dark-mode-title': 'Toggle Dark Mode',
+            'dark-mode-title-light': 'Switch to Light Mode',
+            'lang-toggle-title': 'Switch to Arabic',
+            'lang-toggle-title-en': 'Switch to Arabic'
+        }
+    };
+    
+    // Translate elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+    
+    // Translate navigation links
+    const navLinks = document.querySelectorAll('.main-navigation a');
+    if (navLinks.length >= 4) {
+        if (lang === 'en') {
+            navLinks[0].textContent = 'Home';
+            navLinks[1].textContent = 'About Us';
+            navLinks[2].textContent = 'Contact Us';
+            navLinks[3].textContent = 'Privacy Policy';
+        } else {
+            navLinks[0].textContent = 'الرئيسية';
+            navLinks[1].textContent = 'من نحن';
+            navLinks[2].textContent = 'اتصل بنا';
+            navLinks[3].textContent = 'سياسة الخصوصية';
+        }
+    }
+    
+    // Translate site description
+    const siteDesc = document.querySelector('.site-description');
+    if (siteDesc) {
+        siteDesc.textContent = lang === 'en' ? 'Smart Apps & Digital Achievements' : 'تطبيقات ذكية وإنجازات رقمية';
+    }
+}
+
+function updateLanguageToggleIcon() {
+    const toggle = document.querySelector('.language-toggle');
+    if (!toggle) return;
+    
+    const currentLang = localStorage.getItem('language') || 'ar';
+    
+    if (currentLang === 'ar') {
+        toggle.innerHTML = '<i class="fas fa-globe"></i><span>EN</span>';
+        toggle.title = 'Switch to English';
+    } else {
+        toggle.innerHTML = '<i class="fas fa-globe"></i><span>AR</span>';
+        toggle.title = 'التبديل إلى العربية';
     }
 }
