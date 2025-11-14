@@ -29,11 +29,13 @@
     <meta property="og:title" content="من نحن - ديومكس">
     <meta property="og:description" content="تعرف على شركة ديومكس المتخصصة في تطوير التطبيقات الذكية والشروحات التقنية على يوتيوب">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://diyomx.github.io/about.html">
+    <meta property="og:url" content="https://diyomx.com/about.html">
     <meta property="og:locale" content="ar_SA">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -43,7 +45,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="site-header">
+    <header class="site-header" id="header">
         <div class="header-container">
             <div class="site-branding">
                 <a href="index.html" class="site-logo-link">
@@ -53,10 +55,15 @@
                         <div class="logo-name">DIYOMX</div>
                     </div>
                 </a>
-                <a href="index.html" class="site-title">ديومكس</a>
-                <p class="site-description">تطبيقات ذكية وإنجازات رقمية</p>
+                <div>
+                    <a href="index.html" class="site-title">ديومكس</a>
+                    <p class="site-description">تطبيقات ذكية وإنجازات رقمية</p>
+                </div>
             </div>
-            <nav class="main-navigation">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-navigation" id="mainNavigation">
                 <a href="index.html">الرئيسية</a>
                 <a href="about.html" class="active">من نحن</a>
                 <a href="contact.html">اتصل بنا</a>
@@ -74,179 +81,185 @@
         </section>
 
         <!-- About Content -->
-        <section class="about-content">
-            <div class="about-intro">
-                <h2>قصتنا</h2>
-                <p>ديومكس هي شركة متخصصة في تطوير التطبيقات الذكية والمواقع الإلكترونية وإنتاج الشروحات التقنية على يوتيوب. تأسست الشركة في 26 أغسطس 2025 من مجموعة من المطورين المتميزين الذين يجمعون بين الخبرة التقنية العميقة والشغف بالإبداع والابتكار.</p>
-                
-                <p>نؤمن في ديومكس أن التكنولوجيا يجب أن تكون في خدمة الإنسان، ولهذا نركز على تطوير تطبيقات مفيدة وسهلة الاستخدام تعمل على تحسين حياة المستخدمين وتسهيل مهامهم اليومية. كما نقدم شروحات تقنية متخصصة على قناتنا في يوتيوب لمساعدة المطورين والمبرمجين في تعلم أحدث التقنيات.</p>
-                
-                <p>بدأت رحلتنا بإطلاق تطبيق التسبيح الذي حقق نجاحاً كبيراً، كما طورنا موقع التسبيح الإلكتروني (tasbiah.diyomx.com). نحن نعمل حالياً على تطوير تطبيقات ومواقع جديدة مثل حاسبة الكهرباء وتطبيق صيانة السيارات، بالإضافة إلى مشاريع أخرى مفيدة للمستخدمين حول العالم.</p>
-            </div>
-
-            <!-- Mission & Vision -->
-            <div class="mission-vision">
-                <div class="mission-item">
-                    <div class="mission-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>رؤيتنا</h3>
-                    <p>أن نكون الرائدين في مجال تطوير التطبيقات الذكية والشروحات التقنية على مستوى العالم، وأن نساهم في بناء مجتمع رقمي متقدم ومتطور.</p>
+        <section class="about-content" style="padding: var(--spacing-xl) var(--spacing-md);">
+            <div class="container">
+                <div class="about-intro" style="max-width: 900px; margin: 0 auto var(--spacing-xl); text-align: center;">
+                    <h2 style="color: var(--accent-color); margin-bottom: var(--spacing-md);">قصتنا</h2>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: var(--spacing-md); font-size: 1.1rem;">
+                        ديومكس هي شركة متخصصة في تطوير التطبيقات الذكية والمواقع الإلكترونية وإنتاج الشروحات التقنية على يوتيوب. تأسست الشركة في 26 أغسطس 2025 من مجموعة من المطورين المتميزين الذين يجمعون بين الخبرة التقنية العميقة والشغف بالإبداع والابتكار.
+                    </p>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: var(--spacing-md); font-size: 1.1rem;">
+                        نؤمن في ديومكس أن التكنولوجيا يجب أن تكون في خدمة الإنسان، ولهذا نركز على تطوير تطبيقات مفيدة وسهلة الاستخدام تعمل على تحسين حياة المستخدمين وتسهيل مهامهم اليومية. كما نقدم شروحات تقنية متخصصة على قناتنا في يوتيوب لمساعدة المطورين والمبرمجين في تعلم أحدث التقنيات.
+                    </p>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: var(--spacing-md); font-size: 1.1rem;">
+                        بدأت رحلتنا بإطلاق تطبيق التسبيح الذي حقق نجاحاً كبيراً، كما طورنا موقع التسبيح الإلكتروني (tasbiah.diyomx.com). نحن نعمل حالياً على تطوير تطبيقات ومواقع جديدة مثل حاسبة الكهرباء وتطبيق صيانة السيارات، بالإضافة إلى مشاريع أخرى مفيدة للمستخدمين حول العالم.
+                    </p>
                 </div>
-                
-                <div class="mission-item">
-                    <div class="mission-icon">
-                        <i class="fas fa-flag"></i>
-                    </div>
-                    <h3>رسالتنا</h3>
-                    <p>تطوير تطبيقات مبتكرة وذكية تلبي احتياجات المستخدمين حول العالم، وإنتاج محتوى تعليمي تقني عالي الجودة على يوتيوب لمساعدة المطورين والمبرمجين.</p>
-                </div>
-            </div>
 
-            <!-- Services -->
-            <div class="services-section">
-                <h2>خدماتنا</h2>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class="fas fa-mobile-alt"></i>
+                <!-- Mission & Vision -->
+                <div class="mission-vision" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-md); margin-bottom: var(--spacing-xl);">
+                    <div class="mission-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); text-align: center;">
+                        <div class="mission-icon" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; background: var(--gradient-accent); border-radius: var(--radius-md); margin: 0 auto var(--spacing-md); font-size: 2rem; color: var(--primary-color); box-shadow: var(--shadow-gold);">
+                            <i class="fas fa-bullseye"></i>
                         </div>
-                        <h4>تطوير التطبيقات</h4>
-                        <p>نطور تطبيقات ذكية ومبتكرة للهواتف الذكية والأجهزة اللوحية</p>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <h4>تطوير المواقع الإلكترونية</h4>
-                        <p>نطور مواقع ويب حديثة ومتجاوبة مع ميزات متقدمة وسهلة الاستخدام</p>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class="fab fa-youtube"></i>
-                        </div>
-                        <h4>الشروحات التقنية</h4>
-                        <p>نقدم شروحات تقنية متخصصة على يوتيوب لتطوير التطبيقات والبرمجة</p>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <h4>تصميم الواجهات</h4>
-                        <p>نصمم واجهات مستخدم جذابة وسهلة الاستخدام</p>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h4>الدعم الفني</h4>
-                        <p>نقدم دعم فني متخصص لجميع تطبيقاتنا ومواقعنا ومستخدمينا</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Values -->
-            <div class="values-section">
-                <h2>قيمنا</h2>
-                <div class="values-grid">
-                    <div class="value-item">
-                        <i class="fas fa-lightbulb"></i>
-                        <h4>الابتكار</h4>
-                        <p>نبحث دائماً عن طرق جديدة ومبتكرة لحل المشاكل وتطوير الحلول</p>
-                    </div>
-                    <div class="value-item">
-                        <i class="fas fa-star"></i>
-                        <h4>الجودة</h4>
-                        <p>نلتزم بأعلى معايير الجودة في كل ما ننتجه ونطوره</p>
-                    </div>
-                    <div class="value-item">
-                        <i class="fas fa-handshake"></i>
-                        <h4>الشفافية</h4>
-                        <p>نؤمن بالشفافية والوضوح في جميع تعاملاتنا مع العملاء</p>
-                    </div>
-                    <div class="value-item">
-                        <i class="fas fa-users"></i>
-                        <h4>العمل الجماعي</h4>
-                        <p>نعمل كفريق واحد لتحقيق أفضل النتائج</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team -->
-            <div class="team-section">
-                <h2>فريقنا</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <div class="member-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <h4>عبدالسلام سالم النعماني</h4>
-                        <p class="member-role">مدير المشروع</p>
-                        <p class="member-bio">صاحب خبرة في تصميم وإدارة المشاريع لأكثر من سنتين وحاصل على شهادة مهندس ميكانيكي</p>
+                        <h3 style="color: var(--accent-color); margin-bottom: var(--spacing-sm);">رؤيتنا</h3>
+                        <p style="color: var(--gray); line-height: 1.8;">أن نكون الرائدين في مجال تطوير التطبيقات الذكية والشروحات التقنية على مستوى العالم، وأن نساهم في بناء مجتمع رقمي متقدم ومتطور.</p>
                     </div>
                     
-                    <div class="team-member">
-                        <div class="member-avatar">
-                            <i class="fas fa-user"></i>
+                    <div class="mission-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); text-align: center;">
+                        <div class="mission-icon" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; background: var(--gradient-accent); border-radius: var(--radius-md); margin: 0 auto var(--spacing-md); font-size: 2rem; color: var(--primary-color); box-shadow: var(--shadow-gold);">
+                            <i class="fas fa-flag"></i>
                         </div>
-                        <h4>غير معلن</h4>
-                        <p class="member-role">مطور تطبيقات</p>
-                        <p class="member-bio">متخصص في تطوير تطبيقات الأندرويد</p>
-                    </div>
-                    
-                    <div class="team-member">
-                        <div class="member-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <h4>عصام النعماني</h4>
-                        <p class="member-role">المختبر الأول</p>
-                        <p class="member-bio">المسئول عن تصميم واجهات التطبيقات والمواقع</p>
-                    </div>
-                    
-                    <div class="team-member">
-                        <div class="member-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <h4>عبدالملك النعماني</h4>
-                        <p class="member-role">خبير أول</p>
-                        <p class="member-bio">مختص في تطوير التطبيقات وكشف الأخطاء</p>
+                        <h3 style="color: var(--accent-color); margin-bottom: var(--spacing-sm);">رسالتنا</h3>
+                        <p style="color: var(--gray); line-height: 1.8;">تطوير تطبيقات مبتكرة وذكية تلبي احتياجات المستخدمين حول العالم، وإنتاج محتوى تعليمي تقني عالي الجودة على يوتيوب لمساعدة المطورين والمبرمجين.</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Timeline -->
-            <div class="timeline-section">
-                <h2>رحلة نجاحنا</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-year">2025</div>
-                        <div class="timeline-content">
-                            <h4>تأسيس الفريق</h4>
-                            <p>تأسس الفريق بتاريخ 26/08/2025</p>
+                <!-- Services -->
+                <div class="services-section" style="margin-bottom: var(--spacing-xl);">
+                    <h2 class="section-title">خدماتنا</h2>
+                    <div class="services-grid">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>تطوير التطبيقات</h4>
+                            <p>نطور تطبيقات ذكية ومبتكرة للهواتف الذكية والأجهزة اللوحية</p>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h4>تطوير المواقع الإلكترونية</h4>
+                            <p>نطور مواقع ويب حديثة ومتجاوبة مع ميزات متقدمة وسهلة الاستخدام</p>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <h4>الشروحات التقنية</h4>
+                            <p>نقدم شروحات تقنية متخصصة على يوتيوب لتطوير التطبيقات والبرمجة</p>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h4>تصميم الواجهات</h4>
+                            <p>نصمم واجهات مستخدم جذابة وسهلة الاستخدام</p>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4>الدعم الفني</h4>
+                            <p>نقدم دعم فني متخصص لجميع تطبيقاتنا ومواقعنا ومستخدمينا</p>
                         </div>
                     </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-year">2025</div>
-                        <div class="timeline-content">
-                            <h4>أول تطبيق</h4>
-                            <p>تم البدء بالعمل على أول تطبيق بتاريخ 28/08/2025</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-year">2025</div>
-                        <div class="timeline-content">
-                            <h4>إصدار أول تطبيق</h4>
-                            <p>تم إصدار أول تطبيق المسبحة الذكية اذكار وتسبيح بتاريخ 7/10/2025</p>
-                        </div>
-                    </div>
+                </div>
 
-                    <div class="timeline-item">
-                        <div class="timeline-year">2025</div>
-                        <div class="timeline-content">
-                            <h4>المستقبل</h4>
-                            <p>إطلاق مشاريع جديدة ومبتكرة</p>
+                <!-- Values -->
+                <div class="values-section" style="margin-bottom: var(--spacing-xl);">
+                    <h2 class="section-title">قيمنا</h2>
+                    <div class="values-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md);">
+                        <div class="value-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); text-align: center;">
+                            <i class="fas fa-lightbulb" style="font-size: 3rem; color: var(--accent-color); margin-bottom: var(--spacing-sm);"></i>
+                            <h4 style="color: var(--white); margin-bottom: var(--spacing-sm);">الابتكار</h4>
+                            <p style="color: var(--gray); line-height: 1.8;">نبحث دائماً عن طرق جديدة ومبتكرة لحل المشاكل وتطوير الحلول</p>
+                        </div>
+                        <div class="value-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); text-align: center;">
+                            <i class="fas fa-star" style="font-size: 3rem; color: var(--accent-color); margin-bottom: var(--spacing-sm);"></i>
+                            <h4 style="color: var(--white); margin-bottom: var(--spacing-sm);">الجودة</h4>
+                            <p style="color: var(--gray); line-height: 1.8;">نلتزم بأعلى معايير الجودة في كل ما ننتجه ونطوره</p>
+                        </div>
+                        <div class="value-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); text-align: center;">
+                            <i class="fas fa-handshake" style="font-size: 3rem; color: var(--accent-color); margin-bottom: var(--spacing-sm);"></i>
+                            <h4 style="color: var(--white); margin-bottom: var(--spacing-sm);">الشفافية</h4>
+                            <p style="color: var(--gray); line-height: 1.8;">نؤمن بالشفافية والوضوح في جميع تعاملاتنا مع العملاء</p>
+                        </div>
+                        <div class="value-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); text-align: center;">
+                            <i class="fas fa-users" style="font-size: 3rem; color: var(--accent-color); margin-bottom: var(--spacing-sm);"></i>
+                            <h4 style="color: var(--white); margin-bottom: var(--spacing-sm);">العمل الجماعي</h4>
+                            <p style="color: var(--gray); line-height: 1.8;">نعمل كفريق واحد لتحقيق أفضل النتائج</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team -->
+                <div class="team-section" style="margin-bottom: var(--spacing-xl);">
+                    <h2 class="section-title">فريقنا</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-avatar" style="width: 120px; height: 120px; margin: 0 auto var(--spacing-md); display: flex; align-items: center; justify-content: center; background: var(--gradient-accent); border-radius: 50%; font-size: 3rem; color: var(--primary-color); box-shadow: var(--shadow-gold);">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h4 style="text-align: center; color: var(--white); margin-bottom: var(--spacing-xs);">عبدالسلام سالم النعماني</h4>
+                            <p class="member-role" style="text-align: center; color: var(--accent-color); font-weight: 600; margin-bottom: var(--spacing-sm);">مدير المشروع</p>
+                            <p class="member-bio" style="text-align: center; color: var(--gray); line-height: 1.8;">صاحب خبرة في تصميم وإدارة المشاريع لأكثر من سنتين وحاصل على شهادة مهندس ميكانيكي</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-avatar" style="width: 120px; height: 120px; margin: 0 auto var(--spacing-md); display: flex; align-items: center; justify-content: center; background: var(--gradient-accent); border-radius: 50%; font-size: 3rem; color: var(--primary-color); box-shadow: var(--shadow-gold);">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h4 style="text-align: center; color: var(--white); margin-bottom: var(--spacing-xs);">غير معلن</h4>
+                            <p class="member-role" style="text-align: center; color: var(--accent-color); font-weight: 600; margin-bottom: var(--spacing-sm);">مطور تطبيقات</p>
+                            <p class="member-bio" style="text-align: center; color: var(--gray); line-height: 1.8;">متخصص في تطوير تطبيقات الأندرويد</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-avatar" style="width: 120px; height: 120px; margin: 0 auto var(--spacing-md); display: flex; align-items: center; justify-content: center; background: var(--gradient-accent); border-radius: 50%; font-size: 3rem; color: var(--primary-color); box-shadow: var(--shadow-gold);">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h4 style="text-align: center; color: var(--white); margin-bottom: var(--spacing-xs);">عصام النعماني</h4>
+                            <p class="member-role" style="text-align: center; color: var(--accent-color); font-weight: 600; margin-bottom: var(--spacing-sm);">المختبر الأول</p>
+                            <p class="member-bio" style="text-align: center; color: var(--gray); line-height: 1.8;">المسئول عن تصميم واجهات التطبيقات والمواقع</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-avatar" style="width: 120px; height: 120px; margin: 0 auto var(--spacing-md); display: flex; align-items: center; justify-content: center; background: var(--gradient-accent); border-radius: 50%; font-size: 3rem; color: var(--primary-color); box-shadow: var(--shadow-gold);">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h4 style="text-align: center; color: var(--white); margin-bottom: var(--spacing-xs);">عبدالملك النعماني</h4>
+                            <p class="member-role" style="text-align: center; color: var(--accent-color); font-weight: 600; margin-bottom: var(--spacing-sm);">خبير أول</p>
+                            <p class="member-bio" style="text-align: center; color: var(--gray); line-height: 1.8;">مختص في تطوير التطبيقات وكشف الأخطاء</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div class="timeline-section" style="margin-bottom: var(--spacing-xl);">
+                    <h2 class="section-title">رحلة نجاحنا</h2>
+                    <div class="timeline" style="max-width: 800px; margin: 0 auto; position: relative; padding: var(--spacing-md) 0;">
+                        <div class="timeline-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); margin-bottom: var(--spacing-md); display: flex; gap: var(--spacing-md); align-items: center;">
+                            <div class="timeline-year" style="background: var(--gradient-accent); color: var(--primary-color); padding: var(--spacing-sm) var(--spacing-md); border-radius: var(--radius-md); font-weight: 700; font-size: 1.25rem; white-space: nowrap; box-shadow: var(--shadow-gold);">2025</div>
+                            <div class="timeline-content">
+                                <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-xs);">تأسيس الفريق</h4>
+                                <p style="color: var(--gray); margin: 0;">تأسس الفريق بتاريخ 26/08/2025</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); margin-bottom: var(--spacing-md); display: flex; gap: var(--spacing-md); align-items: center;">
+                            <div class="timeline-year" style="background: var(--gradient-accent); color: var(--primary-color); padding: var(--spacing-sm) var(--spacing-md); border-radius: var(--radius-md); font-weight: 700; font-size: 1.25rem; white-space: nowrap; box-shadow: var(--shadow-gold);">2025</div>
+                            <div class="timeline-content">
+                                <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-xs);">أول تطبيق</h4>
+                                <p style="color: var(--gray); margin: 0;">تم البدء بالعمل على أول تطبيق بتاريخ 28/08/2025</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); margin-bottom: var(--spacing-md); display: flex; gap: var(--spacing-md); align-items: center;">
+                            <div class="timeline-year" style="background: var(--gradient-accent); color: var(--primary-color); padding: var(--spacing-sm) var(--spacing-md); border-radius: var(--radius-md); font-weight: 700; font-size: 1.25rem; white-space: nowrap; box-shadow: var(--shadow-gold);">2025</div>
+                            <div class="timeline-content">
+                                <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-xs);">إصدار أول تطبيق</h4>
+                                <p style="color: var(--gray); margin: 0;">تم إصدار أول تطبيق المسبحة الذكية اذكار وتسبيح بتاريخ 7/10/2025</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); margin-bottom: var(--spacing-md); display: flex; gap: var(--spacing-md); align-items: center;">
+                            <div class="timeline-year" style="background: var(--gradient-accent); color: var(--primary-color); padding: var(--spacing-sm) var(--spacing-md); border-radius: var(--radius-md); font-weight: 700; font-size: 1.25rem; white-space: nowrap; box-shadow: var(--shadow-gold);">2025</div>
+                            <div class="timeline-content">
+                                <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-xs);">المستقبل</h4>
+                                <p style="color: var(--gray); margin: 0;">إطلاق مشاريع جديدة ومبتكرة</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -262,6 +275,7 @@
                 <p>تطبيقات ذكية وإنجازات رقمية</p>
             </div>
             <div class="footer-links">
+                <h4>روابط سريعة</h4>
                 <a href="index.html">الرئيسية</a>
                 <a href="about.html">من نحن</a>
                 <a href="contact.html">اتصل بنا</a>
@@ -275,16 +289,19 @@
                 <a href="privacy-money.html">إدارة المال الشخصي</a>
             </div>
             <div class="footer-social">
-                <a href="https://twitter.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://facebook.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://instagram.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://linkedin.com/company/DIYOMX" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://youtube.com/@DIYOMX" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://github.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/DIYOMX" class="social-link" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/DIYOMX" class="social-link" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/@DIYOMX" class="social-link" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 ديومكس. جميع الحقوق محفوظة.</p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ديومكس. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 

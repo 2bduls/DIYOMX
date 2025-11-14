@@ -10,9 +10,8 @@
       gtag('config', 'G-HJWH59MZWB');
     </script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6443623739763369"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6443623739763369"
      crossorigin="anonymous"></script>
-
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +44,9 @@
     <meta name="twitter:description" content="شركة متخصصة في تطوير التطبيقات الذكية والمواقع الإلكترونية والشروحات التقنية على يوتيوب">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -53,7 +54,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- Structured Data (JSON-LD) for Organization -->
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -74,67 +75,10 @@
       }
     }
     </script>
-    
-    <!-- Structured Data (JSON-LD) for WebSite -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "ديومكس",
-      "url": "https://diyomx.com",
-      "description": "تطبيقات ذكية وإنجازات رقمية",
-      "inLanguage": "ar",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://diyomx.com/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-    
-    <!-- Structured Data (JSON-LD) for Mobile Application - Tasbiah -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MobileApplication",
-      "name": "تطبيق التسبيح",
-      "description": "تطبيق ذكي للتسبيح والذكر مع ميزات متقدمة للعد والتتبع",
-      "applicationCategory": "LifestyleApplication",
-      "operatingSystem": "Android",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "author": {
-        "@type": "Organization",
-        "name": "ديومكس",
-        "url": "https://diyomx.com"
-      },
-      "downloadUrl": "https://play.google.com/store/apps/details?id=com.diyom.tasbiah",
-      "url": "https://diyomx.com/tasbiah.html"
-    }
-    </script>
-    
-    <!-- Structured Data (JSON-LD) for Breadcrumb -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "الرئيسية",
-          "item": "https://diyomx.com"
-        }
-      ]
-    }
-    </script>
 </head>
 <body>
     <!-- Header -->
-    <header class="site-header">
+    <header class="site-header" id="header">
         <div class="header-container">
             <div class="site-branding">
                 <a href="index.html" class="site-logo-link">
@@ -144,11 +88,16 @@
                         <div class="logo-name">DIYOMX</div>
                     </div>
                 </a>
-                <a href="index.html" class="site-title">ديومكس</a>
-                <p class="site-description">تطبيقات ذكية وإنجازات رقمية</p>
+                <div>
+                    <a href="index.html" class="site-title">ديومكس</a>
+                    <p class="site-description">تطبيقات ذكية وإنجازات رقمية</p>
+                </div>
             </div>
-            <nav class="main-navigation">
-                <a href="index.html">الرئيسية</a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-navigation" id="mainNavigation">
+                <a href="index.html" class="active">الرئيسية</a>
                 <a href="about.html">من نحن</a>
                 <a href="contact.html">اتصل بنا</a>
                 <a href="privacy-options.html">سياسة الخصوصية</a>
@@ -160,294 +109,325 @@
     <main class="site-main">
         <!-- Hero Section -->
         <section class="hero-section">
-            <h1 class="hero-title">مرحباً بك في ديومكس</h1>
-            <p class="hero-subtitle">نحن فريق متخصص في تطوير التطبيقات الذكية والحلول الرقمية المبتكرة</p>
-            <div class="hero-buttons">
-                <a href="#apps" class="btn btn-primary">استكشف تطبيقاتنا</a>
-                <a href="contact.html" class="btn btn-secondary">تواصل معنا</a>
+            <div class="hero-content">
+                <h1 class="hero-title">مرحباً بك في ديومكس</h1>
+                <p class="hero-subtitle">نحن فريق متخصص في تطوير التطبيقات الذكية والحلول الرقمية المبتكرة التي تجمع بين الجمال والوظيفية</p>
+                <div class="hero-buttons">
+                    <a href="#apps" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        <span>استكشف تطبيقاتنا</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        <span>تواصل معنا</span>
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- Apps Section -->
         <section id="apps" class="apps-section">
-            <h2 class="section-title">تطبيقاتنا للأندرويد</h2>
-            <div class="apps-grid">
-                <!-- App 1 - التسبيح -->
-                <div class="app-card">
-                    <div class="app-icon">
-                        <i class="fas fa-mobile-alt"></i>
+            <div class="container">
+                <h2 class="section-title">تطبيقاتنا للأندرويد</h2>
+                <div class="apps-grid">
+                    <!-- App 1 - التسبيح -->
+                    <div class="app-card">
+                        <div class="app-icon">
+                            <i class="fas fa-mosque"></i>
+                        </div>
+                        <h3 class="app-title">تطبيق التسبيح</h3>
+                        <p class="app-description">تطبيق ذكي للتسبيح والذكر مع ميزات متقدمة للعد والتتبع</p>
+                        <ul class="app-features">
+                            <li>عداد ذكي للتسبيح</li>
+                            <li>أذكار متنوعة</li>
+                            <li>إحصائيات مفصلة</li>
+                            <li>وضع ليلي مريح</li>
+                        </ul>
+                        <a href="https://play.google.com/store/apps/details?id=com.diyom.tasbiah&pcampaignid=web_share" class="btn btn-primary" target="_blank" style="margin-top: 1rem; width: 100%;">
+                            <i class="fab fa-google-play"></i>
+                            <span>تحميل من Google Play</span>
+                        </a>
+                        <span class="app-status status-current">متاح الآن</span>
                     </div>
-                    <h3 class="app-title">تطبيق التسبيح</h3>
-                    <p class="app-description">تطبيق ذكي للتسبيح والذكر مع ميزات متقدمة للعد والتتبع</p>
-                    <ul class="app-features">
-                        <li>عداد ذكي للتسبيح</li>
-                        <li>أذكار متنوعة</li>
-                        <li>إعلانات غير مزعجة</li>
-                    </ul>
-                    <a href="https://play.google.com/store/apps/details?id=com.diyom.tasbiah&pcampaignid=web_share" class="btn btn-primary" target="_blank" style="margin-top: 1rem; display: inline-flex; align-items: center; gap: 0.5rem;">
-                        <i class="fab fa-google-play"></i>
-                        <span>تحميل من Google Play</span>
-                    </a>
-                    <span class="app-status status-current">متاح الآن</span>
-                </div>
 
-                <!-- App 2 - DIY Electric Calculator -->
-                <div class="app-card">
-                    <div class="app-icon">
-                        <i class="fas fa-bolt"></i>
+                    <!-- App 2 - DIY Electric Calculator -->
+                    <div class="app-card">
+                        <div class="app-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="app-title">DIY Electric Calculator</h3>
+                        <p class="app-description">تطبيق شامل لحساب الطاقة وحجم الأسلاك والطاقة الشمسية والبطاريات</p>
+                        <ul class="app-features">
+                            <li>حساب الطاقة الكهربائية</li>
+                            <li>حساب حجم الأسلاك</li>
+                            <li>حساب الطاقة الشمسية</li>
+                            <li>حساب البطاريات</li>
+                        </ul>
+                        <span class="app-status status-development">قيد التطوير</span>
                     </div>
-                    <h3 class="app-title">DIY Electric Calculator</h3>
-                    <p class="app-description">تطبيق لحساب الطاقة وحجم الأسلاك والطاقة الشمسية والبطاريات</p>
-                    <ul class="app-features">
-                        <li>حساب الطاقة</li>
-                        <li>حساب حجم الأسلاك</li>
-                        <li>حساب الطاقة الشمسية</li>
-                        <li>حساب البطاريات</li>
 
-                    </ul>
-                    <span class="app-status status-development">قيد التطوير</span>
-                </div>
-
-                <!-- App 3 - صيانة السيارات -->
-                <div class="app-card">
-                    <div class="app-icon">
-                        <i class="fas fa-car"></i>
+                    <!-- App 3 - صيانة السيارات -->
+                    <div class="app-card">
+                        <div class="app-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 class="app-title">صيانة السيارات</h3>
+                        <p class="app-description">تطبيق شامل لإدارة صيانة السيارات وتتبع الخدمات</p>
+                        <ul class="app-features">
+                            <li>جدولة الصيانة الدورية</li>
+                            <li>تتبع تاريخ الخدمات</li>
+                            <li>تنبيهات الصيانة</li>
+                            <li>تنبيهات الضمان</li>
+                        </ul>
+                        <span class="app-status status-future">قريباً</span>
                     </div>
-                    <h3 class="app-title">صيانة السيارات</h3>
-                    <p class="app-description">تطبيق شامل لإدارة صيانة السيارات وتتبع الخدمات</p>
-                    <ul class="app-features">
-                        <li>جدولة الصيانة الدورية</li>
-                        <li>تتبع تاريخ الخدمات</li>
-                        <li>تنبيهات الصيانة</li>
-                        <li>تنبيهات الضمان</li>
-                    </ul>
-                    <span class="app-status status-future">قريباً</span>
-                </div>
 
-                <!-- App 4 - تطبيق إدارة المال -->
-                <div class="app-card">
-                    <div class="app-icon">
-                        <i class="fa-solid fa-viruses"></i>
+                    <!-- App 4 - تطبيق إدارة المال -->
+                    <div class="app-card">
+                        <div class="app-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3 class="app-title">إدارة المال الشخصي</h3>
+                        <p class="app-description">تطبيق لإدارة الميزانية الشخصية وتتبع المصروفات</p>
+                        <ul class="app-features">
+                            <li>تتبع الدخل والمصروفات</li>
+                            <li>إنشاء ميزانية شهرية</li>
+                            <li>تقارير مالية مفصلة</li>
+                            <li>تنبيهات الميزانية</li>
+                        </ul>
+                        <span class="app-status status-future">قريباً</span>
                     </div>
-                    <h3 class="app-title">إدارة المال الشخصي</h3>
-                    <p class="app-description">تطبيق لإدارة الميزانية الشخصية وتتبع المصروفات</p>
-                    <ul class="app-features">
-                        <li>تتبع الدخل والمصروفات</li>
-                        <li>إنشاء ميزانية شهرية</li>
-                        <li>تقارير مالية مفصلة</li>
-                        <li>تنبيهات الميزانية</li>
-                    </ul>
-                    <span class="app-status status-future">قريباً</span>
                 </div>
             </div>
         </section>
 
         <!-- Websites Section -->
-        <section class="websites-section" style="padding: 4rem 2rem; background: white;">
-            <h2 class="section-title">مواقعنا الإلكترونية</h2>
-            <div class="apps-grid">
-                <!-- Website 1 - Tasbiah -->
-                <div class="app-card">
-                    <div class="app-icon">
-                        <i class="fas fa-globe"></i>
+        <section class="websites-section">
+            <div class="container">
+                <h2 class="section-title">مواقعنا الإلكترونية</h2>
+                <div class="apps-grid">
+                    <!-- Website 1 - Tasbiah -->
+                    <div class="app-card">
+                        <div class="app-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="app-title">موقع التسبيح الإلكتروني</h3>
+                        <p class="app-description">موقع ويب شامل للتسبيح والذكر مع ميزات متقدمة</p>
+                        <ul class="app-features">
+                            <li>عداد ذكي للتسبيح</li>
+                            <li>أذكار متنوعة</li>
+                            <li>يعمل على جميع الأجهزة</li>
+                            <li>واجهة سهلة الاستخدام</li>
+                        </ul>
+                        <a href="https://tasbiah.diyomx.com" class="btn btn-primary" target="_blank" style="margin-top: 1rem; width: 100%;">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>زيارة الموقع</span>
+                        </a>
+                        <span class="app-status status-current">متاح الآن</span>
                     </div>
-                    <h3 class="app-title">موقع التسبيح الإلكتروني</h3>
-                    <p class="app-description">موقع ويب شامل للتسبيح والذكر مع ميزات متقدمة</p>
-                    <ul class="app-features">
-                        <li>عداد ذكي للتسبيح</li>
-                        <li>أذكار متنوعة</li>
-                        <li>يعمل على جميع الأجهزة</li>
-                        <li>واجهة سهلة الاستخدام</li>
-                    </ul>
-                    <a href="https://tasbiah.diyomx.com" class="btn btn-primary" target="_blank" style="margin-top: 1rem; display: inline-flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-external-link-alt"></i>
-                        <span>زيارة الموقع</span>
-                    </a>
-                    <span class="app-status status-current">متاح الآن</span>
                 </div>
+                <p style="text-align: center; margin-top: 2rem; color: var(--gray); font-size: 1.1rem;">
+                    نعمل على تطوير مواقع وتطبيقات جديدة قريباً
+                </p>
             </div>
-            <p style="text-align: center; margin-top: 2rem; color: #666; font-size: 1.1rem;">
-                نعمل على تطوير مواقع وتطبيقات جديدة قريباً
-            </p>
         </section>
 
         <!-- YouTube Tutorials Section -->
         <section class="youtube-section">
-            <h2 class="section-title">شروحاتنا على يوتيوب</h2>
-            <div class="youtube-intro">
-                <p>نقدم شروحات تقنية متخصصة على قناتنا في يوتيوب لتطوير التطبيقات والبرمجة</p>
-            </div>
-            <div class="youtube-grid">
-                <div class="youtube-card">
-                    <div class="youtube-icon">
-                        <i class="fab fa-youtube"></i>
+            <div class="container">
+                <h2 class="section-title">شروحاتنا على يوتيوب</h2>
+                <p style="text-align: center; color: var(--gray); margin-bottom: var(--spacing-lg); font-size: 1.2rem;">
+                    نقدم شروحات تقنية متخصصة على قناتنا في يوتيوب لتطوير التطبيقات والبرمجة
+                </p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <h3>شروحات تطوير التطبيقات</h3>
+                        <p>شروحات مفصلة لتطوير تطبيقات الأندرويد والبرمجة</p>
+                        <a href="https://youtube.com/@DIYOMX" class="btn btn-outline" target="_blank" style="margin-top: 1rem;">
+                            <i class="fab fa-youtube"></i>
+                            <span>مشاهدة الشروحات</span>
+                        </a>
                     </div>
-                    <h3>شروحات تطوير التطبيقات</h3>
-                    <p>شروحات مفصلة لتطوير تطبيقات الأندرويد والبرمجة</p>
-                    <a href="https://youtube.com/@DIYOMX" class="btn btn-primary" target="_blank">مشاهدة الشروحات</a>
-                </div>
-                <div class="youtube-card">
-                    <div class="youtube-icon">
-                        <i class="fas fa-code"></i>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>دروس البرمجة</h3>
+                        <p>دروس تعليمية في البرمجة والتطوير للمبتدئين والمحترفين</p>
+                        <a href="https://youtube.com/@DIYOMX" class="btn btn-outline" target="_blank" style="margin-top: 1rem;">
+                            <i class="fab fa-youtube"></i>
+                            <span>مشاهدة الشروحات</span>
+                        </a>
                     </div>
-                    <h3>دروس البرمجة</h3>
-                    <p>دروس تعليمية في البرمجة والتطوير للمبتدئين والمحترفين</p>
-                    <a href="https://youtube.com/@DIYOMX" class="btn btn-primary" target="_blank">مشاهدة الشروحات</a>
-                </div>
-                <div class="youtube-card">
-                    <div class="youtube-icon">
-                        <i class="fas fa-tools"></i>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>نصائح وتقنيات</h3>
+                        <p>نصائح وتقنيات متقدمة في تطوير التطبيقات والبرمجة</p>
+                        <a href="https://youtube.com/@DIYOMX" class="btn btn-outline" target="_blank" style="margin-top: 1rem;">
+                            <i class="fab fa-youtube"></i>
+                            <span>مشاهدة الشروحات</span>
+                        </a>
                     </div>
-                    <h3>نصائح وتقنيات</h3>
-                    <p>نصائح وتقنيات متقدمة في تطوير التطبيقات والبرمجة</p>
-                    <a href="https://youtube.com/@DIYOMX" class="btn btn-primary" target="_blank">مشاهدة الشروحات</a>
                 </div>
             </div>
         </section>
 
         <!-- Achievements Section -->
         <section class="achievements-section">
-            <h2 class="section-title">إنجازاتنا</h2>
-            <div class="achievements-grid" id="achievementsGrid">
-                <div class="achievement-item" data-key="apps-published">
-                    <div class="achievement-icon">
-                        <i class="fas fa-mobile-alt"></i>
+            <div class="container">
+                <h2 class="section-title">إنجازاتنا</h2>
+                <div class="achievements-grid" id="achievementsGrid">
+                    <div class="achievement-item" data-key="apps-published">
+                        <div class="achievement-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="achievement-number" data-value="1">1+</div>
+                        <div class="achievement-label">تطبيقات مطورة</div>
+                        <div class="achievement-description">تطبيق متاح على Google Play</div>
                     </div>
-                    <div class="achievement-number" data-value="1">1+</div>
-                    <div class="achievement-label">تطبيقات مطورة</div>
-                    <div class="achievement-description">تطبيق متاح على Google Play</div>
-                </div>
-                <div class="achievement-item" data-key="apps-development">
-                    <div class="achievement-icon">
-                        <i class="fas fa-code-branch"></i>
+                    <div class="achievement-item" data-key="apps-development">
+                        <div class="achievement-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="achievement-number" data-value="3">3+</div>
+                        <div class="achievement-label">تطبيقات قيد التطوير</div>
+                        <div class="achievement-description">قريباً على المتاجر</div>
                     </div>
-                    <div class="achievement-number" data-value="3">3+</div>
-                    <div class="achievement-label">تطبيقات قيد التطوير</div>
-                    <div class="achievement-description">قريباً على المتاجر</div>
-                </div>
-                <div class="achievement-item" data-key="users-active">
-                    <div class="achievement-icon">
-                        <i class="fas fa-users"></i>
+                    <div class="achievement-item" data-key="users-active">
+                        <div class="achievement-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="achievement-number" data-value="388">388+</div>
+                        <div class="achievement-label">مستخدم نشط</div>
+                        <div class="achievement-description">يستخدمون تطبيقاتنا يومياً</div>
                     </div>
-                    <div class="achievement-number" data-value="388">388+</div>
-                    <div class="achievement-label">مستخدم نشط</div>
-                    <div class="achievement-description">يستخدمون تطبيقاتنا يومياً</div>
-                </div>
-                <div class="achievement-item" data-key="downloads">
-                    <div class="achievement-icon">
-                        <i class="fas fa-download"></i>
+                    <div class="achievement-item" data-key="downloads">
+                        <div class="achievement-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="achievement-number" data-value="676">676+</div>
+                        <div class="achievement-label">تحميل</div>
+                        <div class="achievement-description">من Google Play Store</div>
                     </div>
-                    <div class="achievement-number" data-value="676">676+</div>
-                    <div class="achievement-label">تحميل</div>
-                    <div class="achievement-description">من Google Play Store</div>
-                </div>
-                <div class="achievement-item" data-key="rating-average">
-                    <div class="achievement-icon">
-                        <i class="fas fa-star"></i>
+                    <div class="achievement-item" data-key="rating-average">
+                        <div class="achievement-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="achievement-number" data-value="5.0">5.0</div>
+                        <div class="achievement-label">تقييم متوسط</div>
+                        <div class="achievement-description">من المستخدمين</div>
                     </div>
-                    <div class="achievement-number" data-value="5.0">5.0</div>
-                    <div class="achievement-label">تقييم متوسط</div>
-                    <div class="achievement-description">من المستخدمين</div>
-                </div>
-                <div class="achievement-item" data-key="ratings-count">
-                    <div class="achievement-icon">
-                        <i class="fas fa-comments"></i>
+                    <div class="achievement-item" data-key="ratings-count">
+                        <div class="achievement-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="achievement-number" data-value="50">50+</div>
+                        <div class="achievement-label">تقييم</div>
+                        <div class="achievement-description">تقييمات إيجابية</div>
                     </div>
-                    <div class="achievement-number" data-value="50">50+</div>
-                    <div class="achievement-label">تقييم</div>
-                    <div class="achievement-description">تقييمات إيجابية</div>
-                </div>
-                <div class="achievement-item" data-key="countries">
-                    <div class="achievement-icon">
-                        <i class="fas fa-globe"></i>
+                    <div class="achievement-item" data-key="countries">
+                        <div class="achievement-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="achievement-number" data-value="15">15+</div>
+                        <div class="achievement-label">دولة</div>
+                        <div class="achievement-description">يستخدمون تطبيقاتنا</div>
                     </div>
-                    <div class="achievement-number" data-value="15">15+</div>
-                    <div class="achievement-label">دولة</div>
-                    <div class="achievement-description">يستخدمون تطبيقاتنا</div>
-                </div>
-                <div class="achievement-item" data-key="languages">
-                    <div class="achievement-icon">
-                        <i class="fas fa-language"></i>
+                    <div class="achievement-item" data-key="languages">
+                        <div class="achievement-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="achievement-number" data-value="2">2</div>
+                        <div class="achievement-label">لغة</div>
+                        <div class="achievement-description">العربية والإنجليزية</div>
                     </div>
-                    <div class="achievement-number" data-value="2">2</div>
-                    <div class="achievement-label">لغة</div>
-                    <div class="achievement-description">العربية والإنجليزية</div>
-                </div>
-                <div class="achievement-item" data-key="updates">
-                    <div class="achievement-icon">
-                        <i class="fas fa-sync-alt"></i>
+                    <div class="achievement-item" data-key="updates">
+                        <div class="achievement-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div class="achievement-number" data-value="10">10+</div>
+                        <div class="achievement-label">تحديث</div>
+                        <div class="achievement-description">تحسينات وميزات جديدة</div>
                     </div>
-                    <div class="achievement-number" data-value="10">10+</div>
-                    <div class="achievement-label">تحديث</div>
-                    <div class="achievement-description">تحسينات وميزات جديدة</div>
-                </div>
-                <div class="achievement-item" data-key="privacy">
-                    <div class="achievement-icon">
-                        <i class="fas fa-shield-alt"></i>
+                    <div class="achievement-item" data-key="privacy">
+                        <div class="achievement-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="achievement-number" data-value="100">100%</div>
+                        <div class="achievement-label">خصوصية</div>
+                        <div class="achievement-description">بيانات محلية فقط</div>
                     </div>
-                    <div class="achievement-number" data-value="100">100%</div>
-                    <div class="achievement-label">خصوصية</div>
-                    <div class="achievement-description">بيانات محلية فقط</div>
-                </div>
-                <div class="achievement-item" data-key="features">
-                    <div class="achievement-icon">
-                        <i class="fas fa-bolt"></i>
+                    <div class="achievement-item" data-key="features">
+                        <div class="achievement-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="achievement-number" data-value="14">14+</div>
+                        <div class="achievement-label">ميزة</div>
+                        <div class="achievement-description">في كل تطبيق</div>
                     </div>
-                    <div class="achievement-number" data-value="14">14+</div>
-                    <div class="achievement-label">ميزة</div>
-                    <div class="achievement-description">في كل تطبيق</div>
-                </div>
-                <div class="achievement-item" data-key="satisfaction">
-                    <div class="achievement-icon">
-                        <i class="fas fa-heart"></i>
+                    <div class="achievement-item" data-key="satisfaction">
+                        <div class="achievement-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="achievement-number" data-value="95">95%</div>
+                        <div class="achievement-label">رضا</div>
+                        <div class="achievement-description">معدل رضا المستخدمين</div>
                     </div>
-                    <div class="achievement-number" data-value="95">95%</div>
-                    <div class="achievement-label">رضا</div>
-                    <div class="achievement-description">معدل رضا المستخدمين</div>
                 </div>
             </div>
         </section>
 
         <!-- Content Section -->
-        <section style="padding: 4rem 2rem; background: #f8f9fa;">
-            <div class="container" style="max-width: 1200px; margin: 0 auto;">
-                <h2 style="color: #2c5530; margin-bottom: 2rem; font-size: 2.5rem; text-align: center;">ديومكس - تطبيقات ذكية للمستخدمين حول العالم</h2>
-                <p style="color: #555; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem; text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
-                    ديومكس هي شركة متخصصة في تطوير التطبيقات الذكية والحلول الرقمية المبتكرة للمستخدمين حول العالم. نحن نؤمن بأن التكنولوجيا يجب أن تكون في خدمة الإنسان، ولهذا نركز على تطوير تطبيقات مفيدة وسهلة الاستخدام تعمل على تحسين حياة المستخدمين وتسهيل مهامهم اليومية.
-                </p>
-                <p style="color: #555; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem; text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
-                    بدأت رحلتنا بإطلاق تطبيق التسبيح الذي حقق نجاحاً كبيراً وحصل على تقييمات إيجابية من المستخدمين. التطبيق متوفر الآن على Google Play Store ويمكن تحميله مجاناً. كما طورنا موقع التسبيح الإلكتروني (tasbiah.diyomx.com) الذي يوفر تجربة مماثلة على الويب. نحن نعمل حالياً على تطوير تطبيقات ومواقع جديدة مثل حاسبة الكهرباء وتطبيق صيانة السيارات، بالإضافة إلى مشاريع أخرى مفيدة للمستخدمين حول العالم.
-                </p>
-                <p style="color: #555; line-height: 1.8; margin-bottom: 2rem; font-size: 1.1rem; text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
-                    جميع تطبيقاتنا مجانية تماماً وتراعي خصوصية المستخدمين. نحن نؤمن بأهمية حماية بيانات المستخدمين وعدم جمع أي معلومات شخصية غير ضرورية. تطبيقاتنا تعمل بشكل كامل بدون الحاجة لاتصال بالإنترنت في معظم الحالات.
-                </p>
+        <section style="padding: var(--spacing-xl) var(--spacing-md);">
+            <div class="container">
+                <h2 style="color: var(--white); margin-bottom: var(--spacing-md); font-size: clamp(2rem, 4vw, 3rem); text-align: center;">
+                    ديومكس - تطبيقات ذكية للمستخدمين حول العالم
+                </h2>
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: var(--spacing-md); font-size: 1.1rem; text-align: center;">
+                        ديومكس هي شركة متخصصة في تطوير التطبيقات الذكية والحلول الرقمية المبتكرة للمستخدمين حول العالم. نحن نؤمن بأن التكنولوجيا يجب أن تكون في خدمة الإنسان، ولهذا نركز على تطوير تطبيقات مفيدة وسهلة الاستخدام تعمل على تحسين حياة المستخدمين وتسهيل مهامهم اليومية.
+                    </p>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: var(--spacing-md); font-size: 1.1rem; text-align: center;">
+                        بدأت رحلتنا بإطلاق تطبيق التسبيح الذي حقق نجاحاً كبيراً وحصل على تقييمات إيجابية من المستخدمين. التطبيق متوفر الآن على Google Play Store ويمكن تحميله مجاناً. كما طورنا موقع التسبيح الإلكتروني (tasbiah.diyomx.com) الذي يوفر تجربة مماثلة على الويب. نحن نعمل حالياً على تطوير تطبيقات ومواقع جديدة مثل حاسبة الكهرباء وتطبيق صيانة السيارات، بالإضافة إلى مشاريع أخرى مفيدة للمستخدمين حول العالم.
+                    </p>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: var(--spacing-md); font-size: 1.1rem; text-align: center;">
+                        جميع تطبيقاتنا مجانية تماماً وتراعي خصوصية المستخدمين. نحن نؤمن بأهمية حماية بيانات المستخدمين وعدم جمع أي معلومات شخصية غير ضرورية. تطبيقاتنا تعمل بشكل كامل بدون الحاجة لاتصال بالإنترنت في معظم الحالات.
+                    </p>
+                </div>
             </div>
         </section>
 
         <!-- Features Section -->
         <section class="features-section">
-            <h2 class="section-title">لماذا ديومكس؟</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-rocket"></i>
+            <div class="container">
+                <h2 class="section-title">لماذا ديومكس؟</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>تطوير سريع</h3>
+                        <p>نطور تطبيقاتنا ومواقعنا بأحدث التقنيات وأسرع الطرق</p>
                     </div>
-                    <h3>تطوير سريع</h3>
-                    <p>نطور تطبيقاتنا ومواقعنا بأحدث التقنيات وأسرع الطرق</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>أمان عالي</h3>
+                        <p>نضمن حماية بيانات المستخدمين بأعلى معايير الأمان</p>
                     </div>
-                    <h3>أمان عالي</h3>
-                    <p>نضمن حماية بيانات المستخدمين بأعلى معايير الأمان</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>دعم فني</h3>
+                        <p>فريق دعم فني متاح لخدمة جميع مستخدمينا</p>
                     </div>
-                    <h3>دعم فني</h3>
-                    <p>فريق دعم فني متاح لخدمة جميع مستخدمينا</p>
                 </div>
             </div>
         </section>
@@ -461,35 +441,33 @@
                 <p>تطبيقات ذكية وإنجازات رقمية</p>
             </div>
             <div class="footer-links">
+                <h4>روابط سريعة</h4>
                 <a href="index.html">الرئيسية</a>
                 <a href="about.html">من نحن</a>
                 <a href="contact.html">اتصل بنا</a>
                 <a href="privacy-options.html">سياسة الخصوصية</a>
             </div>
             <div class="footer-privacy-links">
-<h4>سياسات الخصوصية</h4>
-
-<a href="privacy-tasbiah.html">تطبيق التسبيح</a>
-
-<a href="privacy-electric.html">DIY Electric Calculator</a>
-
-<a href="privacy-car.html">صيانة السيارات</a>
-
-<a href="privacy-money.html">إدارة المال الشخصي</a>
-
+                <h4>سياسات الخصوصية</h4>
+                <a href="privacy-tasbiah.html">تطبيق التسبيح</a>
+                <a href="privacy-electric.html">DIY Electric Calculator</a>
+                <a href="privacy-car.html">صيانة السيارات</a>
+                <a href="privacy-money.html">إدارة المال الشخصي</a>
             </div>
             <div class="footer-social">
-
-<a href="https://twitter.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
-              
-<a href="https://instagram.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
-
-<a href="https://youtube.com/@DIYOMX" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
-
+                <a href="https://twitter.com/DIYOMX" class="social-link" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/DIYOMX" class="social-link" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/@DIYOMX" class="social-link" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 ديومكس. جميع الحقوق محفوظة.</p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ديومكس. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 

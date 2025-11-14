@@ -29,11 +29,13 @@
     <meta property="og:title" content="اتصل بنا - ديومكس">
     <meta property="og:description" content="تواصل مع شركة ديومكس للحصول على الدعم الفني أو الاستفسارات حول تطبيقاتنا وشروحات يوتيوب">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://diyomx.github.io/contact.html">
+    <meta property="og:url" content="https://diyomx.com/contact.html">
     <meta property="og:locale" content="ar_SA">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -43,7 +45,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="site-header">
+    <header class="site-header" id="header">
         <div class="header-container">
             <div class="site-branding">
                 <a href="index.html" class="site-logo-link">
@@ -53,10 +55,15 @@
                         <div class="logo-name">DIYOMX</div>
                     </div>
                 </a>
-                <a href="index.html" class="site-title">ديومكس</a>
-                <p class="site-description">تطبيقات ذكية وإنجازات رقمية</p>
+                <div>
+                    <a href="index.html" class="site-title">ديومكس</a>
+                    <p class="site-description">تطبيقات ذكية وإنجازات رقمية</p>
+                </div>
             </div>
-            <nav class="main-navigation">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-navigation" id="mainNavigation">
                 <a href="index.html">الرئيسية</a>
                 <a href="about.html">من نحن</a>
                 <a href="contact.html" class="active">اتصل بنا</a>
@@ -74,7 +81,7 @@
         </section>
 
         <!-- Contact Content -->
-        <section class="contact-content">
+        <section class="contact-content" style="padding: var(--spacing-xl) var(--spacing-md);">
             <div class="contact-grid">
                 <!-- Contact Form -->
                 <div class="contact-form-section">
@@ -114,9 +121,9 @@
                             <textarea id="message" name="message" rows="5" required placeholder="اكتب رسالتك هنا..."></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
                             <i class="fas fa-paper-plane"></i>
-                            إرسال الرسالة
+                            <span>إرسال الرسالة</span>
                         </button>
                     </form>
                 </div>
@@ -135,14 +142,13 @@
                         </div>
                     </div>
                     
-                    
                     <div class="contact-info-item">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="contact-details">
                             <h4>العنوان</h4>
-                            <p>مسقط , سلطنة عمان</p>
+                            <p>مسقط، سلطنة عمان</p>
                         </div>
                     </div>
                     
@@ -152,7 +158,7 @@
                         </div>
                         <div class="contact-details">
                             <h4>ساعات العمل</h4>
-                            <p>الأحد - الاربعاء: 10:00 ص - 4:00 م</p>
+                            <p>الأحد - الأربعاء: 10:00 ص - 4:00 م</p>
                             <p>الخميس - السبت: مغلق</p>
                         </div>
                     </div>
@@ -160,59 +166,63 @@
             </div>
 
             <!-- FAQ Section -->
-            <div class="faq-section">
-                <h2>الأسئلة الشائعة</h2>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <h4>كيف يمكنني تحميل تطبيقاتكم؟</h4>
-                        <p>يمكنك تحميل تطبيقاتنا من متجر Google Play، ونحاول بأسرع وقت إدراجها على App Store. تطبيق التسبيح متاح الآن، والتطبيقات الأخرى قيد التطوير.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h4>هل تطبيقاتكم مجانية؟</h4>
-                        <p>نعم، جميع تطبيقاتنا الأساسية مجانية مع إمكانية الترقية للميزات المتقدمة.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h4>متى ستكون تطبيقات حساب الكهرباء وصيانة السيارات متاحة؟</h4>
-                        <p>نعمل حالياً على تطوير هذه التطبيقات وستكون متاحة قريباً. يمكنك متابعة آخر التحديثات على موقعنا.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h4>هل تقدمون شروحات على يوتيوب؟</h4>
-                        <p>حالياً لا، ولكن نأمل في إنشاء قناة يوتيوب قريباً لتقديم شروحات تقنية متخصصة.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h4>كيف يمكنني الإبلاغ عن خطأ في التطبيق؟</h4>
-                        <p>يمكنك استخدام نموذج الاتصال أعلاه واختيار "تقرير خطأ في التطبيق" كموضوع الرسالة.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h4>هل تقدمون دعم فني؟</h4>
-                        <p>نعم، نقدم دعم فني مجاني لجميع المستخدمين عبر البريد الإلكتروني.</p>
+            <div class="faq-section" style="margin-top: var(--spacing-xl);">
+                <div class="container">
+                    <h2 class="section-title">الأسئلة الشائعة</h2>
+                    <div class="faq-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-md); max-width: 1200px; margin: 0 auto;">
+                        <div class="faq-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); border-right: 4px solid var(--accent-color);">
+                            <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-sm); font-size: 1.2rem;">كيف يمكنني تحميل تطبيقاتكم؟</h4>
+                            <p style="color: var(--gray); line-height: 1.8; margin: 0;">يمكنك تحميل تطبيقاتنا من متجر Google Play، ونحاول بأسرع وقت إدراجها على App Store. تطبيق التسبيح متاح الآن، والتطبيقات الأخرى قيد التطوير.</p>
+                        </div>
+                        
+                        <div class="faq-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); border-right: 4px solid var(--accent-color);">
+                            <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-sm); font-size: 1.2rem;">هل تطبيقاتكم مجانية؟</h4>
+                            <p style="color: var(--gray); line-height: 1.8; margin: 0;">نعم، جميع تطبيقاتنا الأساسية مجانية مع إمكانية الترقية للميزات المتقدمة.</p>
+                        </div>
+                        
+                        <div class="faq-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); border-right: 4px solid var(--accent-color);">
+                            <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-sm); font-size: 1.2rem;">متى ستكون تطبيقات حساب الكهرباء وصيانة السيارات متاحة؟</h4>
+                            <p style="color: var(--gray); line-height: 1.8; margin: 0;">نعمل حالياً على تطوير هذه التطبيقات وستكون متاحة قريباً. يمكنك متابعة آخر التحديثات على موقعنا.</p>
+                        </div>
+                        
+                        <div class="faq-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); border-right: 4px solid var(--accent-color);">
+                            <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-sm); font-size: 1.2rem;">هل تقدمون شروحات على يوتيوب؟</h4>
+                            <p style="color: var(--gray); line-height: 1.8; margin: 0;">حالياً لا، ولكن نأمل في إنشاء قناة يوتيوب قريباً لتقديم شروحات تقنية متخصصة.</p>
+                        </div>
+                        
+                        <div class="faq-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); border-right: 4px solid var(--accent-color);">
+                            <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-sm); font-size: 1.2rem;">كيف يمكنني الإبلاغ عن خطأ في التطبيق؟</h4>
+                            <p style="color: var(--gray); line-height: 1.8; margin: 0;">يمكنك استخدام نموذج الاتصال أعلاه واختيار "تقرير خطأ في التطبيق" كموضوع الرسالة.</p>
+                        </div>
+                        
+                        <div class="faq-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); border-right: 4px solid var(--accent-color);">
+                            <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-sm); font-size: 1.2rem;">هل تقدمون دعم فني؟</h4>
+                            <p style="color: var(--gray); line-height: 1.8; margin: 0;">نعم، نقدم دعم فني مجاني لجميع المستخدمين عبر البريد الإلكتروني.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Social Media -->
-            <div class="social-section">
-                <h2>تابعنا على وسائل التواصل</h2>
-                    <div class="social-links">
-                    <a href="https://twitter.com/DIYOMX" class="social-link-large" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                        <span>تويتر</span>
-                    </a>
+            <div class="social-section" style="margin-top: var(--spacing-xl); text-align: center;">
+                <div class="container">
+                    <h2 class="section-title">تابعنا على وسائل التواصل</h2>
+                    <div class="social-links" style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap; margin-top: var(--spacing-lg);">
+                        <a href="https://twitter.com/DIYOMX" class="social-link-large" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm); padding: var(--spacing-md); background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); color: var(--gray); transition: var(--transition-normal); min-width: 150px;">
+                            <i class="fab fa-twitter" style="font-size: 2.5rem; color: var(--accent-color);"></i>
+                            <span style="font-weight: 600;">تويتر</span>
+                        </a>
 
-                    <a href="https://instagram.com/DIYOMX" class="social-link-large" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                        <span>إنستغرام</span>
-                    </a>
+                        <a href="https://instagram.com/DIYOMX" class="social-link-large" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm); padding: var(--spacing-md); background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); color: var(--gray); transition: var(--transition-normal); min-width: 150px;">
+                            <i class="fab fa-instagram" style="font-size: 2.5rem; color: var(--accent-color);"></i>
+                            <span style="font-weight: 600;">إنستغرام</span>
+                        </a>
 
-                    <a href="https://youtube.com/@DIYOMX" class="social-link-large" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                        <span>يوتيوب</span>
-                    </a>
+                        <a href="https://youtube.com/@DIYOMX" class="social-link-large" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm); padding: var(--spacing-md); background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); color: var(--gray); transition: var(--transition-normal); min-width: 150px;">
+                            <i class="fab fa-youtube" style="font-size: 2.5rem; color: var(--accent-color);"></i>
+                            <span style="font-weight: 600;">يوتيوب</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -226,6 +236,7 @@
                 <p>تطبيقات ذكية وإنجازات رقمية</p>
             </div>
             <div class="footer-links">
+                <h4>روابط سريعة</h4>
                 <a href="index.html">الرئيسية</a>
                 <a href="about.html">من نحن</a>
                 <a href="contact.html">اتصل بنا</a>
@@ -239,16 +250,19 @@
                 <a href="privacy-money.html">إدارة المال الشخصي</a>
             </div>
             <div class="footer-social">
-                <a href="https://twitter.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://facebook.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://instagram.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://linkedin.com/company/DIYOMX" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://youtube.com/@DIYOMX" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://github.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/DIYOMX" class="social-link" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/DIYOMX" class="social-link" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/@DIYOMX" class="social-link" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 ديومكس. جميع الحقوق محفوظة.</p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ديومكس. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
