@@ -1363,7 +1363,7 @@ body {
     border-radius: 25px;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
@@ -1372,6 +1372,10 @@ body {
     backdrop-filter: blur(10px);
     font-weight: 600;
     font-size: 0.9rem;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 1000;
 }
 
 .language-toggle:hover {
@@ -1403,12 +1407,16 @@ body {
     width: 45px;
     height: 45px;
     cursor: pointer;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     margin-left: 1rem;
     backdrop-filter: blur(10px);
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 1000;
 }
 
 .dark-mode-toggle:hover {

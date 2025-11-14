@@ -309,10 +309,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Dark Mode Functionality
-    initializeDarkMode();
+    // Use setTimeout to ensure DOM is fully ready
+    setTimeout(() => {
+        initializeDarkMode();
+    }, 50);
 
     // Language Toggle Functionality
-    initializeLanguageToggle();
+    // Use setTimeout to ensure DOM is fully ready and dark mode toggle is created first
+    setTimeout(() => {
+        initializeLanguageToggle();
+    }, 150);
 
     console.log('ديومكس - الموقع جاهز للاستخدام!');
 });
@@ -548,6 +554,8 @@ function createDarkModeToggle() {
     const toggle = document.createElement('button');
     toggle.className = 'dark-mode-toggle';
     toggle.innerHTML = '<i class="fas fa-moon"></i>';
+    toggle.setAttribute('type', 'button');
+    toggle.setAttribute('aria-label', 'Toggle Dark Mode');
     const currentLang = localStorage.getItem('language') || 'ar';
     toggle.title = currentLang === 'ar' ? 'تبديل الوضع الليلي' : 'Toggle Dark Mode';
     
@@ -555,6 +563,19 @@ function createDarkModeToggle() {
     const headerContainer = document.querySelector('.header-container');
     if (headerContainer) {
         headerContainer.appendChild(toggle);
+        // Ensure it's visible
+        toggle.style.display = 'flex';
+        toggle.style.visibility = 'visible';
+    } else {
+        // Retry after a short delay if header is not ready
+        setTimeout(() => {
+            const retryContainer = document.querySelector('.header-container');
+            if (retryContainer) {
+                retryContainer.appendChild(toggle);
+                toggle.style.display = 'flex';
+                toggle.style.visibility = 'visible';
+            }
+        }, 200);
     }
     
     // Add click event listener
@@ -793,6 +814,8 @@ function createLanguageToggle() {
     
     const toggle = document.createElement('button');
     toggle.className = 'language-toggle';
+    toggle.setAttribute('type', 'button');
+    toggle.setAttribute('aria-label', 'Toggle Language');
     const currentLang = localStorage.getItem('language') || 'ar';
     
     if (currentLang === 'ar') {
@@ -816,6 +839,24 @@ function createLanguageToggle() {
             // If dark mode toggle doesn't exist, append to header
             headerContainer.appendChild(toggle);
         }
+        // Ensure it's visible
+        toggle.style.display = 'flex';
+        toggle.style.visibility = 'visible';
+    } else {
+        // Retry after a short delay if header is not ready
+        setTimeout(() => {
+            const retryContainer = document.querySelector('.header-container');
+            const retryDarkModeToggle = document.querySelector('.dark-mode-toggle');
+            if (retryContainer) {
+                if (retryDarkModeToggle) {
+                    retryContainer.insertBefore(toggle, retryDarkModeToggle);
+                } else {
+                    retryContainer.appendChild(toggle);
+                }
+                toggle.style.display = 'flex';
+                toggle.style.visibility = 'visible';
+            }
+        }, 200);
     }
     
     // Add click event listener
