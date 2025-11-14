@@ -820,9 +820,18 @@ function createLanguageToggle() {
     
     // Add click event listener
     toggle.addEventListener('click', toggleLanguage);
+    
+    // Also add mousedown to ensure it works
+    toggle.addEventListener('mousedown', function(e) {
+        e.preventDefault();
+    });
 }
 
-function toggleLanguage() {
+function toggleLanguage(e) {
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
     const currentLang = localStorage.getItem('language') || 'ar';
     
     if (currentLang === 'ar') {
@@ -1864,22 +1873,50 @@ function translatePage(lang) {
     const navLinks = document.querySelectorAll('.main-navigation a');
     if (navLinks.length >= 4) {
         if (lang === 'en') {
+            // Save original Arabic text if not already saved
+            if (!navLinks[0].hasAttribute('data-ar-original')) {
+                navLinks[0].setAttribute('data-ar-original', navLinks[0].textContent);
+            }
+            if (!navLinks[1].hasAttribute('data-ar-original')) {
+                navLinks[1].setAttribute('data-ar-original', navLinks[1].textContent);
+            }
+            if (!navLinks[2].hasAttribute('data-ar-original')) {
+                navLinks[2].setAttribute('data-ar-original', navLinks[2].textContent);
+            }
+            if (!navLinks[3].hasAttribute('data-ar-original')) {
+                navLinks[3].setAttribute('data-ar-original', navLinks[3].textContent);
+            }
             navLinks[0].textContent = 'Home';
             navLinks[1].textContent = 'About Us';
             navLinks[2].textContent = 'Contact Us';
             navLinks[3].textContent = 'Privacy Policy';
         } else {
-            navLinks[0].textContent = 'الرئيسية';
-            navLinks[1].textContent = 'من نحن';
-            navLinks[2].textContent = 'اتصل بنا';
-            navLinks[3].textContent = 'سياسة الخصوصية';
+            // Restore original Arabic text
+            const original0 = navLinks[0].getAttribute('data-ar-original');
+            const original1 = navLinks[1].getAttribute('data-ar-original');
+            const original2 = navLinks[2].getAttribute('data-ar-original');
+            const original3 = navLinks[3].getAttribute('data-ar-original');
+            if (original0) navLinks[0].textContent = original0;
+            if (original1) navLinks[1].textContent = original1;
+            if (original2) navLinks[2].textContent = original2;
+            if (original3) navLinks[3].textContent = original3;
         }
     }
     
     // Translate site description
     const siteDesc = document.querySelector('.site-description');
     if (siteDesc) {
-        siteDesc.textContent = translations[lang]['site-desc'];
+        if (lang === 'en') {
+            if (!siteDesc.hasAttribute('data-ar-original')) {
+                siteDesc.setAttribute('data-ar-original', siteDesc.textContent);
+            }
+            siteDesc.textContent = translations[lang]['site-desc'];
+        } else {
+            const original = siteDesc.getAttribute('data-ar-original');
+            if (original) {
+                siteDesc.textContent = original;
+            }
+        }
     }
     
     // Translate page title
