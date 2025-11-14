@@ -81,147 +81,149 @@
         </section>
 
         <!-- Contact Content -->
-        <section class="contact-content" style="padding: var(--spacing-xl) var(--spacing-md);">
-            <div class="contact-grid">
-                <!-- Contact Form -->
-                <div class="contact-form-section">
-                    <h2>أرسل لنا رسالة</h2>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">الاسم الكامل</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">البريد الإلكتروني</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">رقم الهاتف</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">الموضوع</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">اختر الموضوع</option>
-                                <option value="support">دعم فني للتطبيقات</option>
-                                <option value="bug">تقرير خطأ في التطبيق</option>
-                                <option value="feature">اقتراح ميزة جديدة</option>
-                                <option value="youtube">استفسار حول شروحات يوتيوب</option>
-                                <option value="business">أعمال تجارية</option>
-                                <option value="partnership">شراكة أو تعاون</option>
-                                <option value="other">أخرى</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">الرسالة</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="اكتب رسالتك هنا..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">
-                            <i class="fas fa-paper-plane"></i>
-                            <span>إرسال الرسالة</span>
-                        </button>
-                    </form>
-                </div>
+        <section style="padding: var(--space-24) var(--space-6);">
+            <div class="contact-content">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-section">
+                        <h2>أرسل لنا رسالة</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">الاسم الكامل</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">الموضوع</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">اختر الموضوع</option>
+                                    <option value="support">دعم فني للتطبيقات</option>
+                                    <option value="bug">تقرير خطأ في التطبيق</option>
+                                    <option value="feature">اقتراح ميزة جديدة</option>
+                                    <option value="youtube">استفسار حول شروحات يوتيوب</option>
+                                    <option value="business">أعمال تجارية</option>
+                                    <option value="partnership">شراكة أو تعاون</option>
+                                    <option value="other">أخرى</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">الرسالة</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="اكتب رسالتك هنا..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>إرسال الرسالة</span>
+                            </button>
+                        </form>
+                    </div>
 
-                <!-- Contact Info -->
-                <div class="contact-info-section">
-                    <h2>معلومات التواصل</h2>
-                    
-                    <div class="contact-info-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>البريد الإلكتروني</h4>
-                            <p>diyomx@gmail.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-info-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>العنوان</h4>
-                            <p>مسقط، سلطنة عمان</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-info-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>ساعات العمل</h4>
-                            <p>الأحد - الأربعاء: 10:00 ص - 4:00 م</p>
-                            <p>الخميس - السبت: مغلق</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ Section -->
-            <div class="faq-section" style="margin-top: var(--spacing-xl);">
-                <div class="container">
-                    <h2 class="section-title">الأسئلة الشائعة</h2>
-                    <div class="faq-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-md); max-width: 1200px; margin: 0 auto;">
-                        <div class="faq-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); border-right: 4px solid var(--accent-color);">
-                            <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-sm); font-size: 1.2rem;">كيف يمكنني تحميل تطبيقاتكم؟</h4>
-                            <p style="color: var(--gray); line-height: 1.8; margin: 0;">يمكنك تحميل تطبيقاتنا من متجر Google Play، ونحاول بأسرع وقت إدراجها على App Store. تطبيق التسبيح متاح الآن، والتطبيقات الأخرى قيد التطوير.</p>
+                    <!-- Contact Info -->
+                    <div class="contact-info-section">
+                        <h2>معلومات التواصل</h2>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>البريد الإلكتروني</h4>
+                                <p>diyomx@gmail.com</p>
+                            </div>
                         </div>
                         
-                        <div class="faq-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); border-right: 4px solid var(--accent-color);">
-                            <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-sm); font-size: 1.2rem;">هل تطبيقاتكم مجانية؟</h4>
-                            <p style="color: var(--gray); line-height: 1.8; margin: 0;">نعم، جميع تطبيقاتنا الأساسية مجانية مع إمكانية الترقية للميزات المتقدمة.</p>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>العنوان</h4>
+                                <p>مسقط، سلطنة عمان</p>
+                            </div>
                         </div>
                         
-                        <div class="faq-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); border-right: 4px solid var(--accent-color);">
-                            <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-sm); font-size: 1.2rem;">متى ستكون تطبيقات حساب الكهرباء وصيانة السيارات متاحة؟</h4>
-                            <p style="color: var(--gray); line-height: 1.8; margin: 0;">نعمل حالياً على تطوير هذه التطبيقات وستكون متاحة قريباً. يمكنك متابعة آخر التحديثات على موقعنا.</p>
-                        </div>
-                        
-                        <div class="faq-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); border-right: 4px solid var(--accent-color);">
-                            <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-sm); font-size: 1.2rem;">هل تقدمون شروحات على يوتيوب؟</h4>
-                            <p style="color: var(--gray); line-height: 1.8; margin: 0;">حالياً لا، ولكن نأمل في إنشاء قناة يوتيوب قريباً لتقديم شروحات تقنية متخصصة.</p>
-                        </div>
-                        
-                        <div class="faq-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); border-right: 4px solid var(--accent-color);">
-                            <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-sm); font-size: 1.2rem;">كيف يمكنني الإبلاغ عن خطأ في التطبيق؟</h4>
-                            <p style="color: var(--gray); line-height: 1.8; margin: 0;">يمكنك استخدام نموذج الاتصال أعلاه واختيار "تقرير خطأ في التطبيق" كموضوع الرسالة.</p>
-                        </div>
-                        
-                        <div class="faq-item" style="background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); padding: var(--spacing-md); border-right: 4px solid var(--accent-color);">
-                            <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-sm); font-size: 1.2rem;">هل تقدمون دعم فني؟</h4>
-                            <p style="color: var(--gray); line-height: 1.8; margin: 0;">نعم، نقدم دعم فني مجاني لجميع المستخدمين عبر البريد الإلكتروني.</p>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>ساعات العمل</h4>
+                                <p>الأحد - الأربعاء: 10:00 ص - 4:00 م</p>
+                                <p>الخميس - السبت: مغلق</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Social Media -->
-            <div class="social-section" style="margin-top: var(--spacing-xl); text-align: center;">
-                <div class="container">
-                    <h2 class="section-title">تابعنا على وسائل التواصل</h2>
-                    <div class="social-links" style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap; margin-top: var(--spacing-lg);">
-                        <a href="https://twitter.com/DIYOMX" class="social-link-large" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm); padding: var(--spacing-md); background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); color: var(--gray); transition: var(--transition-normal); min-width: 150px;">
-                            <i class="fab fa-twitter" style="font-size: 2.5rem; color: var(--accent-color);"></i>
-                            <span style="font-weight: 600;">تويتر</span>
-                        </a>
+                <!-- FAQ Section -->
+                <div style="margin-top: var(--space-16);">
+                    <div class="container">
+                        <h2 class="section-title">الأسئلة الشائعة</h2>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-6); max-width: 1200px; margin: 0 auto;">
+                            <div class="feature-item" style="border-right: 4px solid var(--accent-gold);">
+                                <h4 style="color: var(--accent-gold); margin-bottom: var(--space-4); font-size: 1.2rem;">كيف يمكنني تحميل تطبيقاتكم؟</h4>
+                                <p style="color: var(--gray-300); line-height: 1.8; margin: 0;">يمكنك تحميل تطبيقاتنا من متجر Google Play، ونحاول بأسرع وقت إدراجها على App Store. تطبيق التسبيح متاح الآن، والتطبيقات الأخرى قيد التطوير.</p>
+                            </div>
+                            
+                            <div class="feature-item" style="border-right: 4px solid var(--accent-gold);">
+                                <h4 style="color: var(--accent-gold); margin-bottom: var(--space-4); font-size: 1.2rem;">هل تطبيقاتكم مجانية؟</h4>
+                                <p style="color: var(--gray-300); line-height: 1.8; margin: 0;">نعم، جميع تطبيقاتنا الأساسية مجانية مع إمكانية الترقية للميزات المتقدمة.</p>
+                            </div>
+                            
+                            <div class="feature-item" style="border-right: 4px solid var(--accent-gold);">
+                                <h4 style="color: var(--accent-gold); margin-bottom: var(--space-4); font-size: 1.2rem;">متى ستكون تطبيقات حساب الكهرباء وصيانة السيارات متاحة؟</h4>
+                                <p style="color: var(--gray-300); line-height: 1.8; margin: 0;">نعمل حالياً على تطوير هذه التطبيقات وستكون متاحة قريباً. يمكنك متابعة آخر التحديثات على موقعنا.</p>
+                            </div>
+                            
+                            <div class="feature-item" style="border-right: 4px solid var(--accent-gold);">
+                                <h4 style="color: var(--accent-gold); margin-bottom: var(--space-4); font-size: 1.2rem;">هل تقدمون شروحات على يوتيوب؟</h4>
+                                <p style="color: var(--gray-300); line-height: 1.8; margin: 0;">حالياً لا، ولكن نأمل في إنشاء قناة يوتيوب قريباً لتقديم شروحات تقنية متخصصة.</p>
+                            </div>
+                            
+                            <div class="feature-item" style="border-right: 4px solid var(--accent-gold);">
+                                <h4 style="color: var(--accent-gold); margin-bottom: var(--space-4); font-size: 1.2rem;">كيف يمكنني الإبلاغ عن خطأ في التطبيق؟</h4>
+                                <p style="color: var(--gray-300); line-height: 1.8; margin: 0;">يمكنك استخدام نموذج الاتصال أعلاه واختيار "تقرير خطأ في التطبيق" كموضوع الرسالة.</p>
+                            </div>
+                            
+                            <div class="feature-item" style="border-right: 4px solid var(--accent-gold);">
+                                <h4 style="color: var(--accent-gold); margin-bottom: var(--space-4); font-size: 1.2rem;">هل تقدمون دعم فني؟</h4>
+                                <p style="color: var(--gray-300); line-height: 1.8; margin: 0;">نعم، نقدم دعم فني مجاني لجميع المستخدمين عبر البريد الإلكتروني.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                        <a href="https://instagram.com/DIYOMX" class="social-link-large" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm); padding: var(--spacing-md); background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); color: var(--gray); transition: var(--transition-normal); min-width: 150px;">
-                            <i class="fab fa-instagram" style="font-size: 2.5rem; color: var(--accent-color);"></i>
-                            <span style="font-weight: 600;">إنستغرام</span>
-                        </a>
+                <!-- Social Media -->
+                <div style="margin-top: var(--space-16); text-align: center;">
+                    <div class="container">
+                        <h2 class="section-title">تابعنا على وسائل التواصل</h2>
+                        <div style="display: flex; gap: var(--space-6); justify-content: center; flex-wrap: wrap; margin-top: var(--space-12);">
+                            <a href="https://twitter.com/DIYOMX" class="feature-item" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: var(--space-4); padding: var(--space-8); min-width: 150px; text-decoration: none;">
+                                <i class="fab fa-twitter" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                                <span style="font-weight: 600; color: var(--white);">تويتر</span>
+                            </a>
 
-                        <a href="https://youtube.com/@DIYOMX" class="social-link-large" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm); padding: var(--spacing-md); background: rgba(17, 34, 64, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: var(--radius-lg); color: var(--gray); transition: var(--transition-normal); min-width: 150px;">
-                            <i class="fab fa-youtube" style="font-size: 2.5rem; color: var(--accent-color);"></i>
-                            <span style="font-weight: 600;">يوتيوب</span>
-                        </a>
+                            <a href="https://instagram.com/DIYOMX" class="feature-item" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: var(--space-4); padding: var(--space-8); min-width: 150px; text-decoration: none;">
+                                <i class="fab fa-instagram" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                                <span style="font-weight: 600; color: var(--white);">إنستغرام</span>
+                            </a>
+
+                            <a href="https://youtube.com/@DIYOMX" class="feature-item" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: var(--space-4); padding: var(--space-8); min-width: 150px; text-decoration: none;">
+                                <i class="fab fa-youtube" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                                <span style="font-weight: 600; color: var(--white);">يوتيوب</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
