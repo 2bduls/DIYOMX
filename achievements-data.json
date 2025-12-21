@@ -4,22 +4,22 @@
     "inDevelopment": 3
   },
   "users": {
-    "active": 320,
-    "downloads": 849
+    "active": 620,
+    "downloads": 6880
   },
   "ratings": {
-    "average": 5.0,
-    "count": 6
+    "average": 4.9,
+    "count": 28
   },
   "global": {
-    "countries": 25,
-    "languages": 2
+    "countries": 45,
+    "languages": 5
   },
   "updates": {
     "total": 2
   },
   "features": {
-    "perApp": 8
+    "perApp": 15+
   },
   "satisfaction": {
     "rate": 85
@@ -27,6 +27,6 @@
   "privacy": {
     "localData": 100
   },
-  "lastUpdated": "2025-11-13"
+  "lastUpdated": "2025-12-21"
 }
 
