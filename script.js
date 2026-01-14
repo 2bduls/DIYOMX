@@ -103,6 +103,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Load achievements data automatically
+    function loadAchievementsData() {
+        fetch('achievements-data.json')
+            .then(response => response.json())
+            .then(data => {
+                // Update achievement numbers if needed
+                // This function can be extended to update the UI dynamically
+            })
+            .catch(error => {
+                console.log('Could not load achievements data:', error);
+            });
+    }
+    
     loadAchievementsData();
 
     // Counter animation for achievements
@@ -217,12 +229,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Header scroll effect
+    const header = document.getElementById('header');
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
+    
     // Parallax effect for hero section
     const heroSection = document.querySelector('.hero-section');
     if (heroSection) {
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
+            const rate = scrolled * -0.3;
             heroSection.style.transform = `translateY(${rate}px)`;
         });
     }
@@ -272,31 +296,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollToTopBtn = document.createElement('button');
     scrollToTopBtn.className = 'scroll-to-top';
     scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    scrollToTopBtn.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #4a7c59;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        opacity: 0;
-        transition: all 0.3s ease;
-        z-index: 1000;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    `;
-    
     document.body.appendChild(scrollToTopBtn);
+    
+    // Scroll to top functionality
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
     
     // Show/hide scroll to top button
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 300) {
-            scrollToTopBtn.style.opacity = '1';
+            scrollToTopBtn.classList.add('visible');
         } else {
-            scrollToTopBtn.style.opacity = '0';
+            scrollToTopBtn.classList.remove('visible');
         }
     });
     

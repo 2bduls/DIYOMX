@@ -59,10 +59,15 @@
                         <div class="logo-name">DIYOMX</div>
                     </div>
                 </a>
-                <a href="index.html" class="site-title">ديومكس</a>
-                <p class="site-description">تطبيقات ذكية وإنجازات رقمية</p>
+                <div>
+                    <a href="index.html" class="site-title">ديومكس</a>
+                    <p class="site-description">تطبيقات ذكية وإنجازات رقمية</p>
+                </div>
             </div>
-            <nav class="main-navigation">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-navigation" id="mainNavigation">
                 <a href="index.html">الرئيسية</a>
                 <a href="about.html">من نحن</a>
                 <a href="contact.html">اتصل بنا</a>
@@ -144,9 +149,9 @@
                             <select id="app" name="app" required>
                                 <option value="">اختر التطبيق</option>
                                 <option value="tasbiah">تطبيق التسبيح</option>
-                                <option value="electric">DIY Electric Calculator</option>
-                                <option value="car">تطبيق صيانة السيارات</option>
-                                <option value="money">تطبيق إدارة المال الشخصي</option>
+                                <option value="electric">حاسبة الكهرباء</option>
+                                <option value="car">خدمات المركبات</option>
+                                <option value="nert">نيرت (Nert)</option>
                                 <option value="website">حساب الموقع</option>
                                 <option value="all">جميع التطبيقات والحسابات</option>
                             </select>
@@ -365,9 +370,9 @@
         function getAppName(appValue) {
             const apps = {
                 'tasbiah': 'تطبيق التسبيح',
-                'electric': 'DIY Electric Calculator',
-                'car': 'تطبيق صيانة السيارات',
-                'money': 'تطبيق إدارة المال الشخصي',
+                'electric': 'حاسبة الكهرباء',
+                'car': 'خدمات المركبات',
+                'nert': 'نيرت (Nert)',
                 'website': 'حساب الموقع',
                 'all': 'جميع التطبيقات والحسابات'
             };

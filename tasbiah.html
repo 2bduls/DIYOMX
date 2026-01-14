@@ -15,11 +15,11 @@
     <title>المسبحة الذكية اذكار - تسبيح | ديومكس</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://diyomx.com/logo.png?v=1">
-    <link rel="shortcut icon" type="image/png" href="https://diyomx.com/logo.png?v=1">
-    <link rel="apple-touch-icon" href="https://diyomx.com/logo.png?v=1">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://diyomx.com/logo.png?v=1">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://diyomx.com/logo.png?v=1">
+    <link rel="icon" type="image/png" href="logo.png?v=1">
+    <link rel="shortcut icon" type="image/png" href="logo.png?v=1">
+    <link rel="apple-touch-icon" href="logo.png?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png?v=1">
     <meta name="description" content="المسبحة الذكية اذكار - تسبيح - تطبيق شامل للتسبيح والذكر مع ميزات متقدمة للعد والتتبع. تطبيق مجاني وآمن تماماً">
     <meta name="keywords" content="المسبحة الذكية اذكار - تسبيح, المسبحة الذكية اذكار - تسبيح للاندرويد, المسبحة الذكية اذكار - تسبيح مجاني, التسبيح, الأذكار, الذكر, عداد التسبيح, تطبيق إسلامي, تطبيق الأذكار, تطبيق الذكر, تطبيق تسبيح مجاني, تطبيق تسبيح للاندرويد, ديومكس, تطبيقات ذكية, تطبيقات مجانية">
     <meta name="author" content="ديومكس">
@@ -53,7 +53,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://diyomx.com/style.css">
+    <link rel="stylesheet" href="style.css">
     
     <!-- Structured Data (JSON-LD) for Mobile App -->
     <script type="application/ld+json">
@@ -561,21 +561,26 @@
     <header class="site-header">
         <div class="header-container">
             <div class="site-branding">
-                <a href="https://diyomx.com" class="site-logo-link">
-                    <img src="https://diyomx.com/logo.png" alt="ديومكس" class="site-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <a href="index.html" class="site-logo-link">
+                    <img src="logo.png" alt="ديومكس" class="site-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="site-logo-text" style="display: none;">
                         <div class="logo-dx">DX</div>
                         <div class="logo-name">DIYOMX</div>
                     </div>
                 </a>
-                <a href="https://diyomx.com" class="site-title">ديومكس</a>
-                <p class="site-description">المسبحة الذكية اذكار - تسبيح</p>
+                <div>
+                    <a href="index.html" class="site-title">ديومكس</a>
+                    <p class="site-description">المسبحة الذكية اذكار - تسبيح</p>
+                </div>
             </div>
-            <nav class="main-navigation">
-                <a href="https://diyomx.com">الرئيسية</a>
-                <a href="https://diyomx.com/about.html">من نحن</a>
-                <a href="https://diyomx.com/contact.html">اتصل بنا</a>
-                <a href="https://diyomx.com/privacy-tasbiah.html">سياسة الخصوصية</a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-navigation" id="mainNavigation">
+                <a href="index.html">الرئيسية</a>
+                <a href="about.html">من نحن</a>
+                <a href="contact.html">اتصل بنا</a>
+                <a href="privacy-tasbiah.html">سياسة الخصوصية</a>
             </nav>
         </div>
     </header>
@@ -593,9 +598,13 @@
                     <i class="fab fa-google-play"></i>
                     <span>تحميل من Google Play</span>
                 </a>
-                <a href="https://apps.apple.com/app/tasbiah" class="download-btn" target="_blank">
+                <a href="https://tasbiah.diyomx.com" class="download-btn" target="_blank">
+                    <i class="fas fa-globe"></i>
+                    <span>استخدام النسخة الإلكترونية</span>
+                </a>
+                <a href="#" class="download-btn" style="opacity: 0.6; cursor: not-allowed;" onclick="return false;">
                     <i class="fab fa-apple"></i>
-                    <span>تحميل من App Store</span>
+                    <span>قريباً على App Store</span>
                 </a>
             </div>
         </div>
@@ -741,7 +750,7 @@
                 </span>
             </div>
             <p style="margin-top: 2rem;">
-                <a href="https://diyomx.com/privacy-tasbiah.html" style="color: #2c5530; font-weight: 600; text-decoration: underline;">
+                <a href="privacy-tasbiah.html" style="color: #2c5530; font-weight: 600; text-decoration: underline;">
                     اقرأ سياسة الخصوصية الكاملة
                 </a>
             </p>
@@ -760,7 +769,7 @@
             
             <p>التطبيق يوفر لك تحكم كامل في بياناتك - يمكنك تصدير جميع بياناتك بصيغة قابلة للقراءة، أو حذف جميع بياناتك من التطبيق في أي وقت تريده. كما يمكنك إدارة الإعلانات وتعطيلها من إعدادات التطبيق.</p>
             
-            <p>المسبحة الذكية اذكار - تسبيح يعمل بشكل كامل بدون الحاجة لاتصال بالإنترنت، مما يعني أنه يمكنك استخدامه في أي وقت وأي مكان. التطبيق متوفر الآن على Google Play Store ويمكن تحميله مجاناً.</p>
+            <p>المسبحة الذكية اذكار - تسبيح يعمل بشكل كامل بدون الحاجة لاتصال بالإنترنت، مما يعني أنه يمكنك استخدامه في أي وقت وأي مكان. التطبيق متوفر الآن على Google Play Store ويمكن تحميله مجاناً. كما نعمل على تطوير نسخة الويب (tasbiah.diyomx.com) ونسخة iOS التي ستكون متاحة قريباً.</p>
             
             <h3 style="color: #2c5530; margin-top: 2rem; margin-bottom: 1rem;">لماذا المسبحة الذكية اذكار - تسبيح من ديومكس؟</h3>
             <p>نحن في ديومكس نؤمن بأهمية تطوير تطبيقات مفيدة للمستخدمين حول العالم. المسبحة الذكية اذكار - تسبيح تم تطويره بعناية فائقة ليكون أداة مساعدة حقيقية للمسلمين في تتبع تسبيحاتهم وأذكارهم. التطبيق يتميز بسهولة الاستخدام والتصميم الجميل والخصوصية الكاملة.</p>
@@ -851,16 +860,16 @@
                 <p>تطبيق ذكي للتسبيح والذكر</p>
             </div>
             <div class="footer-links">
-                <a href="https://diyomx.com">الرئيسية</a>
-                <a href="https://diyomx.com/about.html">من نحن</a>
-                <a href="https://diyomx.com/contact.html">اتصل بنا</a>
-                <a href="https://diyomx.com/privacy-tasbiah.html">سياسة الخصوصية</a>
+                <a href="index.html">الرئيسية</a>
+                <a href="about.html">من نحن</a>
+                <a href="contact.html">اتصل بنا</a>
+                <a href="privacy-tasbiah.html">سياسة الخصوصية</a>
             </div>
             <div class="footer-privacy-links">
                 <h4>روابط مهمة</h4>
-                <a href="https://diyomx.com/privacy-tasbiah.html">سياسة الخصوصية</a>
-                <a href="https://diyomx.com/delete-account.html">حذف الحساب</a>
-                <a href="https://diyomx.com/contact.html">ممارسة الحقوق</a>
+                <a href="privacy-tasbiah.html">سياسة الخصوصية</a>
+                <a href="delete-account.html">حذف الحساب</a>
+                <a href="contact.html">ممارسة الحقوق</a>
             </div>
             <div class="footer-social">
                 <a href="https://twitter.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -877,7 +886,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="https://diyomx.com/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
 

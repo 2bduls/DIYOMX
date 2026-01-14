@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJWH59MZWB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HJWH59MZWB');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة الكهرباء | ديومكس</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png?v=1">
+    <meta name="description" content="حاسبة الكهرباء - تطبيق شامل لحساب الطاقة الكهربائية والطاقة الشمسية مع دليل كامل للعمل الحر DIY">
+    <meta name="keywords" content="حاسبة الكهرباء, الطاقة الشمسية, DIY, العمل الحر, ديومكس">
+    <meta name="author" content="ديومكس">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="site-branding">
+                <a href="index.html" class="site-logo-link">
+                    <img src="logo.png" alt="ديومكس" class="site-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="site-logo-text" style="display: none;">
+                        <div class="logo-dx">DX</div>
+                        <div class="logo-name">DIYOMX</div>
+                    </div>
+                </a>
+                <div>
+                    <a href="index.html" class="site-title">ديومكس</a>
+                    <p class="site-description">حاسبة الكهرباء</p>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-navigation" id="mainNavigation">
+                <a href="index.html">الرئيسية</a>
+                <a href="about.html">من نحن</a>
+                <a href="contact.html">اتصل بنا</a>
+                <a href="privacy-options.html">سياسة الخصوصية</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="site-main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1 class="page-title">حاسبة الكهرباء</h1>
+            <p class="page-subtitle">تطبيق شامل لحساب الطاقة الكهربائية والطاقة الشمسية</p>
+        </section>
+
+        <!-- App Info Section -->
+        <section style="padding: var(--space-24) var(--space-6);">
+            <div class="container">
+                <div class="app-card" style="max-width: 1000px; margin: 0 auto;">
+                    <div class="app-icon" style="margin: 0 auto var(--space-6);">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h2 style="text-align: center; color: var(--accent-gold); margin-bottom: var(--space-6);">عن التطبيق</h2>
+                    <p style="text-align: center; color: var(--gray-300); line-height: 1.8; margin-bottom: var(--space-8); font-size: 1.1rem;">
+                        حاسبة الكهرباء هو تطبيق شامل ومتقدم لحساب الطاقة الكهربائية والطاقة الشمسية مع دليل كامل للعمل الحر DIY (اعمله بنفسك). التطبيق يوفر أدوات حساب متقدمة لتحويلات الطاقة وحساب حجم الأسلاك والطاقة الشمسية والبطاريات.
+                    </p>
+                    
+                    <div class="platform-badges" style="justify-content: center; margin-bottom: var(--space-8);">
+                        <span class="platform-badge"><i class="fab fa-android"></i> Android</span>
+                        <span class="platform-badge"><i class="fab fa-apple"></i> iOS</span>
+                        <span class="platform-badge"><i class="fas fa-globe"></i> Web</span>
+                        <span class="platform-badge"><i class="fab fa-windows"></i> Windows</span>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <span class="app-status status-development">قيد التطوير</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">الميزات الرئيسية</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>حساب الطاقة الكهربائية</h3>
+                        <p>حساب استهلاك الطاقة الكهربائية بدقة مع تحليل التكاليف</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h3>حساب الطاقة الشمسية</h3>
+                        <p>حساب متطلبات الطاقة الشمسية وحجم الألواح والبطاريات</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>تحويلات الطاقة</h3>
+                        <p>تحويل بين وحدات الطاقة المختلفة بسهولة</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3>حساب حجم الأسلاك</h3>
+                        <p>حساب حجم الأسلاك المناسب حسب الحمل والمسافة</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-battery-full"></i>
+                        </div>
+                        <h3>حساب البطاريات</h3>
+                        <p>حساب حجم البطاريات المطلوبة لمشاريع الطاقة الشمسية</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>دليل DIY شامل</h3>
+                        <p>دليل كامل للعمل الحر DIY مع شروحات تفصيلية</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>أدوات متقدمة</h3>
+                        <p>مجموعة شاملة من الأدوات الحسابية المتقدمة</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>تقارير مفصلة</h3>
+                        <p>تقارير وإحصائيات مفصلة عن الحسابات والنتائج</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-save"></i>
+                        </div>
+                        <h3>حفظ المشاريع</h3>
+                        <p>حفظ المشاريع والحسابات للرجوع إليها لاحقاً</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coming Soon Section -->
+        <section style="padding: var(--space-24) var(--space-6); background: var(--primary);">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <h2 style="color: var(--accent-gold); margin-bottom: var(--space-6);">قريباً</h2>
+                    <p style="color: var(--gray-300); line-height: 1.8; font-size: 1.1rem; margin-bottom: var(--space-8);">
+                        نحن نعمل بجد على تطوير تطبيق حاسبة الكهرباء ليكون متاحاً على Android و iOS قريباً، مع إمكانية توفره على Web و Windows لاحقاً. التطبيق سيكون دليلاً شاملاً للعمل الحر DIY مع أدوات حساب متقدمة.
+                    </p>
+                    <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            <span>تواصل معنا</span>
+                        </a>
+                        <a href="privacy-electric.html" class="btn btn-secondary">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>سياسة الخصوصية</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>ديومكس</h3>
+                <p>تطبيقات ذكية وإنجازات رقمية</p>
+            </div>
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <a href="index.html">الرئيسية</a>
+                <a href="about.html">من نحن</a>
+                <a href="contact.html">اتصل بنا</a>
+                <a href="privacy-options.html">سياسة الخصوصية</a>
+            </div>
+            <div class="footer-privacy-links">
+                <h4>التطبيقات</h4>
+                <a href="tasbiah.html">تطبيق التسبيح</a>
+                <a href="vehicles.html">خدمات المركبات</a>
+                <a href="nert.html">نيرت</a>
+                <a href="electric.html">حاسبة الكهرباء</a>
+            </div>
+            <div class="footer-privacy-links">
+                <h4>سياسات الخصوصية</h4>
+                <a href="privacy-options.html">جميع السياسات</a>
+                <a href="privacy-electric.html">حاسبة الكهرباء</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://twitter.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@DIYOMX" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ديومكس. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

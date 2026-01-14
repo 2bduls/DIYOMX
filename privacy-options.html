@@ -60,10 +60,15 @@
                         <div class="logo-name">DIYOMX</div>
                     </div>
                 </a>
-                <a href="index.html" class="site-title">ديومكس</a>
-                <p class="site-description">تطبيقات ذكية وإنجازات رقمية</p>
+                <div>
+                    <a href="index.html" class="site-title">ديومكس</a>
+                    <p class="site-description">تطبيقات ذكية وإنجازات رقمية</p>
+                </div>
             </div>
-            <nav class="main-navigation">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-navigation" id="mainNavigation">
                 <a href="index.html">الرئيسية</a>
                 <a href="about.html">من نحن</a>
                 <a href="contact.html">اتصل بنا</a>
@@ -135,10 +140,14 @@
                             <li><i class="fas fa-check"></i> التشفير المتقدم</li>
                             <li><i class="fas fa-check"></i> الامتثال للشريعة</li>
                         </ul>
-                        <div class="privacy-card-footer">
+                        <div class="privacy-card-footer" style="display: flex; gap: var(--space-2); flex-direction: column;">
                             <a href="privacy-tasbiah.html" class="btn btn-primary">
                                 <i class="fas fa-arrow-left"></i>
                                 عرض السياسة
+                            </a>
+                            <a href="tasbiah.html" class="btn btn-outline" style="font-size: var(--text-sm); padding: var(--space-2) var(--space-4);">
+                                <i class="fas fa-info-circle"></i>
+                                تعرف على التطبيق
                             </a>
                         </div>
                     </div>
@@ -150,8 +159,8 @@
                         <div class="privacy-icon">
                             <i class="fas fa-bolt"></i>
                         </div>
-                        <h3>DIY Electric Calculator</h3>
-                        <p>حماية حسابات الكهرباء والمشاريع</p>
+                        <h3>حاسبة الكهرباء</h3>
+                        <p>حماية حسابات الكهرباء والطاقة الشمسية</p>
                     </div>
                     <div class="privacy-card-content">
                         <ul class="privacy-features">
@@ -160,61 +169,73 @@
                             <li><i class="fas fa-check"></i> التشفير المحلي</li>
                             <li><i class="fas fa-check"></i> عدم المشاركة</li>
                         </ul>
-                        <div class="privacy-card-footer">
+                        <div class="privacy-card-footer" style="display: flex; gap: var(--space-2); flex-direction: column;">
                             <a href="privacy-electric.html" class="btn btn-primary">
                                 <i class="fas fa-arrow-left"></i>
                                 عرض السياسة
+                            </a>
+                            <a href="electric.html" class="btn btn-outline" style="font-size: var(--text-sm); padding: var(--space-2) var(--space-4);">
+                                <i class="fas fa-info-circle"></i>
+                                تعرف على التطبيق
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Car Maintenance Privacy Policy -->
+                <!-- Vehicles Services Privacy Policy -->
                 <div class="privacy-option-card">
                     <div class="privacy-card-header">
                         <div class="privacy-icon">
                             <i class="fas fa-car"></i>
                         </div>
-                        <h3>صيانة السيارات</h3>
-                        <p>حماية بيانات السيارة والصيانة</p>
+                        <h3>خدمات المركبات</h3>
+                        <p>حماية بيانات المركبات والصيانة والوقود</p>
                     </div>
                     <div class="privacy-card-content">
                         <ul class="privacy-features">
-                            <li><i class="fas fa-check"></i> بيانات السيارة</li>
+                            <li><i class="fas fa-check"></i> بيانات المركبات</li>
                             <li><i class="fas fa-check"></i> تاريخ الصيانة</li>
-                            <li><i class="fas fa-check"></i> التكاليف والأجزاء</li>
-                            <li><i class="fas fa-check"></i> الأمان المتقدم</li>
+                            <li><i class="fas fa-check"></i> التكاليف والوقود</li>
+                            <li><i class="fas fa-check"></i> إدارة الأسطول</li>
                         </ul>
-                        <div class="privacy-card-footer">
+                        <div class="privacy-card-footer" style="display: flex; gap: var(--space-2); flex-direction: column;">
                             <a href="privacy-car.html" class="btn btn-primary">
                                 <i class="fas fa-arrow-left"></i>
                                 عرض السياسة
+                            </a>
+                            <a href="vehicles.html" class="btn btn-outline" style="font-size: var(--text-sm); padding: var(--space-2) var(--space-4);">
+                                <i class="fas fa-info-circle"></i>
+                                تعرف على التطبيق
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Money Management Privacy Policy -->
+                <!-- Nert Privacy Policy -->
                 <div class="privacy-option-card">
                     <div class="privacy-card-header">
                         <div class="privacy-icon">
-                            <i class="fas fa-wallet"></i>
+                            <i class="fas fa-share-alt"></i>
                         </div>
-                        <h3>إدارة المال الشخصي</h3>
-                        <p>حماية البيانات المالية الحساسة</p>
-                        <span class="security-badge">أعلى مستوى أمان</span>
+                        <h3>نيرت (Nert)</h3>
+                        <p>حماية بيانات مشاركة الملفات</p>
+                        <span class="security-badge">مشروع مشترك</span>
                     </div>
                     <div class="privacy-card-content">
                         <ul class="privacy-features">
-                            <li><i class="fas fa-check"></i> التشفير المزدوج</li>
-                            <li><i class="fas fa-check"></i> حماية مالية</li>
-                            <li><i class="fas fa-check"></i> عدم المشاركة</li>
-                            <li><i class="fas fa-check"></i> الامتثال للقوانين</li>
+                            <li><i class="fas fa-check"></i> تشفير الملفات</li>
+                            <li><i class="fas fa-check"></i> نقل آمن</li>
+                            <li><i class="fas fa-check"></i> خصوصية كاملة</li>
+                            <li><i class="fas fa-check"></i> لا تخزين سحابي</li>
                         </ul>
-                        <div class="privacy-card-footer">
+                        <div class="privacy-card-footer" style="display: flex; gap: var(--space-2); flex-direction: column;">
                             <a href="privacy-money.html" class="btn btn-primary">
                                 <i class="fas fa-arrow-left"></i>
                                 عرض السياسة
+                            </a>
+                            <a href="nert.html" class="btn btn-outline" style="font-size: var(--text-sm); padding: var(--space-2) var(--space-4);">
+                                <i class="fas fa-info-circle"></i>
+                                تعرف على التطبيق
                             </a>
                         </div>
                     </div>
@@ -292,9 +313,9 @@
                 <h4>سياسات الخصوصية</h4>
                 <a href="privacy-website.html">الموقع العام</a>
                 <a href="privacy-tasbiah.html">تطبيق التسبيح</a>
-                <a href="privacy-electric.html">DIY Electric Calculator</a>
-                <a href="privacy-car.html">صيانة السيارات</a>
-                <a href="privacy-money.html">إدارة المال الشخصي</a>
+                <a href="privacy-electric.html">حاسبة الكهرباء</a>
+                <a href="privacy-car.html">خدمات المركبات</a>
+                <a href="privacy-money.html">نيرت</a>
             </div>
             <div class="footer-social">
                 <a href="https://twitter.com/DIYOMX" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
