@@ -598,6 +598,15 @@ section {
     color: var(--primary-dark);
     box-shadow: var(--shadow-gold);
     transition: var(--transition-base);
+    overflow: hidden;
+    padding: 8px;
+}
+
+.app-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: var(--radius-lg);
 }
 
 .app-card:hover .app-icon {
