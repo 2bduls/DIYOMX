@@ -1,0 +1,195 @@
+/*
+ * Tasbiah Themes - CSS Variables for Theme Management
+ * Supports 8 predefined themes + custom colors
+ */
+
+:root {
+    /* Default Theme - Classic */
+    --theme-primary: #2c5530;
+    --theme-primary-light: #4a7c59;
+    --theme-primary-dark: #1a3a1e;
+    --theme-secondary: #81c784;
+    --theme-accent: #a5d6a7;
+    --theme-bg: #ffffff;
+    --theme-bg-secondary: #f8f9fa;
+    --theme-text: #212529;
+    --theme-text-secondary: #6c757d;
+    --theme-border: #dee2e6;
+    --theme-shadow: rgba(0, 0, 0, 0.1);
+    --theme-card-bg: #ffffff;
+    --theme-hover: #f0f0f0;
+}
+
+/* Theme: Classic (Default) */
+[data-theme="classic"] {
+    --theme-primary: #2c5530;
+    --theme-primary-light: #4a7c59;
+    --theme-primary-dark: #1a3a1e;
+    --theme-secondary: #81c784;
+    --theme-accent: #a5d6a7;
+    --theme-bg: #ffffff;
+    --theme-bg-secondary: #f8f9fa;
+    --theme-text: #212529;
+    --theme-text-secondary: #6c757d;
+    --theme-border: #dee2e6;
+    --theme-shadow: rgba(0, 0, 0, 0.1);
+    --theme-card-bg: #ffffff;
+    --theme-hover: #f0f0f0;
+}
+
+/* Theme: Islamic Green */
+[data-theme="islamic-green"] {
+    --theme-primary: #1b5e20;
+    --theme-primary-light: #2e7d32;
+    --theme-primary-dark: #0d3e11;
+    --theme-secondary: #4caf50;
+    --theme-accent: #66bb6a;
+    --theme-bg: #f1f8e9;
+    --theme-bg-secondary: #e8f5e9;
+    --theme-text: #1b5e20;
+    --theme-text-secondary: #388e3c;
+    --theme-border: #a5d6a7;
+    --theme-shadow: rgba(27, 94, 32, 0.2);
+    --theme-card-bg: #ffffff;
+    --theme-hover: #c8e6c9;
+}
+
+/* Theme: Islamic Blue */
+[data-theme="islamic-blue"] {
+    --theme-primary: #0d47a1;
+    --theme-primary-light: #1565c0;
+    --theme-primary-dark: #0a3d91;
+    --theme-secondary: #1976d2;
+    --theme-accent: #42a5f5;
+    --theme-bg: #e3f2fd;
+    --theme-bg-secondary: #bbdefb;
+    --theme-text: #0d47a1;
+    --theme-text-secondary: #1565c0;
+    --theme-border: #90caf9;
+    --theme-shadow: rgba(13, 71, 161, 0.2);
+    --theme-card-bg: #ffffff;
+    --theme-hover: #bbdefb;
+}
+
+/* Theme: Sunset */
+[data-theme="sunset"] {
+    --theme-primary: #e65100;
+    --theme-primary-light: #ff6f00;
+    --theme-primary-dark: #bf360c;
+    --theme-secondary: #ff9800;
+    --theme-accent: #ffb74d;
+    --theme-bg: #fff3e0;
+    --theme-bg-secondary: #ffe0b2;
+    --theme-text: #e65100;
+    --theme-text-secondary: #f57c00;
+    --theme-border: #ffcc80;
+    --theme-shadow: rgba(230, 81, 0, 0.2);
+    --theme-card-bg: #ffffff;
+    --theme-hover: #ffe0b2;
+}
+
+/* Theme: Purple */
+[data-theme="purple"] {
+    --theme-primary: #4a148c;
+    --theme-primary-light: #6a1b9a;
+    --theme-primary-dark: #38006b;
+    --theme-secondary: #7b1fa2;
+    --theme-accent: #ab47bc;
+    --theme-bg: #f3e5f5;
+    --theme-bg-secondary: #e1bee7;
+    --theme-text: #4a148c;
+    --theme-text-secondary: #6a1b9a;
+    --theme-border: #ce93d8;
+    --theme-shadow: rgba(74, 20, 140, 0.2);
+    --theme-card-bg: #ffffff;
+    --theme-hover: #e1bee7;
+}
+
+/* Theme: Ocean */
+[data-theme="ocean"] {
+    --theme-primary: #006064;
+    --theme-primary-light: #00838f;
+    --theme-primary-dark: #004d40;
+    --theme-secondary: #00acc1;
+    --theme-accent: #4dd0e1;
+    --theme-bg: #e0f7fa;
+    --theme-bg-secondary: #b2ebf2;
+    --theme-text: #006064;
+    --theme-text-secondary: #00838f;
+    --theme-border: #80deea;
+    --theme-shadow: rgba(0, 96, 100, 0.2);
+    --theme-card-bg: #ffffff;
+    --theme-hover: #b2ebf2;
+}
+
+/* Theme: Pink */
+[data-theme="pink"] {
+    --theme-primary: #880e4f;
+    --theme-primary-light: #ad1457;
+    --theme-primary-dark: #560027;
+    --theme-secondary: #c2185b;
+    --theme-accent: #ec407a;
+    --theme-bg: #fce4ec;
+    --theme-bg-secondary: #f8bbd0;
+    --theme-text: #880e4f;
+    --theme-text-secondary: #ad1457;
+    --theme-border: #f48fb1;
+    --theme-shadow: rgba(136, 14, 79, 0.2);
+    --theme-card-bg: #ffffff;
+    --theme-hover: #f8bbd0;
+}
+
+/* Theme: OLED (Dark) */
+[data-theme="oled"] {
+    --theme-primary: #000000;
+    --theme-primary-light: #1a1a1a;
+    --theme-primary-dark: #000000;
+    --theme-secondary: #2d2d2d;
+    --theme-accent: #4a4a4a;
+    --theme-bg: #000000;
+    --theme-bg-secondary: #1a1a1a;
+    --theme-text: #e0e0e0;
+    --theme-text-secondary: #b0b0b0;
+    --theme-border: #333333;
+    --theme-shadow: rgba(0, 0, 0, 0.5);
+    --theme-card-bg: #1a1a1a;
+    --theme-hover: #2d2d2d;
+}
+
+/* Dark Mode Support */
+[data-theme="classic"][data-dark="true"],
+[data-theme="islamic-green"][data-dark="true"],
+[data-theme="islamic-blue"][data-dark="true"],
+[data-theme="sunset"][data-dark="true"],
+[data-theme="purple"][data-dark="true"],
+[data-theme="ocean"][data-dark="true"],
+[data-theme="pink"][data-dark="true"] {
+    --theme-bg: #1e1e1e;
+    --theme-bg-secondary: #2d2d2d;
+    --theme-text: #e0e0e0;
+    --theme-text-secondary: #b0b0b0;
+    --theme-card-bg: #2d2d2d;
+    --theme-border: #404040;
+    --theme-hover: #3a3a3a;
+}
+
+/* Custom Theme Variables (for user customization) */
+[data-theme="custom"] {
+    /* These will be set dynamically via JavaScript */
+}
+
+/* Theme Transition */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Theme-specific utility classes */
+.theme-primary { color: var(--theme-primary); }
+.theme-primary-bg { background-color: var(--theme-primary); }
+.theme-secondary { color: var(--theme-secondary); }
+.theme-secondary-bg { background-color: var(--theme-secondary); }
+.theme-accent { color: var(--theme-accent); }
+.theme-accent-bg { background-color: var(--theme-accent); }
+.theme-bg { background-color: var(--theme-bg); }
+.theme-text { color: var(--theme-text); }
+.theme-border { border-color: var(--theme-border); }
