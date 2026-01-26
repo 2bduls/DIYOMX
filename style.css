@@ -607,6 +607,24 @@ section {
     height: 100%;
     object-fit: contain;
     border-radius: var(--radius-lg);
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+/* When app-icon contains an image, adjust background */
+.app-icon:has(img) {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.app-icon:has(img) i {
+    display: none !important;
+}
+
+/* Fallback for browsers that don't support :has() */
+.app-icon img + i {
+    display: none !important;
 }
 
 .app-card:hover .app-icon {
